@@ -383,7 +383,10 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Conference/Conference-Prefix.pch";
 				INFOPLIST_FILE = "Conference/Conference-Info.plist";
+				INSTALL_PATH = /Users/Shared;
+				"INSTALL_PATH[sdk=*]" = /Users/Shared;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 2;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -396,7 +399,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Conference/Conference-Prefix.pch";
 				INFOPLIST_FILE = "Conference/Conference-Info.plist";
+				INSTALL_PATH = /Users/Shared;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 2;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -462,6 +467,7 @@
 				34BF450018ACDB8800B66045 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		34BF450118ACDB8800B66045 /* Build configuration list for PBXNativeTarget "ConferenceTests" */ = {
 			isa = XCConfigurationList;
@@ -470,6 +476,7 @@
 				34BF450318ACDB8800B66045 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
