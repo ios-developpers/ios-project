@@ -21,6 +21,7 @@
 		34BF44F118ACDB8800B66045 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 34BF44D318ACDB8700B66045 /* UIKit.framework */; };
 		34BF44F918ACDB8800B66045 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 34BF44F718ACDB8800B66045 /* InfoPlist.strings */; };
 		34BF44FB18ACDB8800B66045 /* ConferenceTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 34BF44FA18ACDB8800B66045 /* ConferenceTests.m */; };
+		AAA6A47C18C5F4B500804407 /* MyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AAA6A47B18C5F4B500804407 /* MyViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,8 @@
 		34BF44F618ACDB8800B66045 /* ConferenceTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ConferenceTests-Info.plist"; sourceTree = "<group>"; };
 		34BF44F818ACDB8800B66045 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		34BF44FA18ACDB8800B66045 /* ConferenceTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ConferenceTests.m; sourceTree = "<group>"; };
+		AAA6A47A18C5F4B500804407 /* MyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyViewController.h; sourceTree = "<group>"; };
+		AAA6A47B18C5F4B500804407 /* MyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +120,8 @@
 				34BF44E118ACDB8700B66045 /* Main.storyboard */,
 				34BF44E418ACDB8700B66045 /* ViewController.h */,
 				34BF44E518ACDB8700B66045 /* ViewController.m */,
+				AAA6A47A18C5F4B500804407 /* MyViewController.h */,
+				AAA6A47B18C5F4B500804407 /* MyViewController.m */,
 				34BF44E718ACDB8800B66045 /* Images.xcassets */,
 				34BF44D618ACDB8700B66045 /* Supporting Files */,
 			);
@@ -251,6 +256,7 @@
 			files = (
 				34BF44E618ACDB8700B66045 /* ViewController.m in Sources */,
 				34BF44E018ACDB8700B66045 /* AppDelegate.m in Sources */,
+				AAA6A47C18C5F4B500804407 /* MyViewController.m in Sources */,
 				34BF44DC18ACDB8700B66045 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
