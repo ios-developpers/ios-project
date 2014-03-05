@@ -7,6 +7,8 @@
 //
 
 #import "Salon.h"
+#import "Utils.h"
+#import "Constants.h"
 
 @implementation Salon
 

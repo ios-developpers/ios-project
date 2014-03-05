@@ -11,12 +11,6 @@
 #import "Constants.h"
 #import "Document.h"
 
-@interface AccueilViewController ()
-
-- (IBAction)addSalonListener:(UIBarButtonItem *)sender;
-
-@end
-
 @implementation AccueilViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -32,7 +26,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view.
+    NSLog(@"%@", [Utils concatenateString:LogLoaded withString:@" Accueil View Controller"]);
 }
 
 - (void)didReceiveMemoryWarning
@@ -44,6 +38,11 @@
 - (IBAction)addSalonListener:(UIBarButtonItem *)sender
 {
     NSLog(@"%@", [Utils concatenateString:LogListener withString:@" Add Salon in Accueil View"]);
+}
+
+- (IBAction)addDocumentListener:(UIBarButtonItem *)sender
+{
+    NSLog(@"%@", [Utils concatenateString:LogListener withString:@" Add Document in Accueil View"]);
 }
 
 @end

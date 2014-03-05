@@ -25,8 +25,7 @@
 -(NSMutableArray *) getDocuments;
 
 -(BOOL) addDocument: (Document *)document;
--(BOOL) removeDocumentAtIndex: (NSInteger)index;
+-(BOOL) removeDocumentAtIndex: (NSUInteger)index;
 -(void) clearDocuments;
--(void) sort;
 
 @end

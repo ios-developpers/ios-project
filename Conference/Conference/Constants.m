@@ -12,5 +12,6 @@
 
 NSString * const LogListener = @"Action perfored on";
 NSString * const LogConstructor = @"New instance of";
+NSString * const LogLoaded = @"Loaded";
 
 @end

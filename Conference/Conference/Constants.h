@@ -12,5 +12,6 @@
 
 extern NSString * const LogListener;
 extern NSString * const LogConstructor;
+extern NSString * const LogLoaded;
 
 @end

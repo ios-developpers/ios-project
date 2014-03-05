@@ -10,4 +10,7 @@
 
 @interface AccueilViewController : UIViewController
 
+- (IBAction)addSalonListener:(UIBarButtonItem *)sender;
+- (IBAction)addDocumentListener:(UIBarButtonItem *)sender;
+
 @end
