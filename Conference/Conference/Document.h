@@ -9,5 +9,17 @@
 #import <Foundation/Foundation.h>
 
 @interface Document : NSObject
+{
+    NSString *name;
+    NSString *url;
+}
+
+-(id) initWithName: (NSString *)_name andUrl: (NSString *)_url;
+
+-(void) setName: (NSString *)newName;
+-(void) setUrl: (NSString *)newUrl;
+
+-(NSString *) getName;
+-(NSString *) getUrl;
 
 @end

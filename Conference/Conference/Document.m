@@ -10,4 +10,48 @@
 
 @implementation Document
 
+/*
+ *  Constructors
+ */
+
+-(id) initWithName: (NSString *)_name andUrl: (NSString *)_url
+{
+    self = [super init];
+    
+    if (self)
+    {
+        self->name = _name;
+        self->url = _url;
+    }
+    
+    return self;
+}
+
+/*
+ *  Setters
+ */
+-(void) setName: (NSString *)newName
+{
+    self->name = newName;
+}
+
+-(void) setUrl: (NSString *)newUrl
+{
+    self->url = newUrl;
+}
+
+
+/*
+ *  Getters
+ */
+-(NSString *) getName
+{
+    return self->name;
+}
+
+-(NSString *) getUrl
+{
+    return self->url;
+}
+
 @end

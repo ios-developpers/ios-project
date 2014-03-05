@@ -21,7 +21,10 @@
 		34BF44F118ACDB8800B66045 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 34BF44D318ACDB8700B66045 /* UIKit.framework */; };
 		34BF44F918ACDB8800B66045 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 34BF44F718ACDB8800B66045 /* InfoPlist.strings */; };
 		34BF44FB18ACDB8800B66045 /* ConferenceTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 34BF44FA18ACDB8800B66045 /* ConferenceTests.m */; };
-		AAA6A47C18C5F4B500804407 /* MyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AAA6A47B18C5F4B500804407 /* MyViewController.m */; };
+		AAA6A47C18C5F4B500804407 /* AccueilViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AAA6A47B18C5F4B500804407 /* AccueilViewController.m */; };
+		AAF3C6B618C720FA00B92618 /* Document.m in Sources */ = {isa = PBXBuildFile; fileRef = AAF3C6B518C720FA00B92618 /* Document.m */; };
+		AAF3C6B918C724C000B92618 /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = AAF3C6B818C724C000B92618 /* Constants.m */; };
+		AAF3C6BC18C7275F00B92618 /* Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = AAF3C6BB18C7275F00B92618 /* Utils.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,8 +57,14 @@
 		34BF44F618ACDB8800B66045 /* ConferenceTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ConferenceTests-Info.plist"; sourceTree = "<group>"; };
 		34BF44F818ACDB8800B66045 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		34BF44FA18ACDB8800B66045 /* ConferenceTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ConferenceTests.m; sourceTree = "<group>"; };
-		AAA6A47A18C5F4B500804407 /* MyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyViewController.h; sourceTree = "<group>"; };
-		AAA6A47B18C5F4B500804407 /* MyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyViewController.m; sourceTree = "<group>"; };
+		AAA6A47A18C5F4B500804407 /* AccueilViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccueilViewController.h; sourceTree = "<group>"; };
+		AAA6A47B18C5F4B500804407 /* AccueilViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccueilViewController.m; sourceTree = "<group>"; };
+		AAF3C6B418C720FA00B92618 /* Document.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Document.h; sourceTree = "<group>"; };
+		AAF3C6B518C720FA00B92618 /* Document.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Document.m; sourceTree = "<group>"; };
+		AAF3C6B718C724C000B92618 /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
+		AAF3C6B818C724C000B92618 /* Constants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Constants.m; sourceTree = "<group>"; };
+		AAF3C6BA18C7275F00B92618 /* Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Utils.h; sourceTree = "<group>"; };
+		AAF3C6BB18C7275F00B92618 /* Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Utils.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,10 +129,16 @@
 				34BF44E118ACDB8700B66045 /* Main.storyboard */,
 				34BF44E418ACDB8700B66045 /* ViewController.h */,
 				34BF44E518ACDB8700B66045 /* ViewController.m */,
-				AAA6A47A18C5F4B500804407 /* MyViewController.h */,
-				AAA6A47B18C5F4B500804407 /* MyViewController.m */,
+				AAA6A47A18C5F4B500804407 /* AccueilViewController.h */,
+				AAF3C6B418C720FA00B92618 /* Document.h */,
+				AAF3C6B518C720FA00B92618 /* Document.m */,
+				AAA6A47B18C5F4B500804407 /* AccueilViewController.m */,
 				34BF44E718ACDB8800B66045 /* Images.xcassets */,
 				34BF44D618ACDB8700B66045 /* Supporting Files */,
+				AAF3C6B718C724C000B92618 /* Constants.h */,
+				AAF3C6B818C724C000B92618 /* Constants.m */,
+				AAF3C6BA18C7275F00B92618 /* Utils.h */,
+				AAF3C6BB18C7275F00B92618 /* Utils.m */,
 			);
 			path = Conference;
 			sourceTree = "<group>";
@@ -256,8 +271,11 @@
 			files = (
 				34BF44E618ACDB8700B66045 /* ViewController.m in Sources */,
 				34BF44E018ACDB8700B66045 /* AppDelegate.m in Sources */,
-				AAA6A47C18C5F4B500804407 /* MyViewController.m in Sources */,
+				AAA6A47C18C5F4B500804407 /* AccueilViewController.m in Sources */,
+				AAF3C6B618C720FA00B92618 /* Document.m in Sources */,
 				34BF44DC18ACDB8700B66045 /* main.m in Sources */,
+				AAF3C6BC18C7275F00B92618 /* Utils.m in Sources */,
+				AAF3C6B918C724C000B92618 /* Constants.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

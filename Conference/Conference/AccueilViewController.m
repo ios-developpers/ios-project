@@ -6,14 +6,17 @@
 //  Copyright (c) 2014 ios-developpers. All rights reserved.
 //
 
-#import "MyViewController.h"
+#import "AccueilViewController.h"
+#import "Utils.h"
+#import "Constants.h"
 
-@interface MyViewController ()
-- (IBAction)addSalonAction:(UIBarButtonItem *)sender;
+@interface AccueilViewController ()
+
+- (IBAction)addSalonListener:(UIBarButtonItem *)sender;
 
 @end
 
-@implementation MyViewController
+@implementation AccueilViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -38,8 +41,9 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (IBAction)addSalonAction:(UIBarButtonItem *)sender
+- (IBAction)addSalonListener:(UIBarButtonItem *)sender
 {
-    NSLog(@"%@", @"coucou keke");
+    NSLog(@"%@", [Utils concatenateString:LogListener withString:@" Add Salon in Accueil View"]);
 }
+
 @end

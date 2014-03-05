@@ -4,10 +4,10 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
     </dependencies>
     <scenes>
-        <!--My View Controller-->
+        <!--Accueil View Controller-->
         <scene sceneID="rif-ua-9AZ">
             <objects>
-                <viewController id="Q5r-Gv-t4h" customClass="MyViewController" sceneMemberID="viewController">
+                <viewController id="Q5r-Gv-t4h" customClass="AccueilViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Lxp-Nd-9uL"/>
                         <viewControllerLayoutGuide type="bottom" id="Y19-8e-Pnq"/>
@@ -24,7 +24,7 @@
                                         <barButtonItem key="leftBarButtonItem" systemItem="organize" id="szF-wD-67v"/>
                                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="3yW-jo-ygi">
                                             <connections>
-                                                <action selector="addSalonAction:" destination="Q5r-Gv-t4h" id="X3F-AY-p9y"/>
+                                                <action selector="addSalonListener:" destination="Q5r-Gv-t4h" id="VtI-sA-cSy"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
@@ -56,9 +56,6 @@
                     </view>
                     <nil key="simulatedStatusBarMetrics"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
-                    <connections>
-                        <outlet property="addSalon" destination="3yW-jo-ygi" id="t8F-cv-26Z"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2mX-UZ-2br" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
