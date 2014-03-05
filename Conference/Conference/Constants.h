@@ -11,5 +11,6 @@
 @interface Constants : NSObject
 
 extern NSString * const LogListener;
+extern NSString * const LogConstructor;
 
 @end

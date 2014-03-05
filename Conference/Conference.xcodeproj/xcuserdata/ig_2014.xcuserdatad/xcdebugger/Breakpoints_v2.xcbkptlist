@@ -9,14 +9,14 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Conference/Document.m"
-            timestampString = "415705436.734919"
+            filePath = "Conference/Salon.h"
+            timestampString = "415708345.821457"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "28"
-            endingLineNumber = "28"
-            landmarkName = "-initWithName:andUrl:"
-            landmarkType = "5">
+            startingLineNumber = "18"
+            endingLineNumber = "18"
+            landmarkName = "-initWithName:andAdress:andDate:"
+            landmarkType = "4">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

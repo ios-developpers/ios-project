@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface AccueilViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
-
-@property(strong,nonatomic)NSArray *list;
+@interface AccueilViewController : UIViewController
 
 @end

@@ -7,6 +7,8 @@
 //
 
 #import "Document.h"
+#import "Utils.h"
+#import "Constants.h"
 
 @implementation Document
 
@@ -23,6 +25,8 @@
         self->name = _name;
         self->url = _url;
     }
+    
+    NSLog(@"%@", [Utils concatenateString:LogConstructor withString:@" Document"]);
     
     return self;
 }

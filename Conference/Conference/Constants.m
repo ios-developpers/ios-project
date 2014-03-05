@@ -11,5 +11,6 @@
 @implementation Constants
 
 NSString * const LogListener = @"Action perfored on";
+NSString * const LogConstructor = @"New instance of";
 
 @end
