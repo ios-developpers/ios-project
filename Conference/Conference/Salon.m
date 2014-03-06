@@ -27,6 +27,8 @@
         self->date = _date;
     }
     
+    self->pools = nil;
+    
     NSLog(@"%@", [Utils concatenateString:LogConstructor withString:@" Salon"]);
     
     return self;

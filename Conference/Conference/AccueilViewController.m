@@ -30,7 +30,6 @@
     NSLog(@"%@", [Utils concatenateString:LogLoaded withString:@" Accueil View Controller"]);
     
     self->salons = [[NSMutableArray alloc] init];
-    self->currentSegue = nil;
 }
 
 - (void)didReceiveMemoryWarning

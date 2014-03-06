@@ -38,10 +38,26 @@
     }
 }
 
-//TODO
 +(BOOL)removeSalonAtIndex:(NSUInteger)index
 {
-    return NO;
+    NSMutableArray *salons = [self getListeSalons];
+    NSUInteger size = [salons count];
+    
+    [salons removeObjectAtIndex:index];
+    
+    if ([salons count] < size)
+    {
+        return YES;
+    }
+    else
+    {
+        return NO;
+    }
+}
+
++(NSUInteger) count
+{
+    return [[self getListeSalons] count];
 }
 
 @end

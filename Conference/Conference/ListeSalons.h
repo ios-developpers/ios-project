@@ -17,5 +17,6 @@
 +(NSMutableArray *) getListeSalons;
 +(BOOL) addSalon: (Salon *)salon;
 +(BOOL) removeSalonAtIndex: (NSUInteger)index;
++(NSUInteger) count;
 
 @end

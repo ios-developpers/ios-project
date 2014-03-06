@@ -10,6 +10,7 @@
 #import "Utils.h"
 #import "Constants.h"
 #import "Salon.h"
+#import "ListeSalons.h"
 
 @implementation SalonPopoverViewController
 
@@ -50,7 +51,9 @@
     // insert control of strings here
     
     Salon *salon = [[Salon alloc] initWithName:name andAdress:lieu andDate:date];
-    //[self->salons addObject:salon];
+    [ListeSalons addSalon:salon];
+    
+    // close popover
 }
 
 @end
