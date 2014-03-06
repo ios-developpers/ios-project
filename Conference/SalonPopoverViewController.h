@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SalonPopoverViewController : UIPopoverController
+@interface SalonPopoverViewController : UIViewController
 {
 
 }

@@ -12,6 +12,7 @@
 #import "Document.h"
 #import "Salon.h"
 #import "ListeSalons.h"
+#import "SalonPopoverViewController.h"
 
 @implementation AccueilViewController
 
@@ -25,6 +26,9 @@
         // Custom initialization
     }
     return self;
+}
+- (IBAction)dtjthj:(id)sender {
+    NSLog(@"%@", [Utils concatenateString:LogLoaded withString:@" srtighusoiugbsgiuv"]);
 }
 
 - (void)viewDidLoad
@@ -73,7 +77,6 @@
     }
     
     Salon *salon = [[ListeSalons getListeSalons] objectAtIndex:[indexPath row]];
-    NSLog(@"%@", salon.getName);
     
     cell.textLabel.text = [salon getName];
     

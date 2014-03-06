@@ -52,7 +52,8 @@
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="I7u-dW-H6b">
                             <connections>
-                                <segue destination="abH-Sx-10s" kind="popover" identifier="addSalonPopover" popoverAnchorBarButtonItem="I7u-dW-H6b" id="Tgj-tM-aXW">
+                                <action selector="dtjthj:" destination="Q5r-Gv-t4h" id="7YJ-F0-Pvb"/>
+                                <segue destination="abH-Sx-10s" kind="popover" popoverAnchorBarButtonItem="I7u-dW-H6b" id="31L-DV-ejq">
                                     <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
                                 </segue>
                             </connections>
