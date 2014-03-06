@@ -8,15 +8,20 @@
 
 #import <Foundation/Foundation.h>
 #import "Salon.h"
+#import "AccueilViewController.h"
 
 @interface ListeSalons : NSObject
 {
     
 }
 
++(AccueilViewController *) accueil;
+
 +(NSMutableArray *) getListeSalons;
++(NSArray *)getListeSalonsNotMutable;
 +(BOOL) addSalon: (Salon *)salon;
 +(BOOL) removeSalonAtIndex: (NSUInteger)index;
 +(NSUInteger) count;
++(void) addObserver: (UIViewController *)controller;
 
 @end

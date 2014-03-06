@@ -8,7 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SalonPopoverViewController : UIViewController
+@interface SalonPopoverViewController : UIPopoverController
+{
+
+}
 
 @property (strong, nonatomic) IBOutlet UITextField *nameSalon;
 @property (strong, nonatomic) IBOutlet UITextField *lieuSalon;

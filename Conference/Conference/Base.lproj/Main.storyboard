@@ -34,15 +34,11 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" id="FoT-JY-0mn">
-                                        <rect key="frame" x="0.0" y="72" width="1024" height="50"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="FoT-JY-0mn" id="jJ8-Gx-lG4">
-                                            <rect key="frame" x="0.0" y="0.0" width="1024" height="49"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="Q5r-Gv-t4h" id="76D-36-1P0"/>
+                                    <outlet property="delegate" destination="Q5r-Gv-t4h" id="foP-1v-bYG"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -56,7 +52,6 @@
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="I7u-dW-H6b">
                             <connections>
-                                <action selector="addSalonListener:" destination="Q5r-Gv-t4h" id="H6I-65-Gs6"/>
                                 <segue destination="abH-Sx-10s" kind="popover" identifier="addSalonPopover" popoverAnchorBarButtonItem="I7u-dW-H6b" id="Tgj-tM-aXW">
                                     <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
                                 </segue>
@@ -64,6 +59,9 @@
                         </barButtonItem>
                     </navigationItem>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <connections>
+                        <outlet property="tableViewSalon" destination="eKF-Jn-ocU" id="wZO-pO-J92"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2mX-UZ-2br" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -119,12 +117,10 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lP2-Mj-eUE">
-                                <rect key="frame" x="128" y="440" width="64" height="30"/>
+                                <rect key="frame" x="122" y="440" width="76" height="22"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
-                                <state key="normal" title="Ajouter">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                <state key="normal" title="Ajouter"/>
                                 <connections>
                                     <action selector="newSalonListener:" destination="abH-Sx-10s" eventType="touchUpInside" id="VPe-B8-0wS"/>
                                 </connections>

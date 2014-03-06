@@ -8,13 +8,20 @@
 
 #import <UIKit/UIKit.h>
 
-@interface AccueilViewController : UIViewController
+@interface AccueilViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
 {
-    NSMutableArray *salons;
+    BOOL isPopoverSalonOpened;
 }
 
+@property (nonatomic, strong) NSArray *tableSalons;
+@property (strong, nonatomic) IBOutlet UITableView *tableViewSalon;
+
 //Listeners
-- (IBAction)addSalonListener:(UIBarButtonItem *)sender;
 - (IBAction)addDocumentListener:(UIBarButtonItem *)sender;
+
+- (void) forceReload;
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section;
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath;
 
 @end
