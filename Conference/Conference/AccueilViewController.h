@@ -7,16 +7,26 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "DocumentPopoverViewController.h"
 
-@interface AccueilViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
+@interface AccueilViewController : UIViewController <UITableViewDelegate, UITableViewDataSource,UIPopoverControllerDelegate>
 {
-    BOOL isPopoverSalonOpened;
+    UIPopoverController *popOverController;
+    UIPickerView *categoryPicker;
+    UIToolbar *pickerToolBar;
+    NSMutableArray *arrayOfCategories;
 }
+
+@property (strong, nonatomic) IBOutlet UIBarButtonItem *buttonDocument;
 
 @property (nonatomic, strong) NSArray *tableSalons;
 @property (strong, nonatomic) IBOutlet UITableView *tableViewSalon;
 
+@property (nonatomic, strong) DocumentPopoverViewController *docView;
+@property (nonatomic, strong) UIPopoverController *docPopover;
+
 //Listeners
+
 - (IBAction)addDocumentListener:(UIBarButtonItem *)sender;
 
 - (void) forceReload;

@@ -23,6 +23,7 @@
 		34BF44FB18ACDB8800B66045 /* ConferenceTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 34BF44FA18ACDB8800B66045 /* ConferenceTests.m */; };
 		AA574EBF18C8922F00C25555 /* SalonPopoverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AA574EBE18C8922F00C25555 /* SalonPopoverViewController.m */; };
 		AA574EC318C893D300C25555 /* ListeSalons.m in Sources */ = {isa = PBXBuildFile; fileRef = AA574EC218C893D300C25555 /* ListeSalons.m */; };
+		AA63806918C8F60800B95C07 /* DocumentPopoverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AA63806818C8F60800B95C07 /* DocumentPopoverViewController.m */; };
 		AAA6A47C18C5F4B500804407 /* AccueilViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AAA6A47B18C5F4B500804407 /* AccueilViewController.m */; };
 		AAF3C6B618C720FA00B92618 /* Document.m in Sources */ = {isa = PBXBuildFile; fileRef = AAF3C6B518C720FA00B92618 /* Document.m */; };
 		AAF3C6B918C724C000B92618 /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = AAF3C6B818C724C000B92618 /* Constants.m */; };
@@ -65,6 +66,8 @@
 		AA574EBE18C8922F00C25555 /* SalonPopoverViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SalonPopoverViewController.m; path = ../SalonPopoverViewController.m; sourceTree = "<group>"; };
 		AA574EC118C893D300C25555 /* ListeSalons.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListeSalons.h; sourceTree = "<group>"; };
 		AA574EC218C893D300C25555 /* ListeSalons.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListeSalons.m; sourceTree = "<group>"; };
+		AA63806718C8F60800B95C07 /* DocumentPopoverViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DocumentPopoverViewController.h; sourceTree = "<group>"; };
+		AA63806818C8F60800B95C07 /* DocumentPopoverViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DocumentPopoverViewController.m; sourceTree = "<group>"; };
 		AAA6A47A18C5F4B500804407 /* AccueilViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccueilViewController.h; sourceTree = "<group>"; };
 		AAA6A47B18C5F4B500804407 /* AccueilViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccueilViewController.m; sourceTree = "<group>"; };
 		AAF3C6B418C720FA00B92618 /* Document.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Document.h; sourceTree = "<group>"; };
@@ -185,6 +188,8 @@
 		AA574EC018C8937C00C25555 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				AA63806718C8F60800B95C07 /* DocumentPopoverViewController.h */,
+				AA63806818C8F60800B95C07 /* DocumentPopoverViewController.m */,
 				AAA6A47A18C5F4B500804407 /* AccueilViewController.h */,
 				AAA6A47B18C5F4B500804407 /* AccueilViewController.m */,
 				AA574EBD18C8922F00C25555 /* SalonPopoverViewController.h */,
@@ -312,6 +317,7 @@
 				34BF44DC18ACDB8700B66045 /* main.m in Sources */,
 				AA574EC318C893D300C25555 /* ListeSalons.m in Sources */,
 				AA574EBF18C8922F00C25555 /* SalonPopoverViewController.m in Sources */,
+				AA63806918C8F60800B95C07 /* DocumentPopoverViewController.m in Sources */,
 				AAF3C6BC18C7275F00B92618 /* Utils.m in Sources */,
 				AAF3C6B918C724C000B92618 /* Constants.m in Sources */,
 				AAF3C6BF18C7342000B92618 /* Salon.m in Sources */,

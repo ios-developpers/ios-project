@@ -13,10 +13,13 @@
 #import "Salon.h"
 #import "ListeSalons.h"
 #import "SalonPopoverViewController.h"
+#import "DocumentPopoverViewController.h"
 
 @implementation AccueilViewController
 
 @synthesize tableViewSalon;
+@synthesize docView;
+@synthesize docPopover;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -24,20 +27,18 @@
     if (self)
     {
         // Custom initialization
+        
     }
     return self;
 }
-- (IBAction)dtjthj:(id)sender {
-    NSLog(@"%@", [Utils concatenateString:LogLoaded withString:@" srtighusoiugbsgiuv"]);
-}
+
 
 - (void)viewDidLoad
 {    
     [super viewDidLoad];
     NSLog(@"%@", [Utils concatenateString:LogLoaded withString:@" Accueil View Controller"]);
     
-    self->isPopoverSalonOpened = NO;
-    
+    //self->isPopoverSalonOpened = NO;
     [ListeSalons addObserver:self];
 }
 
@@ -54,7 +55,23 @@
 
 - (IBAction)addDocumentListener:(UIBarButtonItem *)sender
 {
-    NSLog(@"%@", [Utils concatenateString:LogListener withString:@" Add Document in Accueil View"]);
+    
+    if (docView == nil) {
+        //Create the ColorPickerViewController.
+        docView = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"DocumentPopoverID"];
+       // docView.delegate=self;
+    }
+    
+    if (docPopover == nil) {
+        //The color picker popover is not showing. Show it.
+        docPopover = [[UIPopoverController alloc] initWithContentViewController:docView];
+        [docPopover presentPopoverFromBarButtonItem:(UIBarButtonItem *)sender
+                                    permittedArrowDirections:UIPopoverArrowDirectionUp animated:YES];
+    } else {
+        //The color picker popover is showing. Hide it.
+        [docPopover dismissPopoverAnimated:YES];
+        docPopover = nil;
+    }
 }
 
 /*
