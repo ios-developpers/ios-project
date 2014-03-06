@@ -1,2 +1,10 @@
 Swipe on salon view -> send mail
 Swipe To Delete on table view row
+
+In accueil
+	Nice popover for salon : once popover at a time, dismiss on add
+	Popover on documents:
+	1) scale 1 -> show documents and add button
+	2) scale 2 -> add document information
+
+TODO entirely : salon view
