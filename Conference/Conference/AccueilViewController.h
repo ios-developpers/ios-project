@@ -10,7 +10,14 @@
 
 @interface AccueilViewController : UIViewController
 
+@property (strong, nonatomic) IBOutlet UITextField *nameSalon;
+@property (strong, nonatomic) IBOutlet UITextField *lieuSalon;
+@property (strong, nonatomic) IBOutlet UIDatePicker *dateSalon;
+
+
+
 - (IBAction)addSalonListener:(UIBarButtonItem *)sender;
 - (IBAction)addDocumentListener:(UIBarButtonItem *)sender;
+- (IBAction)newSalonListener:(UIButton *)sender;
 
 @end

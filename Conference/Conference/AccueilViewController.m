@@ -13,6 +13,10 @@
 
 @implementation AccueilViewController
 
+@synthesize nameSalon;
+@synthesize lieuSalon;
+@synthesize dateSalon;
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -43,6 +47,12 @@
 - (IBAction)addDocumentListener:(UIBarButtonItem *)sender
 {
     NSLog(@"%@", [Utils concatenateString:LogListener withString:@" Add Document in Accueil View"]);
+}
+
+- (IBAction)newSalonListener:(UIButton *)sender
+{
+    NSLog(@"%@", [Utils concatenateString:LogListener withString:@" New Salon in Popover Salon"]);
+    
 }
 
 @end
