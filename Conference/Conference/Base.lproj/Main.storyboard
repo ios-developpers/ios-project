@@ -69,10 +69,10 @@
             </objects>
             <point key="canvasLocation" x="1061" y="-1567"/>
         </scene>
-        <!--Accueil View Controller-->
+        <!--Salon Popover View Controller-->
         <scene sceneID="Xjw-tM-5e9">
             <objects>
-                <viewController id="abH-Sx-10s" customClass="AccueilViewController" sceneMemberID="viewController">
+                <viewController id="abH-Sx-10s" customClass="SalonPopoverViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="JSW-Fj-GQF"/>
                         <viewControllerLayoutGuide type="bottom" id="Khq-IT-N4r"/>
@@ -125,9 +125,6 @@
                                 <state key="normal" title="Ajouter">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <connections>
-                                    <action selector="newSalonListener:" destination="abH-Sx-10s" eventType="touchUpInside" id="mib-jI-PXB"/>
-                                </connections>
                             </button>
                             <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="cO2-Ra-FhR">
                                 <rect key="frame" x="20" y="216" width="280" height="216"/>
@@ -171,7 +168,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tx5-kt-awz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2341" y="-2313"/>
+            <point key="canvasLocation" x="2367" y="-2257"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="qqQ-Ja-lQ7">

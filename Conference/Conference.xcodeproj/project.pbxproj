@@ -21,6 +21,8 @@
 		34BF44F118ACDB8800B66045 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 34BF44D318ACDB8700B66045 /* UIKit.framework */; };
 		34BF44F918ACDB8800B66045 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 34BF44F718ACDB8800B66045 /* InfoPlist.strings */; };
 		34BF44FB18ACDB8800B66045 /* ConferenceTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 34BF44FA18ACDB8800B66045 /* ConferenceTests.m */; };
+		AA574EBF18C8922F00C25555 /* SalonPopoverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AA574EBE18C8922F00C25555 /* SalonPopoverViewController.m */; };
+		AA574EC318C893D300C25555 /* ListeSalons.m in Sources */ = {isa = PBXBuildFile; fileRef = AA574EC218C893D300C25555 /* ListeSalons.m */; };
 		AAA6A47C18C5F4B500804407 /* AccueilViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AAA6A47B18C5F4B500804407 /* AccueilViewController.m */; };
 		AAF3C6B618C720FA00B92618 /* Document.m in Sources */ = {isa = PBXBuildFile; fileRef = AAF3C6B518C720FA00B92618 /* Document.m */; };
 		AAF3C6B918C724C000B92618 /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = AAF3C6B818C724C000B92618 /* Constants.m */; };
@@ -59,6 +61,10 @@
 		34BF44F618ACDB8800B66045 /* ConferenceTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ConferenceTests-Info.plist"; sourceTree = "<group>"; };
 		34BF44F818ACDB8800B66045 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		34BF44FA18ACDB8800B66045 /* ConferenceTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ConferenceTests.m; sourceTree = "<group>"; };
+		AA574EBD18C8922F00C25555 /* SalonPopoverViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SalonPopoverViewController.h; path = ../SalonPopoverViewController.h; sourceTree = "<group>"; };
+		AA574EBE18C8922F00C25555 /* SalonPopoverViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SalonPopoverViewController.m; path = ../SalonPopoverViewController.m; sourceTree = "<group>"; };
+		AA574EC118C893D300C25555 /* ListeSalons.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListeSalons.h; sourceTree = "<group>"; };
+		AA574EC218C893D300C25555 /* ListeSalons.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListeSalons.m; sourceTree = "<group>"; };
 		AAA6A47A18C5F4B500804407 /* AccueilViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccueilViewController.h; sourceTree = "<group>"; };
 		AAA6A47B18C5F4B500804407 /* AccueilViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccueilViewController.m; sourceTree = "<group>"; };
 		AAF3C6B418C720FA00B92618 /* Document.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Document.h; sourceTree = "<group>"; };
@@ -130,14 +136,13 @@
 		34BF44D518ACDB8700B66045 /* Conference */ = {
 			isa = PBXGroup;
 			children = (
+				AA574EC018C8937C00C25555 /* Controller */,
 				AAF3C6C418C737DE00B92618 /* Model */,
 				34BF44DE18ACDB8700B66045 /* AppDelegate.h */,
 				34BF44DF18ACDB8700B66045 /* AppDelegate.m */,
 				34BF44E118ACDB8700B66045 /* Main.storyboard */,
 				34BF44E418ACDB8700B66045 /* ViewController.h */,
 				34BF44E518ACDB8700B66045 /* ViewController.m */,
-				AAA6A47A18C5F4B500804407 /* AccueilViewController.h */,
-				AAA6A47B18C5F4B500804407 /* AccueilViewController.m */,
 				34BF44E718ACDB8800B66045 /* Images.xcassets */,
 				34BF44D618ACDB8700B66045 /* Supporting Files */,
 				AAF3C6B718C724C000B92618 /* Constants.h */,
@@ -177,6 +182,17 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		AA574EC018C8937C00C25555 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				AAA6A47A18C5F4B500804407 /* AccueilViewController.h */,
+				AAA6A47B18C5F4B500804407 /* AccueilViewController.m */,
+				AA574EBD18C8922F00C25555 /* SalonPopoverViewController.h */,
+				AA574EBE18C8922F00C25555 /* SalonPopoverViewController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
 		AAF3C6C418C737DE00B92618 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -186,6 +202,8 @@
 				AAF3C6BE18C7342000B92618 /* Salon.m */,
 				AAF3C6C018C737CD00B92618 /* Pool.h */,
 				AAF3C6C118C737CD00B92618 /* Pool.m */,
+				AA574EC118C893D300C25555 /* ListeSalons.h */,
+				AA574EC218C893D300C25555 /* ListeSalons.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -292,6 +310,8 @@
 				AAA6A47C18C5F4B500804407 /* AccueilViewController.m in Sources */,
 				AAF3C6B618C720FA00B92618 /* Document.m in Sources */,
 				34BF44DC18ACDB8700B66045 /* main.m in Sources */,
+				AA574EC318C893D300C25555 /* ListeSalons.m in Sources */,
+				AA574EBF18C8922F00C25555 /* SalonPopoverViewController.m in Sources */,
 				AAF3C6BC18C7275F00B92618 /* Utils.m in Sources */,
 				AAF3C6B918C724C000B92618 /* Constants.m in Sources */,
 				AAF3C6BF18C7342000B92618 /* Salon.m in Sources */,

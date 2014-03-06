@@ -10,12 +10,9 @@
 #import "Utils.h"
 #import "Constants.h"
 #import "Document.h"
+#import "Salon.h"
 
 @implementation AccueilViewController
-
-@synthesize nameSalon;
-@synthesize lieuSalon;
-@synthesize dateSalon;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -31,6 +28,9 @@
 {
     [super viewDidLoad];
     NSLog(@"%@", [Utils concatenateString:LogLoaded withString:@" Accueil View Controller"]);
+    
+    self->salons = [[NSMutableArray alloc] init];
+    self->currentSegue = nil;
 }
 
 - (void)didReceiveMemoryWarning
@@ -47,12 +47,6 @@
 - (IBAction)addDocumentListener:(UIBarButtonItem *)sender
 {
     NSLog(@"%@", [Utils concatenateString:LogListener withString:@" Add Document in Accueil View"]);
-}
-
-- (IBAction)newSalonListener:(UIButton *)sender
-{
-    NSLog(@"%@", [Utils concatenateString:LogListener withString:@" New Salon in Popover Salon"]);
-    
 }
 
 @end

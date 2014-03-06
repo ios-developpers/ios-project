@@ -9,15 +9,12 @@
 #import <UIKit/UIKit.h>
 
 @interface AccueilViewController : UIViewController
+{
+    NSMutableArray *salons;
+}
 
-@property (strong, nonatomic) IBOutlet UITextField *nameSalon;
-@property (strong, nonatomic) IBOutlet UITextField *lieuSalon;
-@property (strong, nonatomic) IBOutlet UIDatePicker *dateSalon;
-
-
-
+//Listeners
 - (IBAction)addSalonListener:(UIBarButtonItem *)sender;
 - (IBAction)addDocumentListener:(UIBarButtonItem *)sender;
-- (IBAction)newSalonListener:(UIButton *)sender;
 
 @end
