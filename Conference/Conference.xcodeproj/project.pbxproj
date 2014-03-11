@@ -21,6 +21,7 @@
 		34BF44F118ACDB8800B66045 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 34BF44D318ACDB8700B66045 /* UIKit.framework */; };
 		34BF44F918ACDB8800B66045 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 34BF44F718ACDB8800B66045 /* InfoPlist.strings */; };
 		34BF44FB18ACDB8800B66045 /* ConferenceTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 34BF44FA18ACDB8800B66045 /* ConferenceTests.m */; };
+		AA47749318CF55370074BA46 /* TODO in Resources */ = {isa = PBXBuildFile; fileRef = AA47749218CF55370074BA46 /* TODO */; };
 		AA574EBF18C8922F00C25555 /* SalonPopoverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AA574EBE18C8922F00C25555 /* SalonPopoverViewController.m */; };
 		AA574EC318C893D300C25555 /* ListeSalons.m in Sources */ = {isa = PBXBuildFile; fileRef = AA574EC218C893D300C25555 /* ListeSalons.m */; };
 		AA63806918C8F60800B95C07 /* DocumentPopoverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AA63806818C8F60800B95C07 /* DocumentPopoverViewController.m */; };
@@ -62,6 +63,7 @@
 		34BF44F618ACDB8800B66045 /* ConferenceTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ConferenceTests-Info.plist"; sourceTree = "<group>"; };
 		34BF44F818ACDB8800B66045 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		34BF44FA18ACDB8800B66045 /* ConferenceTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ConferenceTests.m; sourceTree = "<group>"; };
+		AA47749218CF55370074BA46 /* TODO */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = TODO; sourceTree = "<group>"; };
 		AA574EBD18C8922F00C25555 /* SalonPopoverViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SalonPopoverViewController.h; path = ../SalonPopoverViewController.h; sourceTree = "<group>"; };
 		AA574EBE18C8922F00C25555 /* SalonPopoverViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SalonPopoverViewController.m; path = ../SalonPopoverViewController.m; sourceTree = "<group>"; };
 		AA574EC118C893D300C25555 /* ListeSalons.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListeSalons.h; sourceTree = "<group>"; };
@@ -139,19 +141,15 @@
 		34BF44D518ACDB8700B66045 /* Conference */ = {
 			isa = PBXGroup;
 			children = (
+				AA47749218CF55370074BA46 /* TODO */,
+				34BF44D618ACDB8700B66045 /* Supporting Files */,
+				AA47749418CF56090074BA46 /* Utils */,
 				AA574EC018C8937C00C25555 /* Controller */,
 				AAF3C6C418C737DE00B92618 /* Model */,
 				34BF44DE18ACDB8700B66045 /* AppDelegate.h */,
 				34BF44DF18ACDB8700B66045 /* AppDelegate.m */,
 				34BF44E118ACDB8700B66045 /* Main.storyboard */,
-				34BF44E418ACDB8700B66045 /* ViewController.h */,
-				34BF44E518ACDB8700B66045 /* ViewController.m */,
 				34BF44E718ACDB8800B66045 /* Images.xcassets */,
-				34BF44D618ACDB8700B66045 /* Supporting Files */,
-				AAF3C6B718C724C000B92618 /* Constants.h */,
-				AAF3C6B818C724C000B92618 /* Constants.m */,
-				AAF3C6BA18C7275F00B92618 /* Utils.h */,
-				AAF3C6BB18C7275F00B92618 /* Utils.m */,
 			);
 			path = Conference;
 			sourceTree = "<group>";
@@ -185,9 +183,22 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		AA47749418CF56090074BA46 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				AAF3C6B718C724C000B92618 /* Constants.h */,
+				AAF3C6B818C724C000B92618 /* Constants.m */,
+				AAF3C6BA18C7275F00B92618 /* Utils.h */,
+				AAF3C6BB18C7275F00B92618 /* Utils.m */,
+			);
+			name = Utils;
+			sourceTree = "<group>";
+		};
 		AA574EC018C8937C00C25555 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				34BF44E518ACDB8700B66045 /* ViewController.m */,
+				34BF44E418ACDB8700B66045 /* ViewController.h */,
 				AA63806718C8F60800B95C07 /* DocumentPopoverViewController.h */,
 				AA63806818C8F60800B95C07 /* DocumentPopoverViewController.m */,
 				AAA6A47A18C5F4B500804407 /* AccueilViewController.h */,
@@ -291,6 +302,7 @@
 			files = (
 				34BF44E818ACDB8800B66045 /* Images.xcassets in Resources */,
 				34BF44DA18ACDB8700B66045 /* InfoPlist.strings in Resources */,
+				AA47749318CF55370074BA46 /* TODO in Resources */,
 				34BF44E318ACDB8700B66045 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

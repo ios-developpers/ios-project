@@ -88,6 +88,8 @@
     static NSString *MyIdentifier = @"Cell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:MyIdentifier];
     
+    cell.backgroundColor = [UIColor colorWithRed:246.0f/255.0f green:246.0f/255.0f blue:246.0f/255.0f alpha:1.0];
+    
     if (cell == nil)
     {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault  reuseIdentifier:MyIdentifier];
@@ -96,8 +98,23 @@
     Salon *salon = [[ListeSalons getListeSalons] objectAtIndex:[indexPath row]];
     
     cell.textLabel.text = [salon getName];
+    cell.detailTextLabel.text = [salon getAdress];
     
     return cell;
 }
 
+- (void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    [self performSegueWithIdentifier:@"GoToSalonDetail" sender:[self.tableViewSalon cellForRowAtIndexPath:indexPath]];
+}
+
+/*
+- (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if([segue.identifier isEqualToString:@"GoToSalonDetail"])
+    {
+        SplitView *destination = [segue destinationViewController];
+    }
+}
+*/
 @end

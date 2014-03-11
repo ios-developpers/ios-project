@@ -19,7 +19,7 @@ static AccueilViewController *accueil;
     
     dispatch_once(&onceToken, ^{
         salons = [[NSMutableArray alloc] init];
-        [salons addObject: [[Salon alloc] initWithName:@"nameeeee" andAdress:@"adresssss" andDate:nil]];
+        [salons addObject: [[Salon alloc] initWithName:@"Studirama" andAdress:@"Montpellier" andDate:nil]];
 
     });
     return salons;
