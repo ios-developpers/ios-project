@@ -8,6 +8,7 @@
 
 #import "DocumentPopoverViewController.h"
 #import "Utils.h"
+#import "Constants.h"
 
 @implementation DocumentPopoverViewController
 
@@ -26,7 +27,7 @@
     return self;
 }
 - (IBAction)addDocument:(id)sender {
-     NSLog(@"%@", @" Ajout du document");
+     NSLog(@"%@", [Utils concatenateString:LogListener withString:@" Add Document in Document Popover"]);
 }
 
 - (id)initWithNibName:(NSString *)nibName bundle:(NSBundle *)bundle

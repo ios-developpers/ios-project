@@ -9,46 +9,30 @@
 #import "SalonPopoverViewController.h"
 #import "Utils.h"
 #import "Constants.h"
-#import "Salon.h"
-#import "ListeSalons.h"
 
 @implementation SalonPopoverViewController
 
-@synthesize nameSalon;
-@synthesize lieuSalon;
-@synthesize dateSalon;
+@synthesize champSalon;
+@synthesize champLieu;
+@synthesize champDate;
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+- (id)init
 {
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
+    self = [super initWithNibName:NULL bundle:NULL];
+    if (self != nil)
+    {
+        // Further initialization if needed
         
     }
     return self;
 }
-
-- (void)viewDidLoad
-{
-    [super viewDidLoad];
-	// Do any additional setup after loading the view.
+- (IBAction)addSalon:(id)sender {
+    NSLog(@"%@", [Utils concatenateString:LogListener withString:@" Add Salon in Document Popover"]);
 }
 
-- (IBAction)newSalonListener:(UIButton *)sender
+- (id)initWithNibName:(NSString *)nibName bundle:(NSBundle *)bundle
 {
-    NSLog(@"%@", [Utils concatenateString:LogListener withString:@" New Salon in Popover Salon"]);
-    
-    NSString *name = [self->nameSalon text];
-    NSString *lieu = [self->lieuSalon text];
-    NSDate *date = [self->dateSalon date];
-    
-    // insert control of strings here
-    
-    Salon *salon = [[Salon alloc] initWithName:name andAdress:lieu andDate:date];
-    [ListeSalons addSalon:salon];
-    
-    // close popover
-    
+    NSAssert(NO, @"Initialize with -init");
+    return nil;
 }
-
 @end

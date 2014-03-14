@@ -18,12 +18,16 @@
 }
 
 @property (strong, nonatomic) IBOutlet UIBarButtonItem *buttonDocument;
+@property (strong, nonatomic) IBOutlet UIBarButtonItem *buttonSalon;
 
 @property (nonatomic, strong) NSArray *tableSalons;
 @property (strong, nonatomic) IBOutlet UITableView *tableViewSalon;
 
 @property (nonatomic, strong) DocumentPopoverViewController *docView;
 @property (nonatomic, strong) UIPopoverController *docPopover;
+
+@property (nonatomic, strong) DocumentPopoverViewController *salonView;
+@property (nonatomic, strong) UIPopoverController *salonPopover;
 
 //Listeners
 

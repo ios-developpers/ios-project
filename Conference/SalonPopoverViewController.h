@@ -8,15 +8,21 @@
 
 #import <UIKit/UIKit.h>
 
+@protocol SalonPopoverDelegate <NSObject>
+@required
+- (IBAction)addSalon:(id)sender ;
+@end
+
 @interface SalonPopoverViewController : UIViewController
-{
 
-}
+@property (strong, nonatomic) IBOutlet UIView *ViewSalonPopover;
+@property (strong, nonatomic) IBOutlet UITextField *champSalon;
+@property (strong, nonatomic) IBOutlet UITextField *champLieu;
+@property (strong, nonatomic) IBOutlet UIDatePicker *champDate;
 
-@property (strong, nonatomic) IBOutlet UITextField *nameSalon;
-@property (strong, nonatomic) IBOutlet UITextField *lieuSalon;
-@property (strong, nonatomic) IBOutlet UIDatePicker *dateSalon;
+@property (nonatomic, weak) id<SalonPopoverDelegate> delegate;
 
-- (IBAction)newSalonListener:(UIButton *)sender;
-
+- (IBAction)addSalon:(id)sender ;
+- (id)init;
+- (id)initWithNibName:(NSString *)nibName bundle:(NSBundle *)bundle;
 @end

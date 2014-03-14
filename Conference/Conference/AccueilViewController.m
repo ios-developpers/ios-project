@@ -20,6 +20,8 @@
 @synthesize tableViewSalon;
 @synthesize docView;
 @synthesize docPopover;
+@synthesize salonView;
+@synthesize salonPopover;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -55,7 +57,7 @@
 
 - (IBAction)addDocumentListener:(UIBarButtonItem *)sender
 {
-    
+    NSLog(@"%@", [Utils concatenateString:LogListener withString:@" Add Document Listener"]);
     if (docView == nil) {
         //Create the ColorPickerViewController.
         docView = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"DocumentPopoverID"];
@@ -71,6 +73,27 @@
         //The color picker popover is showing. Hide it.
         [docPopover dismissPopoverAnimated:YES];
         docPopover = nil;
+    }
+}
+
+- (IBAction)addSalonListener:(UIBarButtonItem *)sender
+{
+    NSLog(@"%@", [Utils concatenateString:LogListener withString:@" Add Salon Listener"]);
+    if (salonView == nil) {
+        //Create the ColorPickerViewController.
+        salonView = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"SalonPopoverID"];
+        // docView.delegate=self;
+    }
+    
+    if (salonView == nil) {
+        //The color picker popover is not showing. Show it.
+        salonPopover = [[UIPopoverController alloc] initWithContentViewController:salonView];
+        [salonPopover presentPopoverFromBarButtonItem:(UIBarButtonItem *)sender
+                           permittedArrowDirections:UIPopoverArrowDirectionUp animated:YES];
+    } else {
+        //The color picker popover is showing. Hide it.
+        [salonPopover dismissPopoverAnimated:YES];
+        salonPopover = nil;
     }
 }
 
