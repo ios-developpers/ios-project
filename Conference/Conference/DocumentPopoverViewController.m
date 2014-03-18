@@ -7,9 +7,6 @@
 //
 
 #import "DocumentPopoverViewController.h"
-#import "Utils.h"
-#import "Constants.h"
-#import "Facade.h"
 
 @implementation DocumentPopoverViewController
 

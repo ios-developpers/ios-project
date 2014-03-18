@@ -8,6 +8,9 @@
 
 #import <UIKit/UIKit.h>
 #import "AccueilViewController.h"
+#import "Utils.h"
+#import "Constants.h"
+#import "Facade.h"
 
 @protocol DocumentPopoverDelegate <NSObject>
 @required
@@ -16,9 +19,10 @@
 
 @interface DocumentPopoverViewController : UIViewController
 {
-    AccueilViewController *accueil;
+    //AccueilViewController *accueil;
 }
 
+@property (strong, nonatomic) AccueilViewController *accueil;
 @property (strong, nonatomic) IBOutlet UIView *ViewDocumentPopover;
 @property (strong, nonatomic) IBOutlet UITextField *champNom;
 @property (strong, nonatomic) IBOutlet UITextField *champURL;

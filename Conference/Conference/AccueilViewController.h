@@ -7,7 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Utils.h"
+#import "Constants.h"
+#import "Document.h"
+#import "Salon.h"
+#import "SalonPopoverViewController.h"
 #import "DocumentPopoverViewController.h"
+#import "Facade.h"
 
 @interface AccueilViewController : UIViewController <UITableViewDelegate, UITableViewDataSource,UIPopoverControllerDelegate>
 {

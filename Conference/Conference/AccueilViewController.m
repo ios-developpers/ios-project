@@ -7,13 +7,6 @@
 //
 
 #import "AccueilViewController.h"
-#import "Utils.h"
-#import "Constants.h"
-#import "Document.h"
-#import "Salon.h"
-#import "SalonPopoverViewController.h"
-#import "DocumentPopoverViewController.h"
-#import "Facade.h"
 
 @implementation AccueilViewController
 
