@@ -11,9 +11,9 @@
 #import "Constants.h"
 #import "Document.h"
 #import "Salon.h"
-#import "ListeSalons.h"
 #import "SalonPopoverViewController.h"
 #import "DocumentPopoverViewController.h"
+#import "Facade.h"
 
 @implementation AccueilViewController
 
@@ -41,7 +41,6 @@
     NSLog(@"%@", [Utils concatenateString:LogLoaded withString:@" Accueil View Controller"]);
     
     //self->isPopoverSalonOpened = NO;
-    [ListeSalons addObserver:self];
 }
 
 -(void) forceReload
@@ -69,10 +68,18 @@
         docPopover = [[UIPopoverController alloc] initWithContentViewController:docView];
         [docPopover presentPopoverFromBarButtonItem:(UIBarButtonItem *)sender
                                     permittedArrowDirections:UIPopoverArrowDirectionUp animated:YES];
+        [docView setAccueil:self];
     } else {
         //The color picker popover is showing. Hide it.
         [docPopover dismissPopoverAnimated:YES];
         docPopover = nil;
+    }
+    
+    if (salonPopover != nil)
+    {
+        //The color picker popover is showing. Hide it.
+        [salonPopover dismissPopoverAnimated:YES];
+        salonPopover = nil;
     }
 }
 
@@ -85,15 +92,24 @@
         // docView.delegate=self;
     }
     
-    if (salonView == nil) {
+    if (salonPopover == nil) {
         //The color picker popover is not showing. Show it.
         salonPopover = [[UIPopoverController alloc] initWithContentViewController:salonView];
         [salonPopover presentPopoverFromBarButtonItem:(UIBarButtonItem *)sender
                            permittedArrowDirections:UIPopoverArrowDirectionUp animated:YES];
+
+        
     } else {
         //The color picker popover is showing. Hide it.
         [salonPopover dismissPopoverAnimated:YES];
         salonPopover = nil;
+    }
+    
+    if (docPopover != nil)
+    {
+        //The color picker popover is showing. Hide it.
+        [docPopover dismissPopoverAnimated:YES];
+        docPopover = nil;
     }
 }
 
@@ -103,7 +119,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return [ListeSalons count];
+    return [Facade countSalons];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -118,7 +134,7 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault  reuseIdentifier:MyIdentifier];
     }
     
-    Salon *salon = [[ListeSalons getListeSalons] objectAtIndex:[indexPath row]];
+    Salon *salon = [[Facade getListeSalons] objectAtIndex:[indexPath row]];
     
     cell.textLabel.text = [salon getName];
     cell.detailTextLabel.text = [salon getAdress];

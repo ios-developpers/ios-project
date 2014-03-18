@@ -15,4 +15,22 @@
     return [[NSArray arrayWithObjects:string1, string2, nil] componentsJoinedByString:@""];
 }
 
++(BOOL) isBlanck: (NSString *)string
+{
+    if (string == nil)
+    {
+        return YES;
+    }
+    
+    NSString *regex = @"[ ]*";
+    NSPredicate *test = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", regex];
+    
+    if ([test evaluateWithObject: string])
+    {
+        return YES;
+    }
+    
+    return NO;
+}
+
 @end

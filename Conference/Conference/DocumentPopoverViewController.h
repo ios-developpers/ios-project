@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "AccueilViewController.h"
 
 @protocol DocumentPopoverDelegate <NSObject>
 @required
@@ -14,6 +15,9 @@
 @end
 
 @interface DocumentPopoverViewController : UIViewController
+{
+    AccueilViewController *accueil;
+}
 
 @property (strong, nonatomic) IBOutlet UIView *ViewDocumentPopover;
 @property (strong, nonatomic) IBOutlet UITextField *champNom;
@@ -22,7 +26,8 @@
 
 @property (nonatomic, weak) id<DocumentPopoverDelegate> delegate;
 
-- (IBAction)addDocument:(id)sender ;
+- (IBAction)addDocument:(id)sender;
+- (void)setAccueil:(AccueilViewController *)newAccueil;
 - (id)init;
 - (id)initWithNibName:(NSString *)nibName bundle:(NSBundle *)bundle;
 @end

@@ -11,5 +11,6 @@
 @interface Utils : NSObject
 
 +(NSString *) concatenateString: (NSString *)string1 withString: (NSString *)string2;
++(BOOL) isBlanck: (NSString *)string;
 
 @end
