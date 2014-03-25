@@ -13,8 +13,8 @@ Git Config
 
 Config git on your computer
 
-	git config --global user.name vonVater
-	git config --global user.email thib.pere@gmail.com
+	git config --global user.name name
+	git config --global user.email email@email.fai
 
 
 Git Push & Pull
