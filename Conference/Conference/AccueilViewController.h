@@ -29,10 +29,10 @@
 @property (nonatomic, strong) NSArray *tableSalons;
 @property (strong, nonatomic) IBOutlet UITableView *tableViewSalon;
 
-@property (nonatomic, strong) DocumentPopoverViewController *docView;
+@property (nonatomic, strong) UIViewController *docView;
 @property (nonatomic, strong) UIPopoverController *docPopover;
 
-@property (nonatomic, strong) DocumentPopoverViewController *salonView;
+@property (nonatomic, strong) UIViewController *salonView;
 @property (nonatomic, strong) UIPopoverController *salonPopover;
 
 //Listeners

@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "AccueilViewController.h"
+//#import "AccueilViewController.h"
 #import "Utils.h"
 #import "Constants.h"
 #import "Facade.h"
@@ -17,13 +17,12 @@
 - (IBAction)addDocument:(id)sender ;
 @end
 
-@interface DocumentPopoverViewController : UIViewController
-{
-    //AccueilViewController *accueil;
-}
+@class AccueilViewController;
 
-@property (strong, nonatomic) AccueilViewController *accueil;
-@property (strong, nonatomic) IBOutlet UIView *ViewDocumentPopover;
+@interface DocumentPopoverViewController : UIViewController
+
+@property (strong, nonatomic) UIViewController *accueil;
+@property (strong, nonatomic) IBOutlet UIView *docPopover;
 @property (strong, nonatomic) IBOutlet UITextField *champNom;
 @property (strong, nonatomic) IBOutlet UITextField *champURL;
 @property (strong, nonatomic) IBOutlet UIPickerView *refProfil;
@@ -31,7 +30,7 @@
 @property (nonatomic, weak) id<DocumentPopoverDelegate> delegate;
 
 - (IBAction)addDocument:(id)sender;
-- (void)setAccueil:(AccueilViewController *)newAccueil;
+- (void)setVAccueil:(AccueilViewController *)newAccueil;
 - (id)init;
 - (id)initWithNibName:(NSString *)nibName bundle:(NSBundle *)bundle;
 @end

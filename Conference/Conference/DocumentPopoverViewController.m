@@ -10,6 +10,7 @@
 
 @implementation DocumentPopoverViewController
 
+@synthesize accueil;
 @synthesize champNom;
 @synthesize champURL;
 @synthesize refProfil;
@@ -42,7 +43,7 @@
     {
         // add document
         Document *document = [[Document alloc] initWithName:name andUrl:url];
-        if([Facade addDocument:document])
+        if([[Facade getInstance] addDocument:document])
         {
             NSLog(@"%@", [Utils concatenateString:LogSuccess withString:@" - document added in Facade"]);
         }
@@ -50,12 +51,12 @@
         champNom.text = @"";
         champURL.text = @"";
         
-        [accueil.docPopover dismissPopoverAnimated:YES];
-        accueil.docPopover = nil;
+        [((AccueilViewController*)accueil).docPopover dismissPopoverAnimated:YES];
+        ((AccueilViewController*)accueil).docPopover = nil;
     }
 }
 
-- (void)setAccueil:(AccueilViewController *)newAccueil
+- (void)setVAccueil:(AccueilViewController *)newAccueil
 {
     accueil = newAccueil;
 }

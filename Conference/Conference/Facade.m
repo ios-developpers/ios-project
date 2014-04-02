@@ -1,20 +1,34 @@
-//
-//  CodeData.m
-//  Conference
-//
-//  Created by ig_2014 on 18/03/2014.
-//  Copyright (c) 2014 ios-developpers. All rights reserved.
-//
+//Facade.m
+//Conference
+//Created by LANGLES PERE PONT
+//2014 Polytech
 
+//IMPORT
 #import "Facade.h"
 
+//IMPLEMENTATION
 @implementation Facade
 
-/*
- *  Salons
- */
+//SYNTHESIZE
+@synthesize listDocument;
+@synthesize listField;
+@synthesize listSalon;
 
-+(NSMutableArray *)getListeSalons
+
+//CONSTRUCTEUR
++(Facade*)getInstance
+{
+    static Facade* instance=nil;
+    
+    if(instance==nil)
+        instance=[[Facade alloc]init];
+    
+    return instance;
+}
+
+//METHODS
+/*
+-(NSMutableArray *)getListeSalons
 {
     static NSMutableArray *salons = nil;
     static dispatch_once_t onceToken;
@@ -27,59 +41,46 @@
     return salons;
 }
 
-+(NSArray *)getListeSalonsNotMutable
+
+-(NSArray *)getListeSalonsNotMutable
 {
     NSMutableArray *salons = [self getListeSalons];
     
     return [[NSArray alloc] initWithArray:salons];
-}
+}*/
 
-+(BOOL)addSalon:(Salon *)salon
+-(BOOL)addSalon:(Salon *)salon
 {
-    NSMutableArray *salons = [self getListeSalons];
+    NSMutableArray *salons = [Facade getInstance]->listSalon;
     NSUInteger size = [salons count];
     
     [salons addObject:salon];
     
-    if ([salons count] > size)
-    {
-        return YES;
-    }
-    else
-    {
-        return NO;
-    }
+    return([salons count] > size);
 }
 
-+(BOOL)removeSalonAtIndex:(NSUInteger)index
+-(BOOL)removeSalon:(Document*)_document
 {
-    NSMutableArray *salons = [self getListeSalons];
+    NSMutableArray *salons = [Facade getInstance]->listSalon;
     NSUInteger size = [salons count];
     
-    [salons removeObjectAtIndex:index];
+    [salons removeObject:_document];
     
-    if ([salons count] < size)
-    {
-        return YES;
-    }
-    else
-    {
-        return NO;
-    }
+    return([salons count] < size);
 }
 
-+(NSUInteger) countSalons
+-(NSUInteger) countListSalon
 {
-    return [[self getListeSalons] count];
+    return [[Facade getInstance]->listSalon count];
 }
 
 /*
  *  Documents
- */
 
-+(NSMutableArray *)getListeDocuments
+
+-(NSMutableArray *)getListDocument
 {
-    static NSMutableArray *documents = nil;
+    NSMutableArray *documents = [Facade getInstance]->listDocument;
     static dispatch_once_t onceToken;
     
     dispatch_once(&onceToken, ^{
@@ -90,50 +91,63 @@
     return documents;
 }
 
-+(NSArray *)getListeDocumentsNotMutable
+-(NSArray *)getListeDocumentsNotMutable
 {
     NSMutableArray *documents = [self getListeDocuments];
     
     return [[NSArray alloc] initWithArray:documents];
-}
+} */
 
-+(BOOL)addDocument:(Document *)document
+-(BOOL)addDocument:(Document *)document
 {
-    NSMutableArray *documents = [self getListeDocuments];
+    NSMutableArray *documents = [Facade getInstance]->listDocument;
     NSUInteger size = [documents count];
     
     [documents addObject:document];
     
-    if ([documents count] > size)
-    {
-        return YES;
-    }
-    else
-    {
-        return NO;
-    }
+    return([documents count] > size);
 }
 
-+(BOOL)removeDocumentAtIndex:(NSUInteger)index
+-(BOOL)removeDocument:(Document*)_document
 {
-    NSMutableArray *documents = [self getListeDocuments];
+    NSMutableArray *documents = [Facade getInstance]->listDocument;
     NSUInteger size = [documents count];
     
-    [documents removeObjectAtIndex:index];
+    [documents removeObject:_document];
     
-    if ([documents count] < size)
-    {
-        return YES;
-    }
-    else
-    {
-        return NO;
-    }
+    return([documents count] < size);
 }
 
-+(NSUInteger) countDocuments
+-(NSUInteger) countListDocument
 {
-    return [[self getListeDocuments] count];
+    return [[Facade getInstance]->listDocument count];
 }
+
+-(BOOL) addField:(Field*)_field
+{
+    NSMutableArray *fields = [Facade getInstance]->listField;
+    NSUInteger size = [fields count];
+    
+    [fields addObject:_field];
+    
+    return([fields count] > size);
+}
+
+-(BOOL) removeField:(Field*)_field
+{
+    NSMutableArray *fields = [Facade getInstance]->listField;
+    NSUInteger size = [fields count];
+    
+    [fields removeObject:_field];
+    
+    return([fields count] < size);
+}
+
+-(NSUInteger) countListField
+{
+    return [[Facade getInstance]->listField count];
+}
+
+
 
 @end

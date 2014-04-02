@@ -1,25 +1,22 @@
-//
-//  Document.h
-//  Conference
-//
-//  Created by ig_2014 on 05/03/2014.
-//  Copyright (c) 2014 ios-developpers. All rights reserved.
-//
+//Document.h
+//Conference
+//Created by LANGLES PERE PONT
+//2014 Polytech
 
+//IMPORT
 #import <Foundation/Foundation.h>
+#import "Field.h"
 
+//INTERFACE
 @interface Document : NSObject
-{
-    NSString *name;
-    NSString *url;
-}
 
--(id) initWithName: (NSString *)_name andUrl: (NSString *)_url;
+//PROPERTIES
+@property(nonatomic,copy)NSString* name;
+@property(nonatomic,weak)NSString* url;
+@property(nonatomic,weak)Field* field;
 
--(void) setName: (NSString *)newName;
--(void) setUrl: (NSString *)newUrl;
-
--(NSString *) getName;
--(NSString *) getUrl;
+//METHODS
+-(id) initWithName:(NSString *)_name andUrl:(NSString *)_url;
+-(id) initWithName:(NSString *)_name andUrl:(NSString *)_url andField:(Field*)_field;
 
 @end

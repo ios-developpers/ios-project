@@ -13,8 +13,11 @@
 - (IBAction)addSalon:(id)sender ;
 @end
 
+@class AccueilViewController;
+
 @interface SalonPopoverViewController : UIViewController
 
+@property (strong, nonatomic) UIViewController *accueil;
 @property (strong, nonatomic) IBOutlet UIView *ViewSalonPopover;
 @property (strong, nonatomic) IBOutlet UITextField *champSalon;
 @property (strong, nonatomic) IBOutlet UITextField *champLieu;
@@ -25,4 +28,5 @@
 - (IBAction)addSalon:(id)sender ;
 - (id)init;
 - (id)initWithNibName:(NSString *)nibName bundle:(NSBundle *)bundle;
+- (void)setVAccueil:(AccueilViewController *)newAccueil;
 @end

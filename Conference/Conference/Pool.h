@@ -1,31 +1,26 @@
-//
-//  Pool.h
-//  Conference
-//
-//  Created by ig_2014 on 05/03/2014.
-//  Copyright (c) 2014 ios-developpers. All rights reserved.
-//
+//Pool.h
+//Conference
+//Created by LANGLES PERE PONT
+//2014 Polytech
 
+//IMPORT
 #import <Foundation/Foundation.h>
 #import "Document.h"
 
+//INTERFACE
 @interface Pool : NSObject
-{
-    NSString *name;
-    NSMutableArray *documents;
-}
 
--(id) initWithName: (NSString *)_name;
--(id) initWithName: (NSString *)_name andDocuments: (NSMutableArray *)_documents;
+//PROPERTIES
+@property(nonatomic,copy)NSString *name;
+@property(nonatomic,strong)NSMutableArray *listDocument;
 
--(void) setName: (NSString *)newName;
--(void) setDocuments: (NSMutableArray *)newDocuments;
+//METHODS
+-(id) initWithName:(NSString*)_name;
+-(id) initWithName:(NSString*)_name andListDocument:(NSMutableArray *)_listDocument;
 
--(NSString *) getName;
--(NSMutableArray *) getDocuments;
-
--(BOOL) addDocument: (Document *)document;
--(BOOL) removeDocumentAtIndex: (NSUInteger)index;
--(void) clearDocuments;
+-(BOOL) addDocument:(Document*)_document;
+-(BOOL) removeDocument:(Document*)_document;
+-(void) clearListDocument;
+-(NSUInteger) countListDocument;
 
 @end

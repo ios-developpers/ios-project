@@ -1,36 +1,36 @@
-//
-//  Pool.m
-//  Conference
-//
-//  Created by ig_2014 on 05/03/2014.
-//  Copyright (c) 2014 ios-developpers. All rights reserved.
-//
+//Pool.m
+//Conference
+//Created by LANGLES PERE PONT
+//2014 Polytech
 
+//IMPORT
 #import "Pool.h"
 #import "Utils.h"
 #import "Constants.h"
 
+//IMPLEMENTATION
 @implementation Pool
 
-/*
- *  Constructor
- */
+//SYNTHESIZE
+@synthesize name;
+@synthesize listDocument;
 
+//METHODS
 -(id) initWithName:(NSString *)_name
 {
-    self = [self initWithName:_name andDocuments:nil];
+    self = [self initWithName:_name andListDocument:nil];
     
     return self;
 }
 
--(id) initWithName:(NSString *)_name andDocuments:(NSMutableArray *)_documents
+-(id) initWithName:(NSString *)_name andListDocument:(NSMutableArray *)_listDocument
 {
     self = [super init];
     
     if(self)
     {
         self->name = _name;
-        self->documents = _documents;
+        self->listDocument = _listDocument;
     }
     
     NSLog(@"%@", [Utils concatenateString:LogConstructor withString:@" Pool"]);
@@ -38,48 +38,16 @@
     return self;
 }
 
-/*
- *  Setters
- */
-
--(void) setName:(NSString *)newName
-{
-    self->name = newName;
-}
-
--(void) setDocuments:(NSMutableArray *)newDocuments
-{
-    self->documents = newDocuments;
-}
-
-/*
- *  Getters
- */
-
--(NSString *) getName
-{
-    return self->name;
-}
-
--(NSMutableArray *) getDocuments
-{
-    return self->documents;
-}
-
-/*
- *  Instance methods
- */
-
 -(BOOL) addDocument:(Document *)document
 {
-    if (self->documents == nil)
+    if (self->listDocument == nil)
     {
-        self->documents = [[NSMutableArray alloc] init];
+        self->listDocument = [[NSMutableArray alloc] init];
     }
     
-    [self->documents addObject:document];
+    [self->listDocument addObject:document];
     
-    if ([self->documents containsObject:document])
+    if ([self->listDocument containsObject:document])
     {
         return YES;
     }
@@ -89,21 +57,26 @@
     }
 }
 
--(BOOL) removeDocumentAtIndex:(NSUInteger)index
+-(BOOL) removeDocument:(Document*)_document
 {
-    NSUInteger oldSize = [self->documents count];
+    NSUInteger oldSize = [self countListDocument];
     
-    [self->documents removeObjectAtIndex:index];
+    [self->listDocument removeObject:_document];
     
-    return ([self->documents count] < oldSize);
+    return ([self countListDocument] < oldSize);
 }
 
--(void) clearDocuments
+-(void) clearListDocument
 {
-    [self->documents removeAllObjects];
-    [self->documents finalize];
+    [self->listDocument removeAllObjects];
+    [self->listDocument finalize];
     
-    self->documents = [[NSMutableArray alloc] init];
+    self->listDocument = [[NSMutableArray alloc] init];
+}
+
+-(NSUInteger) countListDocument
+{
+    return [self->listDocument count];
 }
 
 @end

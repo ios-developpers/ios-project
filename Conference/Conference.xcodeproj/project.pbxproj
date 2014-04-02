@@ -23,6 +23,7 @@
 		34BF44FB18ACDB8800B66045 /* ConferenceTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 34BF44FA18ACDB8800B66045 /* ConferenceTests.m */; };
 		AA47749318CF55370074BA46 /* TODO in Resources */ = {isa = PBXBuildFile; fileRef = AA47749218CF55370074BA46 /* TODO */; };
 		AA574EBF18C8922F00C25555 /* SalonPopoverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AA574EBE18C8922F00C25555 /* SalonPopoverViewController.m */; };
+		AA6233A118EC47D100185505 /* Field.m in Sources */ = {isa = PBXBuildFile; fileRef = AA6233A018EC47D100185505 /* Field.m */; };
 		AA63806918C8F60800B95C07 /* DocumentPopoverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AA63806818C8F60800B95C07 /* DocumentPopoverViewController.m */; };
 		AAA6A47C18C5F4B500804407 /* AccueilViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AAA6A47B18C5F4B500804407 /* AccueilViewController.m */; };
 		AAC9FFDF18D85BE300CBAD04 /* Facade.m in Sources */ = {isa = PBXBuildFile; fileRef = AAC9FFDE18D85BE300CBAD04 /* Facade.m */; };
@@ -66,6 +67,8 @@
 		AA47749218CF55370074BA46 /* TODO */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = TODO; sourceTree = "<group>"; };
 		AA574EBD18C8922F00C25555 /* SalonPopoverViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SalonPopoverViewController.h; path = ../SalonPopoverViewController.h; sourceTree = "<group>"; };
 		AA574EBE18C8922F00C25555 /* SalonPopoverViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SalonPopoverViewController.m; path = ../SalonPopoverViewController.m; sourceTree = "<group>"; };
+		AA62339F18EC47D100185505 /* Field.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Field.h; sourceTree = "<group>"; };
+		AA6233A018EC47D100185505 /* Field.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Field.m; sourceTree = "<group>"; };
 		AA63806718C8F60800B95C07 /* DocumentPopoverViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DocumentPopoverViewController.h; sourceTree = "<group>"; };
 		AA63806818C8F60800B95C07 /* DocumentPopoverViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DocumentPopoverViewController.m; sourceTree = "<group>"; };
 		AAA6A47A18C5F4B500804407 /* AccueilViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccueilViewController.h; sourceTree = "<group>"; };
@@ -220,6 +223,8 @@
 				AAF3C6C118C737CD00B92618 /* Pool.m */,
 				AAC9FFDD18D85BE300CBAD04 /* Facade.h */,
 				AAC9FFDE18D85BE300CBAD04 /* Facade.m */,
+				AA62339F18EC47D100185505 /* Field.h */,
+				AA6233A018EC47D100185505 /* Field.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -323,6 +328,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				34BF44E618ACDB8700B66045 /* ViewController.m in Sources */,
+				AA6233A118EC47D100185505 /* Field.m in Sources */,
 				34BF44E018ACDB8700B66045 /* AppDelegate.m in Sources */,
 				AAA6A47C18C5F4B500804407 /* AccueilViewController.m in Sources */,
 				AAF3C6B618C720FA00B92618 /* Document.m in Sources */,

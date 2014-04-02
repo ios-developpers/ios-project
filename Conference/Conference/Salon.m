@@ -1,75 +1,80 @@
-//
-//  Salon.m
-//  Conference
-//
-//  Created by ig_2014 on 05/03/2014.
-//  Copyright (c) 2014 ios-developpers. All rights reserved.
-//
+//Salon.m
+//Conference
+//Created by LANGLES PERE PONT
+//2014 Polytech
 
+//IMPORT
 #import "Salon.h"
 #import "Utils.h"
 #import "Constants.h"
 
+//IMPLEMENTATION
 @implementation Salon
 
-/*
- *  Constructor
- */
+//SYNTHESIZE
+@synthesize name;
+@synthesize adress;
+@synthesize date;
+@synthesize listPool;
 
--(id) initWithName:(NSString *)_name andAdress:(NSString *)_adress andDate:(NSDate *)_date
+//METHODS
+-(id) initWithName:(NSString*)_name andAdress:(NSString *)_adress andDate:(NSDate *)_date
+{
+    return [self initWithName:_name andAdress:_adress andDate:_date andListPool:nil];
+}
+
+
+-(id) initWithName:(NSString *)_name andAdress:(NSString *)_adress andDate:(NSDate *)_date andListPool:(NSMutableArray *)_listPool
 {
     self = [super init];
     
     if (self)
     {
-        self->name = _name;
-        self->adress = _adress;
-        self->date = _date;
+        self.name = _name;
+        self.adress = _adress;
+        self.date = _date;
+        self->listPool = _listPool;
     }
-    
-    self->pools = nil;
     
     NSLog(@"%@", [Utils concatenateString:LogConstructor withString:@" Salon"]);
     
     return self;
 }
 
-/*
- *  Setters
- */
 
--(void) setName:(NSString *)newName
+
+-(BOOL)addPool:(Pool *)_pool
 {
-    self->name = newName;
+    NSMutableArray *pools = self->listPool;
+    NSUInteger size = [pools count];
+    
+    [pools addObject:_pool];
+    
+    return([pools count] > size);
 }
 
--(void) setAdress:(NSString *)newAdress
+-(BOOL) removePool:(Pool*)_pool
 {
-    self->adress = newAdress;
+    NSMutableArray *pools = self->listPool;
+    NSUInteger size = [pools count];
+    
+    [pools removeObject:_pool];
+    
+    return([pools count] < size);
 }
 
--(void) setDate:(NSDate *)newDate
+
+-(void) clearListPool
 {
-    self->date = newDate;
+    [self->listPool removeAllObjects];
+    [self->listPool finalize];
+    
+    self->listPool = [[NSMutableArray alloc] init];
 }
 
-/*
- *  Getters
- */
-
--(NSString *) getName
+-(NSUInteger) countListPool
 {
-    return self->name;
-}
-
--(NSString *) getAdress
-{
-    return self->adress;
-}
-
--(NSDate *) getDate
-{
-    return self->date;
+    return [self->listPool count];
 }
 
 @end

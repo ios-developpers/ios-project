@@ -1,22 +1,24 @@
-//
-//  Document.m
-//  Conference
-//
-//  Created by ig_2014 on 05/03/2014.
-//  Copyright (c) 2014 ios-developpers. All rights reserved.
-//
+//Document.m
+//Conference
+//Created by LANGLES PERE PONT
+//2014 Polytech
 
+//IMPORT
 #import "Document.h"
 #import "Utils.h"
 #import "Constants.h"
 
+//IMPLEMENTATION
 @implementation Document
 
-/*
- *  Constructors
- */
+//SYNTHESIZE
+@synthesize name;
+@synthesize url;
+@synthesize field;
 
--(id) initWithName: (NSString *)_name andUrl: (NSString *)_url
+//METHODS
+
+-(id) initWithName: (NSString *)_name andUrl: (NSString *)_url andField:(Field *)_field
 {
     self = [super init];
     
@@ -24,6 +26,8 @@
     {
         self->name = _name;
         self->url = _url;
+        self->field = nil;
+        if(_field != nil) self->field = _field;
     }
     
     NSLog(@"%@", [Utils concatenateString:LogConstructor withString:@" Document"]);
@@ -31,31 +35,9 @@
     return self;
 }
 
-/*
- *  Setters
- */
--(void) setName: (NSString *)newName
+- (id)initWithName:(NSString *)_name andUrl:(NSString *)_url
 {
-    self->name = newName;
-}
-
--(void) setUrl: (NSString *)newUrl
-{
-    self->url = newUrl;
-}
-
-
-/*
- *  Getters
- */
--(NSString *) getName
-{
-    return self->name;
-}
-
--(NSString *) getUrl
-{
-    return self->url;
+    return [self initWithName:name andUrl:_url andField:nil];
 }
 
 @end

@@ -61,7 +61,7 @@
         docPopover = [[UIPopoverController alloc] initWithContentViewController:docView];
         [docPopover presentPopoverFromBarButtonItem:(UIBarButtonItem *)sender
                                     permittedArrowDirections:UIPopoverArrowDirectionUp animated:YES];
-        [docView setAccueil:self];
+        [((DocumentPopoverViewController*)docView) setVAccueil:self];
     } else {
         //The color picker popover is showing. Hide it.
         [docPopover dismissPopoverAnimated:YES];
@@ -112,7 +112,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return [Facade countSalons];
+    return [[Facade getInstance] countListSalon];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -127,10 +127,10 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault  reuseIdentifier:MyIdentifier];
     }
     
-    Salon *salon = [[Facade getListeSalons] objectAtIndex:[indexPath row]];
+    Salon *salon = [[Facade getInstance].listSalon objectAtIndex:[indexPath row]];
     
-    cell.textLabel.text = [salon getName];
-    cell.detailTextLabel.text = [salon getAdress];
+    cell.textLabel.text = salon.name;
+    cell.detailTextLabel.text = salon.adress;
     
     return cell;
 }
