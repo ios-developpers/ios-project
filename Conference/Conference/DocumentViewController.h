@@ -1,21 +1,20 @@
 //
-//  MyViewController.h
+//  DocumentViewController.h
 //  Conference
 //
-//  Created by ig_2014 on 04/03/2014.
+//  Created by ig_2014 on 03/04/2014.
 //  Copyright (c) 2014 ios-developpers. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 #import "DocumentPopoverViewController.h"
-#import "SalonPopoverViewController.h"
 #import "Utils.h"
 #import "Constants.h"
 #import "Document.h"
 #import "Salon.h"
 #import "Facade.h"
 
-@interface AccueilViewController : UIViewController <UITableViewDelegate, UITableViewDataSource,UIPopoverControllerDelegate>
+@interface DocumentViewController : UIViewController <UITableViewDelegate, UITableViewDataSource,UIPopoverControllerDelegate>
 {
     UIPopoverController *popOverController;
     UIPickerView *categoryPicker;
@@ -23,17 +22,17 @@
     NSMutableArray *arrayOfCategories;
 }
 
-@property (strong, nonatomic) IBOutlet UIBarButtonItem *buttonSalon;
+@property (strong, nonatomic) IBOutlet UIBarButtonItem *buttonDocument;
 
-@property (nonatomic, strong) NSArray *tableSalons;
-@property (strong, nonatomic) IBOutlet UITableView *tableViewSalon;
+@property (nonatomic, strong) NSArray *tableDocuments;
+@property (strong, nonatomic) IBOutlet UITableView *tableViewDocument;
 
-@property (nonatomic, strong) UIViewController *salonView;
-@property (nonatomic, strong) UIPopoverController *salonPopover;
+@property (nonatomic, strong) UIViewController *docView;
+@property (nonatomic, strong) UIPopoverController *docPopover;
 
 //Listeners
 
-- (IBAction)addSalonListener:(UIBarButtonItem *)sender;
+- (IBAction)addDocumentListener:(UIBarButtonItem *)sender;
 
 - (void) forceReload;
 

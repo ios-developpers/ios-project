@@ -11,7 +11,7 @@
 
 @implementation DocumentPopoverViewController
 
-@synthesize accueil;
+@synthesize daddy;
 @synthesize champNom;
 @synthesize champURL;
 @synthesize refProfil;
@@ -26,6 +26,20 @@
     }
     return self;
 }
+
+-(void) viewDidLoad
+{
+    UIView *paddingView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 25, 40)];
+    
+    champNom.leftView = paddingView;
+    champNom.leftViewMode = UITextFieldViewModeAlways;
+    
+    UIView *paddingView2 = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 25, 40)];
+
+    champURL.leftView = paddingView2;
+    champURL.leftViewMode = UITextFieldViewModeAlways;
+}
+
 - (IBAction)addDocument:(id)sender {
     NSLog(@"%@", [Utils concatenateString:LogListener withString:@" Add Document in Document Popover"]);
     
@@ -52,14 +66,16 @@
         champNom.text = @"";
         champURL.text = @"";
         
-        [((AccueilViewController*)accueil).docPopover dismissPopoverAnimated:YES];
-        ((AccueilViewController*)accueil).docPopover = nil;
+        [((DocumentViewController*) daddy) forceReload];
+        
+        [((DocumentViewController*) daddy).docPopover dismissPopoverAnimated:YES];
+        ((DocumentViewController*) daddy).docPopover = nil;
     }
 }
 
-- (void)setVAccueil:(UIViewController *)newAccueil
+- (void)setVDaddy:(UIViewController *)newDaddy
 {
-    accueil = newAccueil;
+    daddy = newDaddy;
 }
 
 - (id)initWithNibName:(NSString *)nibName bundle:(NSBundle *)bundle

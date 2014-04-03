@@ -13,6 +13,7 @@
 @synthesize listDocument;
 @synthesize listField;
 @synthesize listSalon;
+@synthesize listPool;
 
 
 //CONSTRUCTEUR
@@ -35,8 +36,32 @@
     listDocument = [[NSMutableArray alloc] init];
     listSalon = [[NSMutableArray alloc] init];
     listField = [[NSMutableArray alloc] init];
+    listPool = [self getStaticPools];
     
     return self;
+}
+
+//POOL
+-(NSArray *)getStaticPools
+{
+    static NSMutableArray* pools = nil;
+    
+    if(pools == nil)
+    {
+        pools = [[NSMutableArray alloc] init];
+        
+        NSArray *sections = [NSArray arrayWithObjects:@"IG", @"EII", @"STE", @"STIA", @"MAT", @"MEA", @"SE", nil];
+        
+        Pool *pool;
+        NSString *section;
+        for(section in sections)
+        {
+            pool = [[Pool alloc] initWithName:section];
+            [pools addObject:pool];
+        }
+    }
+    
+    return pools;
 }
 
 //METHODS
@@ -117,6 +142,12 @@
     NSUInteger size = [documents count];
     
     [documents addObject:document];
+    
+    Document *tmp;
+    for(tmp in [Facade getInstance].listDocument)
+    {
+        NSLog(@"%@", tmp.url);
+    }
     
     return([documents count] > size);
 }

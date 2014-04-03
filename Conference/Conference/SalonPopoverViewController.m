@@ -21,9 +21,22 @@
     if (self != nil)
     {
         // Further initialization if needed
-        
+
     }
     return self;
+}
+
+-(void) viewDidLoad
+{
+    UIView *paddingView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 25, 40)];
+    
+    champSalon.leftView = paddingView;
+    champSalon.leftViewMode = UITextFieldViewModeAlways;
+    
+    UIView *paddingView2 = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 25, 40)];
+    
+    champLieu.leftView = paddingView2;
+    champLieu.leftViewMode = UITextFieldViewModeAlways;
 }
 
 - (IBAction)addSalon:(id)sender {

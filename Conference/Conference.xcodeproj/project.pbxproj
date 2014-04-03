@@ -22,6 +22,7 @@
 		34BF44F918ACDB8800B66045 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 34BF44F718ACDB8800B66045 /* InfoPlist.strings */; };
 		34BF44FB18ACDB8800B66045 /* ConferenceTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 34BF44FA18ACDB8800B66045 /* ConferenceTests.m */; };
 		AA26B59D18ED6B9D00399BEA /* DocumentPopoverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AA26B59C18ED6B9D00399BEA /* DocumentPopoverViewController.m */; };
+		AA27A6DD18ED8E5E000EAFE4 /* DocumentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AA27A6DC18ED8E5E000EAFE4 /* DocumentViewController.m */; };
 		AA47749318CF55370074BA46 /* TODO in Resources */ = {isa = PBXBuildFile; fileRef = AA47749218CF55370074BA46 /* TODO */; };
 		AA6233A118EC47D100185505 /* Field.m in Sources */ = {isa = PBXBuildFile; fileRef = AA6233A018EC47D100185505 /* Field.m */; };
 		AAA6A47C18C5F4B500804407 /* AccueilViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AAA6A47B18C5F4B500804407 /* AccueilViewController.m */; };
@@ -66,6 +67,8 @@
 		34BF44FA18ACDB8800B66045 /* ConferenceTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ConferenceTests.m; sourceTree = "<group>"; };
 		AA26B59B18ED6B9D00399BEA /* DocumentPopoverViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DocumentPopoverViewController.h; sourceTree = "<group>"; };
 		AA26B59C18ED6B9D00399BEA /* DocumentPopoverViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DocumentPopoverViewController.m; sourceTree = "<group>"; };
+		AA27A6DB18ED8E5E000EAFE4 /* DocumentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DocumentViewController.h; sourceTree = "<group>"; };
+		AA27A6DC18ED8E5E000EAFE4 /* DocumentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DocumentViewController.m; sourceTree = "<group>"; };
 		AA47749218CF55370074BA46 /* TODO */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = TODO; sourceTree = "<group>"; };
 		AA62339F18EC47D100185505 /* Field.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Field.h; sourceTree = "<group>"; };
 		AA6233A018EC47D100185505 /* Field.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Field.m; sourceTree = "<group>"; };
@@ -200,14 +203,16 @@
 		AA574EC018C8937C00C25555 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				34BF44E518ACDB8700B66045 /* ViewController.m */,
-				34BF44E418ACDB8700B66045 /* ViewController.h */,
 				AAA6A47A18C5F4B500804407 /* AccueilViewController.h */,
 				AAA6A47B18C5F4B500804407 /* AccueilViewController.m */,
-				AAD94BC018ED649B008B3057 /* SalonPopoverViewController.h */,
-				AAD94BC118ED649B008B3057 /* SalonPopoverViewController.m */,
 				AA26B59B18ED6B9D00399BEA /* DocumentPopoverViewController.h */,
 				AA26B59C18ED6B9D00399BEA /* DocumentPopoverViewController.m */,
+				AA27A6DB18ED8E5E000EAFE4 /* DocumentViewController.h */,
+				AA27A6DC18ED8E5E000EAFE4 /* DocumentViewController.m */,
+				AAD94BC018ED649B008B3057 /* SalonPopoverViewController.h */,
+				AAD94BC118ED649B008B3057 /* SalonPopoverViewController.m */,
+				34BF44E418ACDB8700B66045 /* ViewController.h */,
+				34BF44E518ACDB8700B66045 /* ViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -330,6 +335,7 @@
 				34BF44E618ACDB8700B66045 /* ViewController.m in Sources */,
 				AA6233A118EC47D100185505 /* Field.m in Sources */,
 				34BF44E018ACDB8700B66045 /* AppDelegate.m in Sources */,
+				AA27A6DD18ED8E5E000EAFE4 /* DocumentViewController.m in Sources */,
 				AA26B59D18ED6B9D00399BEA /* DocumentPopoverViewController.m in Sources */,
 				AAD94BC218ED649B008B3057 /* SalonPopoverViewController.m in Sources */,
 				AAA6A47C18C5F4B500804407 /* AccueilViewController.m in Sources */,

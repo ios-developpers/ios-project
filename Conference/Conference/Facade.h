@@ -10,11 +10,15 @@
 
 //INTERFACE
 @interface Facade : NSObject
+{
+    
+}
 
 //PROPERTIES
 @property(nonatomic,strong)NSMutableArray* listDocument;
 @property(nonatomic,strong)NSMutableArray* listSalon;
 @property(nonatomic,strong)NSMutableArray* listField;
+@property(nonatomic,strong)NSArray* listPool;
 
 //METHODS
     //-(id) init;
@@ -24,6 +28,9 @@
 
 +(Facade*)getInstance;
 -(id) init;
+
+//POOL
+-(NSArray *)getStaticPools;
 
 //SALON
 -(BOOL) addSalon:(Salon*)_salon;

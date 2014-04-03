@@ -37,7 +37,7 @@
 
 - (id)initWithName:(NSString *)_name andUrl:(NSString *)_url
 {
-    return [self initWithName:name andUrl:_url andField:nil];
+    return [self initWithName:_name andUrl:_url andField:nil];
 }
 
 @end

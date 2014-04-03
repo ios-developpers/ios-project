@@ -11,8 +11,6 @@
 @implementation AccueilViewController
 
 @synthesize tableViewSalon;
-@synthesize docView;
-@synthesize docPopover;
 @synthesize salonView;
 @synthesize salonPopover;
 
@@ -36,6 +34,15 @@
     //self->isPopoverSalonOpened = NO;
 }
 
+-(void) viewWillDisappear:(BOOL)animated
+{
+    if (salonPopover != nil)
+    {
+        [salonPopover dismissPopoverAnimated:YES];
+        salonPopover = nil;
+    }
+}
+
 -(void) forceReload
 {
     [tableViewSalon reloadData];
@@ -47,36 +54,6 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (IBAction)addDocumentListener:(UIBarButtonItem *)sender
-{
-    NSLog(@"%@", [Utils concatenateString:LogListener withString:@" Add Document Listener"]);
-    if (docView == nil) {
-        //Create the ColorPickerViewController.
-        docView = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"DocumentPopoverID"];
-       // docView.delegate=self;
-    }
-
-    if (docPopover == nil) {
-        //The color picker popover is not showing. Show it.
-        docPopover = [[UIPopoverController alloc] initWithContentViewController:docView];
-        [docPopover presentPopoverFromBarButtonItem:(UIBarButtonItem *)sender
-                                    permittedArrowDirections:UIPopoverArrowDirectionUp animated:YES];
-        
-        [(DocumentPopoverViewController *) docView setVAccueil:self];
-    } else {
-        //The color picker popover is showing. Hide it.
-        [docPopover dismissPopoverAnimated:YES];
-        docPopover = nil;
-    }
-    
-    if (salonPopover != nil)
-    {
-        //The color picker popover is showing. Hide it.
-        [salonPopover dismissPopoverAnimated:YES];
-        salonPopover = nil;
-    }
-}
-
 - (IBAction)addSalonListener:(UIBarButtonItem *)sender
 {
     NSLog(@"%@", [Utils concatenateString:LogListener withString:@" Add Salon Listener"]);
@@ -84,27 +61,23 @@
         //Create the ColorPickerViewController.
         salonView = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"SalonPopoverID"];
         // docView.delegate=self;
+        NSLog(@"%@", @"0");
     }
     
-    if (salonPopover == nil) {
-        //The color picker popover is not showing. Show it.
+    if (salonPopover == nil | ![salonPopover isPopoverVisible]) {
+         //The color picker popover is not showing. Show it.
         salonPopover = [[UIPopoverController alloc] initWithContentViewController:salonView];
         [salonPopover presentPopoverFromBarButtonItem:(UIBarButtonItem *)sender
                            permittedArrowDirections:UIPopoverArrowDirectionUp animated:YES];
         
         [(SalonPopoverViewController *)salonView setVAccueil:self];
-        
+        NSLog(@"%@", @"1");
+
     } else {
         //The color picker popover is showing. Hide it.
         [salonPopover dismissPopoverAnimated:YES];
         salonPopover = nil;
-    }
-    
-    if (docPopover != nil)
-    {
-        //The color picker popover is showing. Hide it.
-        [docPopover dismissPopoverAnimated:YES];
-        docPopover = nil;
+        NSLog(@"%@", @"2");
     }
 }
 
@@ -119,7 +92,7 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *MyIdentifier = @"Cell";
+    static NSString *MyIdentifier = @"CellSalon";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:MyIdentifier];
     
     cell.backgroundColor = [UIColor colorWithRed:246.0f/255.0f green:246.0f/255.0f blue:246.0f/255.0f alpha:1.0];
@@ -129,17 +102,22 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault  reuseIdentifier:MyIdentifier];
     }
     
+    NSDateFormatter *formatter;
+    
+    formatter = [[NSDateFormatter alloc] init];
+    [formatter setDateFormat:@"HH:mm dd/MM/yyyy"];
+    
     Salon *salon = [[Facade getInstance].listSalon objectAtIndex:[indexPath row]];
     
     cell.textLabel.text = salon.name;
-    cell.detailTextLabel.text = salon.adress;
+    cell.detailTextLabel.text = [formatter stringFromDate:salon.date];
     
     return cell;
 }
 
 - (void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    [self performSegueWithIdentifier:@"GoToSalonDetail" sender:[self.tableViewSalon cellForRowAtIndexPath:indexPath]];
+    //[self performSegueWithIdentifier:@"GoToSalonDetail" sender:[self.tableViewSalon cellForRowAtIndexPath:indexPath]];
 }
 
 /*

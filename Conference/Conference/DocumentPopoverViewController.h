@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "DocumentViewController.h"
 #import "Utils.h"
 #import "Document.h"
 #import "Constants.h"
@@ -19,7 +20,7 @@
 
 @interface DocumentPopoverViewController : UIViewController
 
-@property (strong, nonatomic) UIViewController *accueil;
+@property (strong, nonatomic) UIViewController *daddy;
 @property (strong, nonatomic) IBOutlet UIView *docPopover;
 @property (strong, nonatomic) IBOutlet UITextField *champNom;
 @property (strong, nonatomic) IBOutlet UITextField *champURL;
@@ -30,5 +31,5 @@
 - (id)init;
 - (id)initWithNibName:(NSString *)nibName bundle:(NSBundle *)bundle;
 - (IBAction)addDocument:(id)sender;
-- (void)setVAccueil:(UIViewController *)newAccueil;
+- (void)setVDaddy:(UIViewController *)newAccueil;
 @end
