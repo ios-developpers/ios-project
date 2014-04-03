@@ -18,7 +18,7 @@
 
 //METHODS
 
--(id) initWithName: (NSString *)_name andUrl: (NSString *)_url andField:(Field *)_field
+-(id) initWithName:(NSString*)_name andUrl:(NSString*)_url andField:(Field *)_field
 {
     self = [super init];
     

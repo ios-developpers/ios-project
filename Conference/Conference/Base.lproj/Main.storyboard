@@ -147,7 +147,7 @@
                                     <constraint firstAttribute="width" constant="30" id="j3W-BD-iI3"/>
                                     <constraint firstAttribute="height" constant="20" id="vop-Fn-yl8"/>
                                 </constraints>
-                                <color key="onTintColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <color key="onTintColor" red="0.38273868370000003" green="0.64091467020000004" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             </switch>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="IG" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tGN-jE-8NX">
                                 <rect key="frame" x="115" y="213" width="177" height="21"/>
@@ -163,7 +163,7 @@
                                     <constraint firstAttribute="height" constant="20" id="SaB-6N-ahd"/>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="20" id="ax1-J6-ZBw"/>
                                 </constraints>
-                                <color key="onTintColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <color key="onTintColor" red="0.38273868370000003" green="0.64091467020000004" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             </switch>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="EII" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MFi-is-fxM">
                                 <rect key="frame" x="115" y="252" width="177" height="21"/>
@@ -179,7 +179,7 @@
                                     <constraint firstAttribute="height" constant="20" id="ir6-ff-QDA"/>
                                     <constraint firstAttribute="width" constant="30" id="xny-fd-EsG"/>
                                 </constraints>
-                                <color key="onTintColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <color key="onTintColor" red="0.38273868370000003" green="0.64091467020000004" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             </switch>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="STE" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0pp-pz-BrF">
                                 <rect key="frame" x="115" y="291" width="177" height="21"/>
@@ -195,7 +195,7 @@
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="20" id="p9V-Xd-r7S"/>
                                     <constraint firstAttribute="height" constant="20" id="uLg-LJ-khJ"/>
                                 </constraints>
-                                <color key="onTintColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <color key="onTintColor" red="0.38273868370000003" green="0.64091467020000004" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             </switch>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="STIA" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T5a-nO-aSx">
                                 <rect key="frame" x="115" y="330" width="177" height="21"/>
@@ -211,7 +211,7 @@
                                     <constraint firstAttribute="width" constant="30" id="kFo-Qo-dkp"/>
                                     <constraint firstAttribute="height" constant="20" id="xIo-5f-AvC"/>
                                 </constraints>
-                                <color key="onTintColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <color key="onTintColor" red="0.38273868370000003" green="0.64091467020000004" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             </switch>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="MAT" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wJV-No-Rth">
                                 <rect key="frame" x="115" y="369" width="177" height="21"/>
@@ -227,7 +227,7 @@
                                     <constraint firstAttribute="width" constant="30" id="STu-Pj-UVF"/>
                                     <constraint firstAttribute="height" constant="20" id="jpS-hP-lue"/>
                                 </constraints>
-                                <color key="onTintColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <color key="onTintColor" red="0.38273868370000003" green="0.64091467020000004" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             </switch>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="MEA" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XP9-6K-A8E">
                                 <rect key="frame" x="115" y="408" width="177" height="21"/>
@@ -243,7 +243,7 @@
                                     <constraint firstAttribute="width" constant="30" id="7Cb-rg-OES"/>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="20" id="WPb-1E-fXA"/>
                                 </constraints>
-                                <color key="onTintColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <color key="onTintColor" red="0.38273868370000003" green="0.64091467020000004" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             </switch>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="SE" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0mz-sH-7Ss">
                                 <rect key="frame" x="115" y="447" width="177" height="21"/>
@@ -400,11 +400,11 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CellDocument" textLabel="HgM-H4-E6g" detailTextLabel="StU-2e-wCs" style="IBUITableViewCellStyleSubtitle" id="yuH-SK-QwZ">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="CellDocument" textLabel="HgM-H4-E6g" detailTextLabel="StU-2e-wCs" style="IBUITableViewCellStyleSubtitle" id="yuH-SK-QwZ">
                                         <rect key="frame" x="0.0" y="22" width="1024" height="44"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="yuH-SK-QwZ" id="LDy-vm-eIT">
-                                            <rect key="frame" x="0.0" y="0.0" width="1024" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="991" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Document" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="HgM-H4-E6g">

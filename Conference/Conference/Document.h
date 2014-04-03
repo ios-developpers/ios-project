@@ -12,7 +12,7 @@
 
 //PROPERTIES
 @property(nonatomic,copy)NSString* name;
-@property(nonatomic,weak)NSString* url;
+@property(nonatomic,copy)NSString* url;
 @property(nonatomic,weak)Field* field;
 
 //METHODS

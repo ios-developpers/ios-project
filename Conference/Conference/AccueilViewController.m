@@ -61,7 +61,6 @@
         //Create the ColorPickerViewController.
         salonView = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"SalonPopoverID"];
         // docView.delegate=self;
-        NSLog(@"%@", @"0");
     }
     
     if (salonPopover == nil | ![salonPopover isPopoverVisible]) {
@@ -71,13 +70,11 @@
                            permittedArrowDirections:UIPopoverArrowDirectionUp animated:YES];
         
         [(SalonPopoverViewController *)salonView setVAccueil:self];
-        NSLog(@"%@", @"1");
 
     } else {
         //The color picker popover is showing. Hide it.
         [salonPopover dismissPopoverAnimated:YES];
         salonPopover = nil;
-        NSLog(@"%@", @"2");
     }
 }
 

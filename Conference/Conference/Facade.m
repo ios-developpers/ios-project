@@ -87,22 +87,22 @@
     return [[NSArray alloc] initWithArray:salons];
 }*/
 
--(BOOL)addSalon:(Salon *)salon
+-(BOOL)addSalon:(Salon *)_salon
 {
     NSMutableArray *salons = [Facade getInstance]->listSalon;
     NSUInteger size = [salons count];
     
-    [salons addObject:salon];
+    [salons addObject:_salon];
     
     return([salons count] > size);
 }
 
--(BOOL)removeSalon:(Document*)_document
+-(BOOL)removeSalon:(Salon*)_salon
 {
     NSMutableArray *salons = [Facade getInstance]->listSalon;
     NSUInteger size = [salons count];
     
-    [salons removeObject:_document];
+    [salons removeObject:_salon];
     
     return([salons count] < size);
 }
@@ -136,12 +136,12 @@
     return [[NSArray alloc] initWithArray:documents];
 }*/
 
--(BOOL)addDocument:(Document *)document
+-(BOOL)addDocument:(Document *)_document
 {
     NSMutableArray *documents = [Facade getInstance]->listDocument;
     NSUInteger size = [documents count];
     
-    [documents addObject:document];
+    [documents addObject:_document];
     
     Document *tmp;
     for(tmp in [Facade getInstance].listDocument)

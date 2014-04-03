@@ -17,10 +17,7 @@
 
 @interface AccueilViewController : UIViewController <UITableViewDelegate, UITableViewDataSource,UIPopoverControllerDelegate>
 {
-    UIPopoverController *popOverController;
-    UIPickerView *categoryPicker;
-    UIToolbar *pickerToolBar;
-    NSMutableArray *arrayOfCategories;
+
 }
 
 @property (strong, nonatomic) IBOutlet UIBarButtonItem *buttonSalon;
