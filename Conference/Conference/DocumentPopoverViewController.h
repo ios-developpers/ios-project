@@ -1,5 +1,5 @@
 //
-//  DocumentPopover.h
+//  DocumentPopoverViewController.h
 //  Conference
 //
 //  Created by ig_2014 on 06/03/2014.
@@ -7,8 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-//#import "AccueilViewController.h"
 #import "Utils.h"
+#import "Document.h"
 #import "Constants.h"
 #import "Facade.h"
 
@@ -16,8 +16,6 @@
 @required
 - (IBAction)addDocument:(id)sender ;
 @end
-
-@class AccueilViewController;
 
 @interface DocumentPopoverViewController : UIViewController
 
@@ -29,8 +27,8 @@
 
 @property (nonatomic, weak) id<DocumentPopoverDelegate> delegate;
 
-- (IBAction)addDocument:(id)sender;
-- (void)setVAccueil:(AccueilViewController *)newAccueil;
 - (id)init;
 - (id)initWithNibName:(NSString *)nibName bundle:(NSBundle *)bundle;
+- (IBAction)addDocument:(id)sender;
+- (void)setVAccueil:(UIViewController *)newAccueil;
 @end

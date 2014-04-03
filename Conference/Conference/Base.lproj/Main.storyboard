@@ -129,9 +129,6 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
-                                <connections>
-                                    <outlet property="delegate" destination="nsP-z4-lzM" id="0p5-8I-4io"/>
-                                </connections>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="http://" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="v2m-vZ-eKE">
                                 <rect key="frame" x="140" y="150" width="160" height="30"/>
@@ -161,10 +158,10 @@
                     <value key="contentSizeForViewInPopover" type="size" width="320" height="520"/>
                     <splitViewMasterSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <connections>
-                        <outlet property="ViewDocumentPopover" destination="nsP-z4-lzM" id="5cx-xx-ofR"/>
-                        <outlet property="champNom" destination="MAh-7E-sze" id="Q9S-gV-UP5"/>
-                        <outlet property="champURL" destination="v2m-vZ-eKE" id="aoV-Rj-Bzd"/>
-                        <outlet property="refProfil" destination="Chi-Uq-xqy" id="aci-z1-VZ7"/>
+                        <outlet property="champNom" destination="MAh-7E-sze" id="ZRQ-bq-Pj8"/>
+                        <outlet property="champURL" destination="v2m-vZ-eKE" id="Ojf-Dw-25i"/>
+                        <outlet property="docPopover" destination="nsP-z4-lzM" id="UCV-1T-MUB"/>
+                        <outlet property="refProfil" destination="Chi-Uq-xqy" id="Jd0-C1-g5j"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xlN-Kg-NQB" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -228,9 +225,6 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="URL"/>
-                                <connections>
-                                    <outlet property="delegate" destination="CgJ-Uc-rRs" id="Gbh-Cc-ieX"/>
-                                </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ffd-HB-woi">
                                 <rect key="frame" x="136" y="451" width="49" height="30"/>
@@ -249,7 +243,7 @@
                                     <!--2014-03-14 16:17:04 +0000-->
                                 </date>
                                 <timeZone key="timeZone" name="America/Los_Angeles">
-                                    <mutableData key="data">
+                                    <data key="data">
 VFppZgAAAAAAAAAAAAAAAAAAAAAAAAAEAAAABAAAAAAAAAC5AAAABAAAABCepkign7sVkKCGKqChmveQ
 y4kaoNIj9HDSYSYQ1v50INiArZDa/tGg28CQENzes6DdqayQ3r6VoN+JjpDgnneg4WlwkOJ+WaDjSVKQ
 5F47oOUpNJDmR1gg5xJREOgnOiDo8jMQ6gccIOrSFRDr5v4g7LH3EO3G4CDukdkQ76/8oPBxuxDxj96g
@@ -267,7 +261,7 @@ f5gqkAABAAECAwEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEA
 AQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEA
 AQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEA
 AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
-</mutableData>
+</data>
                                 </timeZone>
                             </datePicker>
                         </subviews>
@@ -278,7 +272,8 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                     <connections>
                         <outlet property="ViewSalonPopover" destination="CgJ-Uc-rRs" id="Zan-tN-3BI"/>
                         <outlet property="champDate" destination="YIl-ej-Zvb" id="o45-6f-W7V"/>
-                        <outlet property="champSalon" destination="cGi-Bb-ogh" id="Foj-r8-vBo"/>
+                        <outlet property="champLieu" destination="RdI-Ca-Yo7" id="lIP-o5-XI4"/>
+                        <outlet property="champSalon" destination="cGi-Bb-ogh" id="PVQ-1z-qpY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YMf-L2-VFb" userLabel="First Responder" sceneMemberID="firstResponder"/>

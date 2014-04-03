@@ -55,13 +55,14 @@
         docView = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"DocumentPopoverID"];
        // docView.delegate=self;
     }
-    
+
     if (docPopover == nil) {
         //The color picker popover is not showing. Show it.
         docPopover = [[UIPopoverController alloc] initWithContentViewController:docView];
         [docPopover presentPopoverFromBarButtonItem:(UIBarButtonItem *)sender
                                     permittedArrowDirections:UIPopoverArrowDirectionUp animated:YES];
-        [((DocumentPopoverViewController*)docView) setVAccueil:self];
+        
+        [(DocumentPopoverViewController *) docView setVAccueil:self];
     } else {
         //The color picker popover is showing. Hide it.
         [docPopover dismissPopoverAnimated:YES];
@@ -90,7 +91,8 @@
         salonPopover = [[UIPopoverController alloc] initWithContentViewController:salonView];
         [salonPopover presentPopoverFromBarButtonItem:(UIBarButtonItem *)sender
                            permittedArrowDirections:UIPopoverArrowDirectionUp animated:YES];
-
+        
+        [(SalonPopoverViewController *)salonView setVAccueil:self];
         
     } else {
         //The color picker popover is showing. Hide it.

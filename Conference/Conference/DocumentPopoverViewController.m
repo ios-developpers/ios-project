@@ -1,5 +1,6 @@
+
 //
-//  DocumentPopover.m
+//  DocumentPopoverViewController.m
 //  Conference
 //
 //  Created by ig_2014 on 06/03/2014.
@@ -35,7 +36,7 @@
     {
         // error
         NSLog(@"%@", [Utils concatenateString:LogError withString:@" - empty parameters on add document"]);
-
+        
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Erreur" message:@"Champs vide" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles: nil];
         [alert show];
     }
@@ -56,7 +57,7 @@
     }
 }
 
-- (void)setVAccueil:(AccueilViewController *)newAccueil
+- (void)setVAccueil:(UIViewController *)newAccueil
 {
     accueil = newAccueil;
 }
@@ -66,4 +67,5 @@
     NSAssert(NO, @"Initialize with -init");
     return nil;
 }
+
 @end

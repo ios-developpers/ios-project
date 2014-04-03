@@ -23,7 +23,7 @@
 //SINGLETON
 
 +(Facade*)getInstance;
-
+-(id) init;
 
 //SALON
 -(BOOL) addSalon:(Salon*)_salon;

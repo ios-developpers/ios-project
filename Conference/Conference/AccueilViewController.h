@@ -7,12 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "DocumentPopoverViewController.h"
+#import "SalonPopoverViewController.h"
 #import "Utils.h"
 #import "Constants.h"
 #import "Document.h"
 #import "Salon.h"
-#import "SalonPopoverViewController.h"
-#import "DocumentPopoverViewController.h"
 #import "Facade.h"
 
 @interface AccueilViewController : UIViewController <UITableViewDelegate, UITableViewDataSource,UIPopoverControllerDelegate>
@@ -29,11 +29,11 @@
 @property (nonatomic, strong) NSArray *tableSalons;
 @property (strong, nonatomic) IBOutlet UITableView *tableViewSalon;
 
-@property (nonatomic, strong) UIViewController *docView;
-@property (nonatomic, strong) UIPopoverController *docPopover;
-
 @property (nonatomic, strong) UIViewController *salonView;
 @property (nonatomic, strong) UIPopoverController *salonPopover;
+
+@property (nonatomic, strong) UIViewController *docView;
+@property (nonatomic, strong) UIPopoverController *docPopover;
 
 //Listeners
 

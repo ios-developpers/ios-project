@@ -21,9 +21,22 @@
     static Facade* instance=nil;
     
     if(instance==nil)
-        instance=[[Facade alloc]init];
+    {
+        instance=[[Facade alloc] init];
+    }
     
     return instance;
+}
+
+-(id) init
+{
+    self =[super init];
+    
+    listDocument = [[NSMutableArray alloc] init];
+    listSalon = [[NSMutableArray alloc] init];
+    listField = [[NSMutableArray alloc] init];
+    
+    return self;
 }
 
 //METHODS
@@ -76,9 +89,9 @@
 
 /*
  *  Documents
+ *
 
-
--(NSMutableArray *)getListDocument
+-(NSMutableArray *)getListDocuments
 {
     NSMutableArray *documents = [Facade getInstance]->listDocument;
     static dispatch_once_t onceToken;
@@ -96,7 +109,7 @@
     NSMutableArray *documents = [self getListeDocuments];
     
     return [[NSArray alloc] initWithArray:documents];
-} */
+}*/
 
 -(BOOL)addDocument:(Document *)document
 {
