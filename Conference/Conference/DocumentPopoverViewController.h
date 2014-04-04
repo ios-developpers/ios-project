@@ -24,7 +24,14 @@
 @property (strong, nonatomic) IBOutlet UIView *docPopover;
 @property (strong, nonatomic) IBOutlet UITextField *champNom;
 @property (strong, nonatomic) IBOutlet UITextField *champURL;
-@property (strong, nonatomic) IBOutlet UIPickerView *refProfil;
+
+@property (strong, nonatomic) IBOutlet UISwitch *igSwitch;
+@property (strong, nonatomic) IBOutlet UISwitch *eiiSwitch;
+@property (strong, nonatomic) IBOutlet UISwitch *steSwitch;
+@property (strong, nonatomic) IBOutlet UISwitch *stiaSwitch;
+@property (strong, nonatomic) IBOutlet UISwitch *matSwitch;
+@property (strong, nonatomic) IBOutlet UISwitch *meaSwitch;
+@property (strong, nonatomic) IBOutlet UISwitch *seSwitch;
 
 @property (nonatomic, weak) id<DocumentPopoverDelegate> delegate;
 

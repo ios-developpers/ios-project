@@ -22,6 +22,7 @@
 
 -(BOOL) addPool:(Pool*)_pool;
 -(BOOL) removePool:(Pool*)_pool;
+-(BOOL) removePoolAtIndex:(NSUInteger)index;
 -(void) clearListPool;
 -(NSUInteger) countListPool;
 

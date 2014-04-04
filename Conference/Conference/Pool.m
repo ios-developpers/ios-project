@@ -59,6 +59,16 @@
 
 -(BOOL) removeDocument:(Document*)_document
 {
+    if (self->listDocument == nil)
+    {
+        self->listDocument = [[NSMutableArray alloc] init];
+    }
+    
+    if (self->listDocument.count == 0)
+    {
+        return NO;
+    }
+        
     NSUInteger oldSize = [self countListDocument];
     
     [self->listDocument removeObject:_document];
@@ -66,12 +76,34 @@
     return ([self countListDocument] < oldSize);
 }
 
+-(BOOL) removeDocumentAtIndex:(NSUInteger)index
+{
+    if (self->listDocument == nil)
+    {
+        self->listDocument = [[NSMutableArray alloc] init];
+    }
+    
+    if (self->listDocument.count == 0)
+    {
+        return NO;
+    }
+    
+    NSUInteger oldSize = [self countListDocument];
+    
+    [self->listDocument removeObjectAtIndex:index];
+    
+    return ([self countListDocument] < oldSize);
+}
+
 -(void) clearListDocument
 {
-    [self->listDocument removeAllObjects];
-    [self->listDocument finalize];
-    
-    self->listDocument = [[NSMutableArray alloc] init];
+    if (self->listDocument != nil)
+    {
+        [self->listDocument removeAllObjects];
+        [self->listDocument finalize];
+        
+        self->listDocument = [[NSMutableArray alloc] init];
+    }
 }
 
 -(NSUInteger) countListDocument

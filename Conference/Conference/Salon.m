@@ -63,6 +63,15 @@
     return([pools count] < size);
 }
 
+-(BOOL) removePoolAtIndex:(NSUInteger)index
+{
+    NSMutableArray *pools = self->listPool;
+    NSUInteger size = [pools count];
+    
+    [pools removeObjectAtIndex:index];
+    
+    return([pools count] < size);
+}
 
 -(void) clearListPool
 {

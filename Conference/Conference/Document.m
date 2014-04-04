@@ -14,11 +14,10 @@
 //SYNTHESIZE
 @synthesize name;
 @synthesize url;
-@synthesize field;
 
 //METHODS
 
--(id) initWithName:(NSString*)_name andUrl:(NSString*)_url andField:(Field *)_field
+-(id) initWithName:(NSString*)_name andUrl:(NSString*)_url
 {
     self = [super init];
     
@@ -26,8 +25,6 @@
     {
         self->name = _name;
         self->url = _url;
-        self->field = nil;
-        if(_field != nil) self->field = _field;
     }
     
     NSLog(@"%@", [Utils concatenateString:LogConstructor withString:@" Document"]);
@@ -35,9 +32,5 @@
     return self;
 }
 
-- (id)initWithName:(NSString *)_name andUrl:(NSString *)_url
-{
-    return [self initWithName:_name andUrl:_url andField:nil];
-}
 
 @end

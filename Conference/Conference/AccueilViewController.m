@@ -106,10 +106,19 @@
     
     Salon *salon = [[Facade getInstance].listSalon objectAtIndex:[indexPath row]];
     
-    cell.textLabel.text = salon.name;
+    cell.textLabel.text = [Utils concatenateString:[Utils concatenateString:salon.name withString:@" : "] withString:salon.adress];
     cell.detailTextLabel.text = [formatter stringFromDate:salon.date];
     
     return cell;
+}
+
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if (editingStyle == UITableViewCellEditingStyleDelete)
+    {
+        [[Facade getInstance] removeSalonAtIndex:indexPath.row];
+        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
+    }
 }
 
 - (void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath

@@ -260,6 +260,13 @@
                         <outlet property="champNom" destination="MAh-7E-sze" id="ZRQ-bq-Pj8"/>
                         <outlet property="champURL" destination="v2m-vZ-eKE" id="Ojf-Dw-25i"/>
                         <outlet property="docPopover" destination="nsP-z4-lzM" id="UCV-1T-MUB"/>
+                        <outlet property="eiiSwitch" destination="ctE-Bc-peu" id="0na-yE-ygb"/>
+                        <outlet property="igSwitch" destination="p2k-Fr-Stu" id="W2s-4i-vu5"/>
+                        <outlet property="matSwitch" destination="sUe-yD-xDf" id="2ib-qb-NPH"/>
+                        <outlet property="meaSwitch" destination="2UO-Sc-Esd" id="H9X-nH-h2n"/>
+                        <outlet property="seSwitch" destination="9OB-xu-iYD" id="3ij-dp-c0M"/>
+                        <outlet property="steSwitch" destination="ud6-dI-frl" id="bu0-PX-hin"/>
+                        <outlet property="stiaSwitch" destination="RWP-mB-gom" id="Php-0o-xQl"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xlN-Kg-NQB" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -484,7 +491,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="CellDocumentsPool" id="UY9-fB-Tgx">
                                         <rect key="frame" x="0.0" y="22" width="672" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="UY9-fB-Tgx">
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="UY9-fB-Tgx" id="QVR-oj-bpR">
                                             <rect key="frame" x="0.0" y="0.0" width="672" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
@@ -499,7 +506,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="3cL-qu-zcN">
                                         <rect key="frame" x="0.0" y="22" width="348" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="3cL-qu-zcN">
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="3cL-qu-zcN" id="dOl-jg-cHv">
                                             <rect key="frame" x="0.0" y="0.0" width="348" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>

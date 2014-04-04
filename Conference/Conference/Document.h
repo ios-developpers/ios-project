@@ -13,10 +13,8 @@
 //PROPERTIES
 @property(nonatomic,copy)NSString* name;
 @property(nonatomic,copy)NSString* url;
-@property(nonatomic,weak)Field* field;
 
 //METHODS
 -(id) initWithName:(NSString *)_name andUrl:(NSString *)_url;
--(id) initWithName:(NSString *)_name andUrl:(NSString *)_url andField:(Field*)_field;
 
 @end

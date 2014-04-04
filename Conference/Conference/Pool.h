@@ -20,6 +20,7 @@
 
 -(BOOL) addDocument:(Document*)_document;
 -(BOOL) removeDocument:(Document*)_document;
+-(BOOL) removeDocumentAtIndex:(NSUInteger)index;
 -(void) clearListDocument;
 -(NSUInteger) countListDocument;
 

@@ -18,10 +18,10 @@
 @property(nonatomic,strong)NSMutableArray* listDocument;
 @property(nonatomic,strong)NSMutableArray* listSalon;
 @property(nonatomic,strong)NSMutableArray* listField;
-@property(nonatomic,strong)NSArray* listPool;
+@property(nonatomic,strong)NSMutableArray* listPool;
 
 //METHODS
-    //-(id) init;
+//-(id) init;
 //-(id) initWithPropertyList;
 
 //SINGLETON
@@ -30,16 +30,19 @@
 -(id) init;
 
 //POOL
--(NSArray *)getStaticPools;
+-(NSMutableArray *)getProfils;
+-(Pool *)getProfilAtIndex:(NSUInteger)index;
 
 //SALON
 -(BOOL) addSalon:(Salon*)_salon;
 -(BOOL) removeSalon:(Salon*)_salon;
+-(BOOL) removeSalonAtIndex:(NSUInteger)index;
 -(NSUInteger) countListSalon;
 
 //DOCUMENT
 -(BOOL) addDocument:(Document*)_document;
 -(BOOL) removeDocument:(Document*)_document;
+-(BOOL) removeDocumentAtIndex:(NSUInteger)index;
 -(NSUInteger) countListDocument;
 
 //FIELD

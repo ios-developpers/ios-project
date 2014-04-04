@@ -14,7 +14,14 @@
 @synthesize daddy;
 @synthesize champNom;
 @synthesize champURL;
-@synthesize refProfil;
+
+@synthesize igSwitch;
+@synthesize eiiSwitch;
+@synthesize steSwitch;
+@synthesize stiaSwitch;
+@synthesize matSwitch;
+@synthesize meaSwitch;
+@synthesize seSwitch;
 
 - (id)init
 {
@@ -61,10 +68,47 @@
         if([[Facade getInstance] addDocument:document])
         {
             NSLog(@"%@", [Utils concatenateString:LogSuccess withString:@" - document added in Facade"]);
+            
+            if([igSwitch isOn])
+            {
+                [[[Facade getInstance] getProfilAtIndex:0] addDocument:document];
+            }
+            if([eiiSwitch isOn])
+            {
+                [[[Facade getInstance] getProfilAtIndex:1] addDocument:document];
+            }
+            if([steSwitch isOn])
+            {
+                [[[Facade getInstance] getProfilAtIndex:2] addDocument:document];
+            }
+            if([stiaSwitch isOn])
+            {
+                [[[Facade getInstance] getProfilAtIndex:3] addDocument:document];
+            }
+            if([matSwitch isOn])
+            {
+                [[[Facade getInstance] getProfilAtIndex:4] addDocument:document];
+            }
+            if([meaSwitch isOn])
+            {
+                [[[Facade getInstance] getProfilAtIndex:5] addDocument:document];
+            }
+            if([seSwitch isOn])
+            {
+                [[[Facade getInstance] getProfilAtIndex:6] addDocument:document];
+            }
         }
         
         champNom.text = @"";
         champURL.text = @"";
+        
+        [igSwitch setOn:NO animated:NO];
+        [eiiSwitch setOn:NO animated:NO];
+        [steSwitch setOn:NO animated:NO];
+        [stiaSwitch setOn:NO animated:NO];
+        [matSwitch setOn:NO animated:NO];
+        [meaSwitch setOn:NO animated:NO];
+        [seSwitch setOn:NO animated:NO];
         
         [((DocumentViewController*) daddy) forceReload];
         

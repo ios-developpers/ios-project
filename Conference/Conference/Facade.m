@@ -36,13 +36,13 @@
     listDocument = [[NSMutableArray alloc] init];
     listSalon = [[NSMutableArray alloc] init];
     listField = [[NSMutableArray alloc] init];
-    listPool = [self getStaticPools];
+    listPool = [self getProfils];
     
     return self;
 }
 
 //POOL
--(NSArray *)getStaticPools
+-(NSMutableArray *)getProfils
 {
     static NSMutableArray* pools = nil;
     
@@ -60,8 +60,13 @@
             [pools addObject:pool];
         }
     }
-    
+
     return pools;
+}
+
+-(Pool *)getProfilAtIndex:(NSUInteger)index
+{
+    return [[self getProfils] objectAtIndex:index];
 }
 
 //METHODS
@@ -103,6 +108,16 @@
     NSUInteger size = [salons count];
     
     [salons removeObject:_salon];
+    
+    return([salons count] < size);
+}
+
+-(BOOL)removeSalonAtIndex:(NSUInteger)index
+{
+    NSMutableArray *salons = [Facade getInstance]->listSalon;
+    NSUInteger size = [salons count];
+    
+    [salons removeObjectAtIndex:index];
     
     return([salons count] < size);
 }
@@ -158,6 +173,16 @@
     NSUInteger size = [documents count];
     
     [documents removeObject:_document];
+    
+    return([documents count] < size);
+}
+
+-(BOOL)removeDocumentAtIndex:(NSUInteger)index
+{
+    NSMutableArray *documents = [Facade getInstance]->listDocument;
+    NSUInteger size = [documents count];
+    
+    [documents removeObjectAtIndex:index];
     
     return([documents count] < size);
 }
