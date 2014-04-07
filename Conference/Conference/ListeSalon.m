@@ -90,8 +90,8 @@
 - (void)notifyObservers
 {
     [[NSNotificationCenter defaultCenter]
-        postNotificationName:@"SalonNotification"
-        object:nil];
+     postNotificationName:@"SalonNotification"
+     object:nil];
 }
 
 //charge depuis la mémoire

@@ -26,7 +26,7 @@
 }
 
 - (void)viewDidLoad
-{    
+{
     [super viewDidLoad];
     NSLog(@"%@", [Utils concatenateString:LogLoaded withString:@" Accueil View Controller"]);
 }
@@ -74,10 +74,10 @@
     }
     
     if (salonPopover == nil | ![salonPopover isPopoverVisible]) {
-         //The color picker popover is not showing. Show it.
+        //The color picker popover is not showing. Show it.
         salonPopover = [[UIPopoverController alloc] initWithContentViewController:salonView];
         [salonPopover presentPopoverFromBarButtonItem:(UIBarButtonItem *)sender
-                           permittedArrowDirections:UIPopoverArrowDirectionUp animated:YES];
+                             permittedArrowDirections:UIPopoverArrowDirectionUp animated:YES];
         
     } else {
         //The color picker popover is showing. Hide it.

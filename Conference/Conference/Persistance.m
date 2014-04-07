@@ -39,7 +39,7 @@
     docsDir=dirPaths[0];
     
     //on construit la chaine complète
-   return [[NSString alloc] initWithString: [docsDir stringByAppendingPathComponent:_cheminFichier]];
+    return [[NSString alloc] initWithString: [docsDir stringByAppendingPathComponent:_cheminFichier]];
 }
 
 +(BOOL) saveData:(NSMutableArray*)contactArray at:(NSString*)_cheminFichier

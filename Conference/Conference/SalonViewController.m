@@ -67,7 +67,7 @@
         //The color picker popover is not showing. Show it.
         poolPopover = [[UIPopoverController alloc] initWithContentViewController:poolView];
         [poolPopover presentPopoverFromBarButtonItem:(UIBarButtonItem *)sender
-                             permittedArrowDirections:UIPopoverArrowDirectionUp animated:YES];
+                            permittedArrowDirections:UIPopoverArrowDirectionUp animated:YES];
         
     } else {
         //The color picker popover is showing. Hide it.
