@@ -8,7 +8,7 @@
 #import "Pool.h"
 
 //INTERFACE
-@interface Salon : NSObject
+@interface Salon : NSObject <NSCoding>
 
 //PROPERTIES
 @property(nonatomic,copy)NSString *name;
@@ -17,6 +17,7 @@
 @property(nonatomic,strong)NSMutableArray *listPool;
 
 //METHODS
+-(id)initWithCoder:(NSCoder *)aDecoder;
 -(id) initWithName:(NSString*)_name andAdress:(NSString *)_adress andDate:(NSDate *)_date;
 -(id) initWithName:(NSString*)_name andAdress:(NSString *)_adress andDate:(NSDate *)_date andListPool:(NSMutableArray*)_listPool;
 
@@ -25,5 +26,7 @@
 -(BOOL) removePoolAtIndex:(NSUInteger)index;
 -(void) clearListPool;
 -(NSUInteger) countListPool;
+
+-(void)encodeWithCoder:(NSCoder *)aCoder;
 
 @end
