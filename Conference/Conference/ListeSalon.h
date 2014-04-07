@@ -7,19 +7,27 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "PersistantP.h"
 #import "Salon.h"
+#import "Persistance.h"
 
 @class AccueilViewController;
 
-@interface ListeSalon : NSObject
+@interface ListeSalon : NSObject <PersistantP>
 
 @property(nonatomic,strong)NSMutableArray* listSalon;
 
 +(ListeSalon*)getInstance;
 
+-(id)init;
+
 -(BOOL) addSalon:(Salon*)_salon;
 -(BOOL) removeSalon:(Salon*)_salon;
 -(BOOL) removeSalonAtIndex:(NSUInteger)index;
 -(NSUInteger) countListSalon;
+
+-(void)loadItSelf;
+-(void)saveItSelf;
+-(NSString *)getPath;
 
 @end
