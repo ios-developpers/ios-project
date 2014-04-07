@@ -14,7 +14,6 @@
 @interface ListeSalon : NSObject
 
 @property(nonatomic,strong)NSMutableArray* listSalon;
-@property(nonatomic)NSInteger selectedSalon;
 
 +(ListeSalon*)getInstance;
 
@@ -22,8 +21,5 @@
 -(BOOL) removeSalon:(Salon*)_salon;
 -(BOOL) removeSalonAtIndex:(NSUInteger)index;
 -(NSUInteger) countListSalon;
-
--(void) setSelectedSalon:(NSInteger)_selectedSalon;
--(NSInteger) getSelectedSalon;
 
 @end

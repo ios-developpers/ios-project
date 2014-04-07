@@ -17,14 +17,6 @@
 //IMPLEMENTATION
 @implementation SalonViewController
 
-@synthesize salon;
-@synthesize addPool;
-
-@synthesize tableViewPools;
-@synthesize tableViewDocuments;
-
-@synthesize poolView;
-@synthesize poolPopover;
 
 //METHODS
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -34,12 +26,6 @@
         // Custom initialization
     }
     return self;
-}
-
--(void) viewWillAppear:(BOOL)animated
-{
-    self->salon = [[ListeSalon getInstance].listSalon objectAtIndex:[[ListeSalon getInstance] getSelectedSalon]];
-    [tableViewPools reloadData];
 }
 
 - (void)viewDidLoad
@@ -52,28 +38,6 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
-}
-
--(IBAction)addPoolListener:(id)sender
-{
-    NSLog(@"%@", [Utils concatenateString:LogListener withString:@" Add Pool Listener"]);
-    if (poolView == nil) {
-        //Create the ColorPickerViewController.
-        poolView = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"PoolPopoverID"];
-        // docView.delegate=self;
-    }
-    
-    if (poolPopover == nil | ![poolPopover isPopoverVisible]) {
-        //The color picker popover is not showing. Show it.
-        poolPopover = [[UIPopoverController alloc] initWithContentViewController:poolView];
-        [poolPopover presentPopoverFromBarButtonItem:(UIBarButtonItem *)sender
-                             permittedArrowDirections:UIPopoverArrowDirectionUp animated:YES];
-        
-    } else {
-        //The color picker popover is showing. Hide it.
-        [poolPopover dismissPopoverAnimated:YES];
-        poolPopover = nil;
-    }
 }
 
 //MAILS
@@ -109,51 +73,6 @@
     }
     
     [self dismissViewControllerAnimated:YES completion:NULL];
-}
-
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
-{
-    if(tableView == tableViewPools)
-        return [[[ListePool getInstance] getAllPoolsOf:salon ] count];
-    else
-        return 0;
-}
-
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    if (tableView == tableViewPools)
-    {
-        static NSString *MyIdentifier = @"CellPool";
-        UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:MyIdentifier];
-        
-        cell.backgroundColor = [UIColor colorWithRed:246.0f/255.0f green:246.0f/255.0f blue:246.0f/255.0f alpha:1.0];
-        
-        if (cell == nil)
-        {
-            cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault  reuseIdentifier:MyIdentifier];
-        }
-        
-        Pool* pool = [[[ListePool getInstance] getAllPoolsOf:salon] objectAtIndex:[indexPath row]];
-        
-        cell.textLabel.text = pool.name;
-        
-        return cell;
-    }
-    else
-        return nil;
-}
-
-- (void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    
-}
-
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    if (editingStyle == UITableViewCellEditingStyleDelete)
-    {
-        //[[ListeSalon getInstance] removeSalonAtIndex:indexPath.row];
-    }
 }
 
 @end

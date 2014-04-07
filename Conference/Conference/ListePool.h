@@ -7,8 +7,6 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "ListeDocument.h"
-#import "Salon.h"
 #import "Pool.h"
 
 @interface ListePool : NSObject
@@ -24,7 +22,5 @@
 
 -(NSMutableArray *)getProfils;
 -(Pool *)getProfilAtIndex:(NSUInteger)index;
-
--(NSMutableArray*) getAllPoolsOf:(Salon*)salon;
 
 @end

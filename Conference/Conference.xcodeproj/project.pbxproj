@@ -35,7 +35,6 @@
 		AAFD6ED118F2CFF7000F697E /* ListeSalon.m in Sources */ = {isa = PBXBuildFile; fileRef = AAFD6ED018F2CFF7000F697E /* ListeSalon.m */; };
 		AAFD6ED418F2D10F000F697E /* ListeDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = AAFD6ED318F2D10F000F697E /* ListeDocument.m */; };
 		AAFD6ED718F2D290000F697E /* ListePool.m in Sources */ = {isa = PBXBuildFile; fileRef = AAFD6ED618F2D290000F697E /* ListePool.m */; };
-		AAFD6EDB18F302DD000F697E /* PoolPopoverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AAFD6EDA18F302DD000F697E /* PoolPopoverViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -98,8 +97,6 @@
 		AAFD6ED318F2D10F000F697E /* ListeDocument.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListeDocument.m; sourceTree = "<group>"; };
 		AAFD6ED518F2D290000F697E /* ListePool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListePool.h; sourceTree = "<group>"; };
 		AAFD6ED618F2D290000F697E /* ListePool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListePool.m; sourceTree = "<group>"; };
-		AAFD6ED918F302DD000F697E /* PoolPopoverViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PoolPopoverViewController.h; path = ../../../Documents/PoolPopoverViewController.h; sourceTree = "<group>"; };
-		AAFD6EDA18F302DD000F697E /* PoolPopoverViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PoolPopoverViewController.m; path = ../../../Documents/PoolPopoverViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -222,8 +219,6 @@
 				AA26B59C18ED6B9D00399BEA /* DocumentPopoverViewController.m */,
 				AA27A6DB18ED8E5E000EAFE4 /* DocumentViewController.h */,
 				AA27A6DC18ED8E5E000EAFE4 /* DocumentViewController.m */,
-				AAFD6ED918F302DD000F697E /* PoolPopoverViewController.h */,
-				AAFD6EDA18F302DD000F697E /* PoolPopoverViewController.m */,
 				AAD94BC018ED649B008B3057 /* SalonPopoverViewController.h */,
 				AAD94BC118ED649B008B3057 /* SalonPopoverViewController.m */,
 				AAE4FF0918F2EC8A0071123B /* SalonViewController.h */,
@@ -368,7 +363,6 @@
 				AA26B59D18ED6B9D00399BEA /* DocumentPopoverViewController.m in Sources */,
 				AAFD6ED118F2CFF7000F697E /* ListeSalon.m in Sources */,
 				AAFD6ED718F2D290000F697E /* ListePool.m in Sources */,
-				AAFD6EDB18F302DD000F697E /* PoolPopoverViewController.m in Sources */,
 				AAD94BC218ED649B008B3057 /* SalonPopoverViewController.m in Sources */,
 				AAA6A47C18C5F4B500804407 /* AccueilViewController.m in Sources */,
 				AAF3C6B618C720FA00B92618 /* Document.m in Sources */,

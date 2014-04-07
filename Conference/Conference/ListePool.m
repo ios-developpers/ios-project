@@ -81,25 +81,5 @@
 {
     return [[self getProfils] objectAtIndex:index];
 }
--(NSMutableArray*) getAllPoolsOf:(Salon *)salon
-{
-    NSMutableArray* pools = [[NSMutableArray alloc] init];
-    
-    Pool* pool = [[Pool alloc] initWithName:@"Tous les documents" andListDocument:[ListeDocument getInstance].listDocument];
-    
-    [pools addObject:pool];
-    
-    for(pool in salon.listPool)
-    {
-        [pools addObject:pool];
-    }
-    
-    for(pool in [self getProfils])
-    {
-        [pools addObject:pool];
-    }
-    
-    return pools;
-}
 
 @end
