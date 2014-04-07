@@ -11,6 +11,7 @@
 @implementation ListeSalon
 
 @synthesize listSalon;
+@synthesize selectedSalon;
 
 +(ListeSalon*)getInstance
 {
@@ -62,6 +63,16 @@
 -(NSUInteger) countListSalon
 {
     return [listSalon count];
+}
+
+-(void) setSelectedSalon:(NSInteger)_selectedSalon
+{
+    self->selectedSalon = _selectedSalon;
+}
+
+-(NSInteger) getSelectedSalon
+{
+    return self->selectedSalon;
 }
 
 // Observable protocol function

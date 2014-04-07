@@ -130,16 +130,7 @@
 
 - (void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    //[self performSegueWithIdentifier:@"GoToSalonDetail" sender:[self.tableViewSalon cellForRowAtIndexPath:indexPath]];
+    [[ListeSalon getInstance] setSelectedSalon:[indexPath row]];
 }
 
-/*
-- (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    if([segue.identifier isEqualToString:@"GoToSalonDetail"])
-    {
-        SplitView *destination = [segue destinationViewController];
-    }
-}
-*/
 @end
