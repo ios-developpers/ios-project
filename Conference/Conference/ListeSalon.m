@@ -64,6 +64,7 @@
     return [listSalon count];
 }
 
+// Observable protocol function
 - (void)notifyObservers
 {
     [[NSNotificationCenter defaultCenter]

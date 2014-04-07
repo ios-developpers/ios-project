@@ -7,9 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "ObservableP.h"
 #import "Document.h"
 
-@interface ListeDocument : NSObject
+@interface ListeDocument : NSObject <ObservableP>
 
 @property(nonatomic,strong)NSMutableArray* listDocument;
 
@@ -20,7 +21,5 @@
 -(BOOL) removeDocument:(Document*)_document;
 -(BOOL) removeDocumentAtIndex:(NSUInteger)index;
 -(NSUInteger) countListDocument;
-
-- (void)notifyObservers;
 
 @end

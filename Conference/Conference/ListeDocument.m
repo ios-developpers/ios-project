@@ -64,6 +64,7 @@
     return [listDocument count];
 }
 
+// Observable protocol function
 - (void)notifyObservers
 {
     [[NSNotificationCenter defaultCenter]

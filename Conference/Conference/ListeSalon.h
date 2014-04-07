@@ -22,6 +22,4 @@
 -(BOOL) removeSalonAtIndex:(NSUInteger)index;
 -(NSUInteger) countListSalon;
 
-- (void)notifyObservers;
-
 @end

@@ -22,7 +22,6 @@
 		34BF44FB18ACDB8800B66045 /* ConferenceTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 34BF44FA18ACDB8800B66045 /* ConferenceTests.m */; };
 		AA26B59D18ED6B9D00399BEA /* DocumentPopoverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AA26B59C18ED6B9D00399BEA /* DocumentPopoverViewController.m */; };
 		AA27A6DD18ED8E5E000EAFE4 /* DocumentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AA27A6DC18ED8E5E000EAFE4 /* DocumentViewController.m */; };
-		AA47749318CF55370074BA46 /* TODO in Resources */ = {isa = PBXBuildFile; fileRef = AA47749218CF55370074BA46 /* TODO */; };
 		AAA6A47C18C5F4B500804407 /* AccueilViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AAA6A47B18C5F4B500804407 /* AccueilViewController.m */; };
 		AAD94BC218ED649B008B3057 /* SalonPopoverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AAD94BC118ED649B008B3057 /* SalonPopoverViewController.m */; };
 		AAE4FF0818F2EC670071123B /* Persistance.m in Sources */ = {isa = PBXBuildFile; fileRef = AAE4FF0718F2EC670071123B /* Persistance.m */; };
@@ -71,7 +70,6 @@
 		AA26B59C18ED6B9D00399BEA /* DocumentPopoverViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DocumentPopoverViewController.m; sourceTree = "<group>"; };
 		AA27A6DB18ED8E5E000EAFE4 /* DocumentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DocumentViewController.h; sourceTree = "<group>"; };
 		AA27A6DC18ED8E5E000EAFE4 /* DocumentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DocumentViewController.m; sourceTree = "<group>"; };
-		AA47749218CF55370074BA46 /* TODO */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = TODO; sourceTree = "<group>"; };
 		AAA6A47A18C5F4B500804407 /* AccueilViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccueilViewController.h; sourceTree = "<group>"; };
 		AAA6A47B18C5F4B500804407 /* AccueilViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccueilViewController.m; sourceTree = "<group>"; };
 		AAD94BC018ED649B008B3057 /* SalonPopoverViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SalonPopoverViewController.h; sourceTree = "<group>"; };
@@ -81,6 +79,8 @@
 		AAE4FF0918F2EC8A0071123B /* SalonViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SalonViewController.h; sourceTree = "<group>"; };
 		AAE4FF0A18F2EC8A0071123B /* SalonViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SalonViewController.m; sourceTree = "<group>"; };
 		AAE4FF0C18F2ECC40071123B /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		AAE4FF0F18F2EF1C0071123B /* PersistantP.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PersistantP.h; sourceTree = "<group>"; };
+		AAE4FF1018F2F0730071123B /* ObservableP.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ObservableP.h; sourceTree = "<group>"; };
 		AAF3C6B418C720FA00B92618 /* Document.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Document.h; sourceTree = "<group>"; };
 		AAF3C6B518C720FA00B92618 /* Document.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Document.m; sourceTree = "<group>"; };
 		AAF3C6B718C724C000B92618 /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
@@ -156,7 +156,7 @@
 		34BF44D518ACDB8700B66045 /* Conference */ = {
 			isa = PBXGroup;
 			children = (
-				AA47749218CF55370074BA46 /* TODO */,
+				AAE4FF0E18F2EEB30071123B /* Persistance */,
 				34BF44D618ACDB8700B66045 /* Supporting Files */,
 				AA47749418CF56090074BA46 /* Utils */,
 				AA574EC018C8937C00C25555 /* Controller */,
@@ -201,12 +201,11 @@
 		AA47749418CF56090074BA46 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				AAE4FF0618F2EC670071123B /* Persistance.h */,
-				AAE4FF0718F2EC670071123B /* Persistance.m */,
 				AAF3C6B718C724C000B92618 /* Constants.h */,
 				AAF3C6B818C724C000B92618 /* Constants.m */,
 				AAF3C6BA18C7275F00B92618 /* Utils.h */,
 				AAF3C6BB18C7275F00B92618 /* Utils.m */,
+				AAE4FF1018F2F0730071123B /* ObservableP.h */,
 			);
 			name = Utils;
 			sourceTree = "<group>";
@@ -228,6 +227,16 @@
 				34BF44E518ACDB8700B66045 /* ViewController.m */,
 			);
 			name = Controller;
+			sourceTree = "<group>";
+		};
+		AAE4FF0E18F2EEB30071123B /* Persistance */ = {
+			isa = PBXGroup;
+			children = (
+				AAE4FF0618F2EC670071123B /* Persistance.h */,
+				AAE4FF0718F2EC670071123B /* Persistance.m */,
+				AAE4FF0F18F2EF1C0071123B /* PersistantP.h */,
+			);
+			name = Persistance;
 			sourceTree = "<group>";
 		};
 		AAF3C6C418C737DE00B92618 /* Model */ = {
@@ -327,7 +336,6 @@
 			files = (
 				34BF44E818ACDB8800B66045 /* Images.xcassets in Resources */,
 				34BF44DA18ACDB8700B66045 /* InfoPlist.strings in Resources */,
-				AA47749318CF55370074BA46 /* TODO in Resources */,
 				AAE4FF0D18F2ECC40071123B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
