@@ -9,9 +9,5 @@
 #import <Foundation/Foundation.h>
 
 @protocol PersistantP <NSObject>
-
--(void)loadItSelf;
--(void)saveItSelf;
--(NSString*)getPath;
-
+    
 @end

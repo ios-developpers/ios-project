@@ -16,6 +16,6 @@
 
 +(NSString*)getDataPath:(NSString*) _cheminFichier;
 
-+(BOOL) saveData:(NSMutableArray*)contactArray at:(NSString*)_cheminFichier;
++(void) saveData:(NSMutableArray*)contactArray at:(NSString*)_cheminFichier;
 
 @end

@@ -20,19 +20,11 @@
     if(instance==nil)
     {
         instance=[[ListeSalon alloc] init];
+        
+        instance->listSalon = [[NSMutableArray alloc] init];
     }
     
     return instance;
-}
-
--(id)init
-{
-    self = [super init];
-    
-    //initialise la liste des salons
-    [self loadItSelf];
-    
-    return self;
 }
 
 -(BOOL)addSalon:(Salon *)_salon
@@ -41,7 +33,6 @@
     
     [listSalon addObject:_salon];
     
-    [self saveItSelf];
     [self notifyObservers];
     
     return([listSalon count] > size);
@@ -53,7 +44,6 @@
     
     [listSalon removeObject:_salon];
     
-    [self saveItSelf];
     [self notifyObservers];
     
     return([listSalon count] < size);
@@ -65,7 +55,6 @@
     
     [listSalon removeObjectAtIndex:index];
     
-    [self saveItSelf];
     [self notifyObservers];
     
     return([listSalon count] < size);
@@ -94,24 +83,5 @@
         object:nil];
 }
 
-//charge depuis la mémoire
--(void)loadItSelf
-{
-    self.listSalon=[Persistance chargerFichier:[self getPath]];
-}
-
-//sauvegarde la liste des salons courante en mémoire
--(void)saveItSelf
-{
-    NSLog(@"avant");
-    [Persistance saveData:self.listSalon at:[self getPath]];
-    NSLog(@"après");
-}
-
-//renvoie une chaine constante (UNIQUE) correspondant à l'endroit en mémoire dans lequel chercher la liste
--(NSString *)getPath
-{
-    return @"listeSalons";
-}
 
 @end

@@ -42,11 +42,11 @@
    return [[NSString alloc] initWithString: [docsDir stringByAppendingPathComponent:_cheminFichier]];
 }
 
-+(BOOL) saveData:(NSMutableArray*)contactArray at:(NSString*)_cheminFichier
++(void) saveData:(NSMutableArray*)contactArray at:(NSString*)_cheminFichier
 {
-    NSString * _dataFilePath=[Persistance getDataPath:_cheminFichier];
+     NSString * _dataFilePath=[Persistance getDataPath:_cheminFichier];
     
-    return [NSKeyedArchiver archiveRootObject:contactArray toFile:_dataFilePath];
+    [NSKeyedArchiver archiveRootObject:contactArray toFile:_dataFilePath];
 }
 
 @end
