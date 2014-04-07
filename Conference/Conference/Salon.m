@@ -16,13 +16,26 @@
 @synthesize adress;
 @synthesize date;
 @synthesize listPool;
+static NSString *const kName = @"Name";
+static NSString *const kAdress = @"Adress";
+static NSString *const kDate=@"date";
 
 //METHODS
+-(id)initWithCoder:(NSCoder *)aDecoder
+{
+    if ((self=[super init])) {
+        NSString *pName = [aDecoder decodeObjectForKey:kName];
+        NSString *pAdress = [aDecoder decodeObjectForKey:kAdress];
+        NSDate *pDate=[aDecoder decodeObjectForKey:kDate];
+        return [self initWithName:pName andAdress:pAdress andDate:pDate];
+    }
+    return self;
+}
+
 -(id) initWithName:(NSString*)_name andAdress:(NSString *)_adress andDate:(NSDate *)_date
 {
     return [self initWithName:_name andAdress:_adress andDate:_date andListPool:nil];
 }
-
 
 -(id) initWithName:(NSString *)_name andAdress:(NSString *)_adress andDate:(NSDate *)_date andListPool:(NSMutableArray *)_listPool
 {
@@ -84,6 +97,13 @@
 -(NSUInteger) countListPool
 {
     return [self->listPool count];
+}
+
+-(void)encodeWithCoder:(NSCoder *)aCoder
+{
+    [aCoder encodeObject:name forKey:kName];
+    [aCoder encodeObject:adress forKey:kAdress];
+    [aCoder encodeObject:date forKey:kDate];
 }
 
 @end
