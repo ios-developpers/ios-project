@@ -13,7 +13,8 @@
 #import "Constants.h"
 #import "Document.h"
 #import "Salon.h"
-#import "Facade.h"
+
+#import "ListeSalon.h"
 
 @interface AccueilViewController : UIViewController <UITableViewDelegate, UITableViewDataSource,UIPopoverControllerDelegate>
 {
@@ -32,7 +33,7 @@
 
 - (IBAction)addSalonListener:(UIBarButtonItem *)sender;
 
-- (void) forceReload;
+-(void) forceReload:(NSNotification *)notification;
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section;
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath;

@@ -25,13 +25,15 @@
     return self;
 }
 
-
 - (void)viewDidLoad
 {    
     [super viewDidLoad];
     NSLog(@"%@", [Utils concatenateString:LogLoaded withString:@" Accueil View Controller"]);
-    
-    //self->isPopoverSalonOpened = NO;
+}
+
+-(void) viewWillAppear:(BOOL)animated
+{
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(forceReload:) name:@"SalonNotification" object:nil];
 }
 
 -(void) viewWillDisappear:(BOOL)animated
@@ -41,11 +43,19 @@
         [salonPopover dismissPopoverAnimated:YES];
         salonPopover = nil;
     }
+    
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
--(void) forceReload
+-(void) forceReload:(NSNotification *)notification
 {
     [tableViewSalon reloadData];
+    
+    if (salonPopover != nil)
+    {
+        [salonPopover dismissPopoverAnimated:YES];
+        salonPopover = nil;
+    }
 }
 
 - (void)didReceiveMemoryWarning
@@ -69,8 +79,6 @@
         [salonPopover presentPopoverFromBarButtonItem:(UIBarButtonItem *)sender
                            permittedArrowDirections:UIPopoverArrowDirectionUp animated:YES];
         
-        [(SalonPopoverViewController *)salonView setVAccueil:self];
-
     } else {
         //The color picker popover is showing. Hide it.
         [salonPopover dismissPopoverAnimated:YES];
@@ -84,7 +92,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return [[Facade getInstance] countListSalon];
+    return [[ListeSalon getInstance] countListSalon];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -104,7 +112,7 @@
     formatter = [[NSDateFormatter alloc] init];
     [formatter setDateFormat:@"HH:mm dd/MM/yyyy"];
     
-    Salon *salon = [[Facade getInstance].listSalon objectAtIndex:[indexPath row]];
+    Salon *salon = [[ListeSalon getInstance].listSalon objectAtIndex:[indexPath row]];
     
     cell.textLabel.text = [Utils concatenateString:[Utils concatenateString:salon.name withString:@" : "] withString:salon.adress];
     cell.detailTextLabel.text = [formatter stringFromDate:salon.date];
@@ -116,8 +124,7 @@
 {
     if (editingStyle == UITableViewCellEditingStyleDelete)
     {
-        [[Facade getInstance] removeSalonAtIndex:indexPath.row];
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
+        [[ListeSalon getInstance] removeSalonAtIndex:indexPath.row];
     }
 }
 

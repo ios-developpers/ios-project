@@ -11,7 +11,9 @@
 #import "Utils.h"
 #import "Document.h"
 #import "Constants.h"
-#import "Facade.h"
+
+#import "ListeDocument.h"
+#import "ListePool.h"
 
 @protocol DocumentPopoverDelegate <NSObject>
 @required
@@ -20,7 +22,6 @@
 
 @interface DocumentPopoverViewController : UIViewController
 
-@property (strong, nonatomic) UIViewController *daddy;
 @property (strong, nonatomic) IBOutlet UIView *docPopover;
 @property (strong, nonatomic) IBOutlet UITextField *champNom;
 @property (strong, nonatomic) IBOutlet UITextField *champURL;
@@ -38,5 +39,5 @@
 - (id)init;
 - (id)initWithNibName:(NSString *)nibName bundle:(NSBundle *)bundle;
 - (IBAction)addDocument:(id)sender;
-- (void)setVDaddy:(UIViewController *)newAccueil;
+
 @end

@@ -12,7 +12,8 @@
 #import "Constants.h"
 #import "Document.h"
 #import "Salon.h"
-#import "Facade.h"
+
+#import "ListeDocument.h"
 
 @interface DocumentViewController : UIViewController <UITableViewDelegate, UITableViewDataSource,UIPopoverControllerDelegate>
 {
@@ -34,7 +35,7 @@
 
 - (IBAction)addDocumentListener:(UIBarButtonItem *)sender;
 
-- (void) forceReload;
+-(void) forceReload:(NSNotification *)notification;
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section;
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath;

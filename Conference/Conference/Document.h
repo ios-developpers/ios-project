@@ -5,7 +5,6 @@
 
 //IMPORT
 #import <Foundation/Foundation.h>
-#import "Field.h"
 
 //INTERFACE
 @interface Document : NSObject

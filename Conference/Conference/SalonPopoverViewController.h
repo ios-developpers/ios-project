@@ -10,7 +10,9 @@
 #import "Utils.h"
 #import "Constants.h"
 #import "Salon.h"
-#import "Facade.h"
+#import "AccueilViewController.h"
+
+#import "ListeSalon.h"
 
 @protocol SalonPopoverDelegate <NSObject>
 @required
@@ -19,7 +21,6 @@
 
 @interface SalonPopoverViewController : UIViewController
 
-@property (strong, nonatomic) UIViewController *accueil;
 @property (strong, nonatomic) IBOutlet UIView *ViewSalonPopover;
 @property (strong, nonatomic) IBOutlet UITextField *champSalon;
 @property (strong, nonatomic) IBOutlet UITextField *champLieu;
@@ -30,5 +31,4 @@
 - (IBAction)addSalon:(id)sender ;
 - (id)init;
 - (id)initWithNibName:(NSString *)nibName bundle:(NSBundle *)bundle;
-- (void)setVAccueil:(UIViewController *)newAccueil;
 @end

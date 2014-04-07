@@ -11,7 +11,6 @@
 
 @implementation DocumentPopoverViewController
 
-@synthesize daddy;
 @synthesize champNom;
 @synthesize champURL;
 
@@ -65,37 +64,37 @@
     {
         // add document
         Document *document = [[Document alloc] initWithName:name andUrl:url];
-        if([[Facade getInstance] addDocument:document])
+        if([[ListeDocument getInstance] addDocument:document])
         {
-            NSLog(@"%@", [Utils concatenateString:LogSuccess withString:@" - document added in Facade"]);
+            NSLog(@"%@", [Utils concatenateString:LogSuccess withString:@" - document added in ListePool"]);
             
             if([igSwitch isOn])
             {
-                [[[Facade getInstance] getProfilAtIndex:0] addDocument:document];
+                [[[ListePool getInstance] getProfilAtIndex:0] addDocument:document];
             }
             if([eiiSwitch isOn])
             {
-                [[[Facade getInstance] getProfilAtIndex:1] addDocument:document];
+                [[[ListePool getInstance] getProfilAtIndex:1] addDocument:document];
             }
             if([steSwitch isOn])
             {
-                [[[Facade getInstance] getProfilAtIndex:2] addDocument:document];
+                [[[ListePool getInstance] getProfilAtIndex:2] addDocument:document];
             }
             if([stiaSwitch isOn])
             {
-                [[[Facade getInstance] getProfilAtIndex:3] addDocument:document];
+                [[[ListePool getInstance] getProfilAtIndex:3] addDocument:document];
             }
             if([matSwitch isOn])
             {
-                [[[Facade getInstance] getProfilAtIndex:4] addDocument:document];
+                [[[ListePool getInstance] getProfilAtIndex:4] addDocument:document];
             }
             if([meaSwitch isOn])
             {
-                [[[Facade getInstance] getProfilAtIndex:5] addDocument:document];
+                [[[ListePool getInstance] getProfilAtIndex:5] addDocument:document];
             }
             if([seSwitch isOn])
             {
-                [[[Facade getInstance] getProfilAtIndex:6] addDocument:document];
+                [[[ListePool getInstance] getProfilAtIndex:6] addDocument:document];
             }
         }
         
@@ -109,17 +108,7 @@
         [matSwitch setOn:NO animated:NO];
         [meaSwitch setOn:NO animated:NO];
         [seSwitch setOn:NO animated:NO];
-        
-        [((DocumentViewController*) daddy) forceReload];
-        
-        [((DocumentViewController*) daddy).docPopover dismissPopoverAnimated:YES];
-        ((DocumentViewController*) daddy).docPopover = nil;
     }
-}
-
-- (void)setVDaddy:(UIViewController *)newDaddy
-{
-    daddy = newDaddy;
 }
 
 - (id)initWithNibName:(NSString *)nibName bundle:(NSBundle *)bundle

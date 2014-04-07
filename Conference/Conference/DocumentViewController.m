@@ -25,6 +25,22 @@
     return self;
 }
 
+-(void) viewWillAppear:(BOOL)animated
+{
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(forceReload:) name:@"DocumentNotification" object:nil];
+}
+
+-(void) viewWillDisappear:(BOOL)animated
+{
+    if (docPopover != nil)
+    {
+        [docPopover dismissPopoverAnimated:YES];
+        docPopover = nil;
+    }
+    
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
+
 
 - (void)viewDidLoad
 {
@@ -32,9 +48,15 @@
     NSLog(@"%@", [Utils concatenateString:LogLoaded withString:@" Document View Controller"]);
 }
 
--(void) forceReload
+-(void) forceReload:(NSNotification *)notification
 {
     [tableViewDocument reloadData];
+    
+    if (docPopover != nil)
+    {
+        [docPopover dismissPopoverAnimated:YES];
+        docPopover = nil;
+    }
 }
 
 - (void)didReceiveMemoryWarning
@@ -60,7 +82,6 @@
         [docPopover presentPopoverFromBarButtonItem:(UIBarButtonItem *)sender
                            permittedArrowDirections:UIPopoverArrowDirectionUp animated:YES];
         
-        [(DocumentPopoverViewController *) docView setVDaddy:self];
     } else {
         //The color picker popover is showing. Hide it.
         [docPopover dismissPopoverAnimated:YES];
@@ -74,7 +95,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return [[Facade getInstance] countListDocument];
+    return [[ListeDocument getInstance] countListDocument];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -89,7 +110,7 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault  reuseIdentifier:MyIdentifier];
     }
     
-    Document *document = [[Facade getInstance].listDocument objectAtIndex:[indexPath row]];
+    Document *document = [[ListeDocument getInstance].listDocument objectAtIndex:[indexPath row]];
     
     cell.textLabel.text = document.name;
     cell.detailTextLabel.text = document.url;
@@ -101,8 +122,7 @@
 {
     if (editingStyle == UITableViewCellEditingStyleDelete)
     {
-        [[Facade getInstance] removeDocumentAtIndex:indexPath.row];
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
+        [[ListeDocument getInstance] removeDocumentAtIndex:indexPath.row];
     }
 }
 

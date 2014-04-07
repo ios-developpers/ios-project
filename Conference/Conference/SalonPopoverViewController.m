@@ -10,7 +10,6 @@
 
 @implementation SalonPopoverViewController
 
-@synthesize accueil;
 @synthesize champSalon;
 @synthesize champLieu;
 @synthesize champDate;
@@ -58,23 +57,14 @@
     {
         // add salon
         Salon *salon = [[Salon alloc] initWithName:name andAdress:lieu andDate:date];
-        if([[Facade getInstance] addSalon:salon])
+        if([[ListeSalon getInstance] addSalon:salon])
         {
             NSLog(@"%@", [Utils concatenateString:LogSuccess withString:@" - salon added in Facade"]);
         }
         
         champSalon.text = @"";
         champLieu.text = @"";
-        
-        [((AccueilViewController*)accueil) forceReload];
-        [((AccueilViewController*)accueil).salonPopover dismissPopoverAnimated:YES];
-        ((AccueilViewController*)accueil).salonPopover = nil;
     }
-}
-
-- (void)setVAccueil:(UIViewController *)newAccueil
-{
-    accueil = newAccueil;
 }
 
 - (id)initWithNibName:(NSString *)nibName bundle:(NSBundle *)bundle
