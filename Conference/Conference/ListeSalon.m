@@ -103,9 +103,7 @@
 //sauvegarde la liste des salons courante en mémoire
 -(void)saveItSelf
 {
-    NSLog(@"avant");
     [Persistance saveData:self.listSalon at:[self getPath]];
-    NSLog(@"après");
 }
 
 //renvoie une chaine constante (UNIQUE) correspondant à l'endroit en mémoire dans lequel chercher la liste

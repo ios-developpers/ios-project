@@ -8,12 +8,15 @@
 
 #import <Foundation/Foundation.h>
 #import "ObservableP.h"
+#import "PersistantP.h"
 #import "Document.h"
+#import "Persistance.h"
 
-@interface ListeDocument : NSObject <ObservableP>
+@interface ListeDocument : NSObject <ObservableP, PersistantP>
 
 @property(nonatomic,strong)NSMutableArray* listDocument;
 
+-(id)init;
 
 +(ListeDocument*)getInstance;
 
@@ -22,4 +25,7 @@
 -(BOOL) removeDocumentAtIndex:(NSUInteger)index;
 -(NSUInteger) countListDocument;
 
+-(void)loadItSelf;
+-(void)saveItSelf;
+-(NSString *)getPath;
 @end
