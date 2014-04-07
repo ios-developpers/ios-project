@@ -19,19 +19,11 @@
     if(instance==nil)
     {
         instance=[[ListeDocument alloc] init];
+        
+        instance->listDocument = [[NSMutableArray alloc] init];
     }
     
     return instance;
-}
-
--(id)init
-{
-    self = [super init];
-    
-    //initialise la liste des salons
-    [self loadItSelf];
-    
-    return self;
 }
 
 -(BOOL)addDocument:(Document *)_document
@@ -40,7 +32,6 @@
     
     [listDocument addObject:_document];
     
-    [self saveItSelf];
     [self notifyObservers];
     
     return([listDocument count] > size);
@@ -52,7 +43,6 @@
     
     [listDocument removeObject:_document];
     
-    [self saveItSelf];
     [self notifyObservers];
     
     return([listDocument count] < size);
@@ -64,7 +54,6 @@
     
     [listDocument removeObjectAtIndex:index];
     
-    [self saveItSelf];
     [self notifyObservers];
     
     return([listDocument count] < size);
@@ -83,21 +72,4 @@
      object:nil];
 }
 
-//charge depuis la mémoire
--(void)loadItSelf
-{
-    self.listDocument=[Persistance chargerFichier:[self getPath]];
-}
-
-//sauvegarde la liste des salons courante en mémoire
--(void)saveItSelf
-{
-    [Persistance saveData:self.listDocument at:[self getPath]];
-}
-
-//renvoie une chaine constante (UNIQUE) correspondant à l'endroit en mémoire dans lequel chercher la liste
--(NSString *)getPath
-{
-    return @"listeDocuments";
-}
 @end

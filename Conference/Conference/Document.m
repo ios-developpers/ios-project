@@ -14,19 +14,8 @@
 //SYNTHESIZE
 @synthesize name;
 @synthesize url;
-static NSString *const kName = @"Name";
-static NSString *const kUrl = @"Url";
 
 //METHODS
--(id)initWithCoder:(NSCoder *)aDecoder
-{
-    if ((self=[super init])) {
-        NSString *pName = [aDecoder decodeObjectForKey:kName];
-        NSString *pUrl = [aDecoder decodeObjectForKey:kUrl];
-        return [self initWithName:pName andUrl:pUrl];
-    }
-    return self;
-}
 
 -(id) initWithName:(NSString*)_name andUrl:(NSString*)_url
 {
@@ -43,10 +32,5 @@ static NSString *const kUrl = @"Url";
     return self;
 }
 
--(void)encodeWithCoder:(NSCoder *)aCoder
-{
-    [aCoder encodeObject:name forKey:kName];
-    [aCoder encodeObject:url forKey:kUrl];
-}
 
 @end
