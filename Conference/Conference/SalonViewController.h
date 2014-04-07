@@ -6,8 +6,15 @@
 //  Copyright (c) 2014 ios-developpers. All rights reserved.
 //
 
+//IMPORT
 #import <UIKit/UIKit.h>
+#import <MessageUI/MessageUI.h>
 
-@interface SalonViewController : UIViewController
+//INTERFACE
+@interface SalonViewController : UIViewController<MFMailComposeViewControllerDelegate>
+
+//METHODS
+- (IBAction)sendButton:(id)sender;
 
 @end
+
