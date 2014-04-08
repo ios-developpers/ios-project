@@ -575,7 +575,6 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                     </navigationItem>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <connections>
-                        <outlet property="addPool" destination="m7J-vT-6Gj" id="nHn-L1-6r9"/>
                         <outlet property="buttonGoToEdit" destination="nes-Hi-f0r" id="CnL-5z-y7a"/>
                         <outlet property="buttonSendMail" destination="Pdd-hf-eX3" id="JvI-4S-YNS"/>
                         <outlet property="buttonaddUnPool" destination="m7J-vT-6Gj" id="6Or-xy-BuL"/>
