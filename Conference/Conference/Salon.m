@@ -63,6 +63,8 @@ static NSString *const kDate=@"date";
     
     [pools addObject:_pool];
     
+    [self notifyObservers];
+    
     return([pools count] > size);
 }
 
@@ -73,6 +75,8 @@ static NSString *const kDate=@"date";
     
     [pools removeObject:_pool];
     
+    [self notifyObservers];
+    
     return([pools count] < size);
 }
 
@@ -82,6 +86,8 @@ static NSString *const kDate=@"date";
     NSUInteger size = [pools count];
     
     [pools removeObjectAtIndex:index];
+    
+    [self notifyObservers];
     
     return([pools count] < size);
 }
@@ -104,6 +110,14 @@ static NSString *const kDate=@"date";
     [aCoder encodeObject:name forKey:kName];
     [aCoder encodeObject:adress forKey:kAdress];
     [aCoder encodeObject:date forKey:kDate];
+}
+
+// Observable protocol function
+- (void)notifyObservers
+{
+    [[NSNotificationCenter defaultCenter]
+     postNotificationName:@"SalonPoolNotification"
+     object:nil];
 }
 
 @end

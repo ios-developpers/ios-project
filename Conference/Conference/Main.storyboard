@@ -77,12 +77,13 @@
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="I7u-dW-H6b">
                             <connections>
-                                <action selector="addSalonListener:" destination="Q5r-Gv-t4h" id="k7W-Wr-wqd"/>
+                                <action selector="addSalonListener:" destination="Q5r-Gv-t4h" id="MGk-mk-w2q"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <connections>
+                        <outlet property="buttonGotoDocument" destination="E2V-vb-2f9" id="Ct7-G7-dyr"/>
                         <outlet property="buttonSalon" destination="I7u-dW-H6b" id="eoa-Te-fY7"/>
                         <outlet property="tableViewSalon" destination="eKF-Jn-ocU" id="wZO-pO-J92"/>
                     </connections>
@@ -94,7 +95,7 @@
         <!--Document Popover View Controller-->
         <scene sceneID="o2m-dr-eo0">
             <objects>
-                <viewController storyboardIdentifier="DocumentPopoverID" useStoryboardIdentifierAsRestorationIdentifier="YES" id="06p-74-0L7" customClass="DocumentPopoverViewController" sceneMemberID="viewController">
+                <viewController restorationIdentifier="DocumentPopoverID" storyboardIdentifier="DocumentPopoverID" id="06p-74-0L7" customClass="DocumentPopoverViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Mz8-xx-acI"/>
                         <viewControllerLayoutGuide type="bottom" id="TW1-6U-JJm"/>
@@ -140,7 +141,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="p2k-Fr-Stu">
-                                <rect key="frame" x="43" y="208" width="51" height="31"/>
+                                <rect key="frame" x="43" y="208" width="32" height="20"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="20" id="0aE-NA-GIe"/>
@@ -156,7 +157,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="ctE-Bc-peu">
-                                <rect key="frame" x="43" y="247" width="51" height="31"/>
+                                <rect key="frame" x="43" y="247" width="32" height="20"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="30" id="IvA-KX-aff"/>
@@ -172,7 +173,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="ud6-dI-frl">
-                                <rect key="frame" x="43" y="286" width="51" height="31"/>
+                                <rect key="frame" x="43" y="286" width="32" height="20"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="20" id="0eX-ZG-WkF"/>
@@ -188,7 +189,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="RWP-mB-gom">
-                                <rect key="frame" x="43" y="325" width="51" height="31"/>
+                                <rect key="frame" x="43" y="325" width="32" height="20"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="30" id="hdC-V0-n6P"/>
@@ -204,7 +205,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="sUe-yD-xDf">
-                                <rect key="frame" x="43" y="364" width="51" height="31"/>
+                                <rect key="frame" x="43" y="364" width="32" height="20"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="20" id="bqr-OI-6fm"/>
@@ -220,7 +221,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="2UO-Sc-Esd">
-                                <rect key="frame" x="43" y="403" width="51" height="31"/>
+                                <rect key="frame" x="43" y="403" width="32" height="20"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="20" id="Eaf-1I-Sfn"/>
@@ -236,7 +237,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="9OB-xu-iYD">
-                                <rect key="frame" x="43" y="442" width="51" height="31"/>
+                                <rect key="frame" x="43" y="442" width="32" height="20"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="20" id="3ar-uE-c2c"/>
@@ -295,7 +296,7 @@
         <!--Salon Popover View Controller-->
         <scene sceneID="oIR-0z-7WL">
             <objects>
-                <viewController storyboardIdentifier="SalonPopoverID" useStoryboardIdentifierAsRestorationIdentifier="YES" id="VPw-kF-wwJ" customClass="SalonPopoverViewController" sceneMemberID="viewController">
+                <viewController restorationIdentifier="SalonPopoverID" storyboardIdentifier="SalonPopoverID" id="VPw-kF-wwJ" customClass="SalonPopoverViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="nfW-Sc-jUZ"/>
                         <viewControllerLayoutGuide type="bottom" id="q5x-TM-iyb"/>
@@ -407,11 +408,11 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="CellDocument" textLabel="HgM-H4-E6g" detailTextLabel="StU-2e-wCs" style="IBUITableViewCellStyleSubtitle" id="yuH-SK-QwZ">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CellDocument" textLabel="HgM-H4-E6g" detailTextLabel="StU-2e-wCs" style="IBUITableViewCellStyleSubtitle" id="yuH-SK-QwZ">
                                         <rect key="frame" x="0.0" y="22" width="1024" height="44"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="yuH-SK-QwZ" id="LDy-vm-eIT">
-                                            <rect key="frame" x="0.0" y="0.0" width="991" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="1024" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Document" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="HgM-H4-E6g">
@@ -450,7 +451,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                     <navigationItem key="navigationItem" title="Documents" id="P6r-PE-Zid">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="aR4-Ju-2M2">
                             <connections>
-                                <action selector="addDocumentListener:" destination="h9w-pQ-P68" id="3Jz-6j-1uf"/>
+                                <action selector="addDocumentListener:" destination="h9w-pQ-P68" id="Igc-eW-lix"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -545,7 +546,9 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="addPoolListener:" destination="vrn-dQ-FJ6" eventType="touchUpInside" id="uTS-VT-3sh"/>
+                                    <segue destination="NW3-hY-PEw" kind="popover" popoverAnchorView="m7J-vT-6Gj" id="x1k-y7-zMz">
+                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                    </segue>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nes-Hi-f0r">
@@ -573,7 +576,9 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <connections>
                         <outlet property="addPool" destination="m7J-vT-6Gj" id="nHn-L1-6r9"/>
-                        <outlet property="addPoolListener" destination="m7J-vT-6Gj" id="Dwq-Nt-Bpq"/>
+                        <outlet property="buttonGoToEdit" destination="nes-Hi-f0r" id="CnL-5z-y7a"/>
+                        <outlet property="buttonSendMail" destination="Pdd-hf-eX3" id="JvI-4S-YNS"/>
+                        <outlet property="buttonaddUnPool" destination="m7J-vT-6Gj" id="6Or-xy-BuL"/>
                         <outlet property="tableViewDocuments" destination="AQT-we-tHx" id="Bbt-rc-wxB"/>
                         <outlet property="tableViewPools" destination="PIp-Cb-MMX" id="1ei-sV-Mfh"/>
                     </connections>
@@ -625,9 +630,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                         <color key="backgroundColor" red="0.38273868370000003" green="0.64091467020000004" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Edition" id="Pj5-eQ-pY6">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="1Nm-SZ-cNp"/>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="Edition" id="Pj5-eQ-pY6"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UCm-zi-auz" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -643,7 +646,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                         <viewControllerLayoutGuide type="bottom" id="aEE-cm-mgX"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" restorationIdentifier="PoolPopoverID" id="EXd-WP-icD">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="768"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Pool" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k3u-nb-9Gq">
@@ -660,15 +663,65 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rqb-Wj-nJd">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uEA-6F-9my">
+                                <rect key="frame" x="137" y="175" width="49" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Ajouter">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="addPool:" destination="NW3-hY-PEw" eventType="touchUpInside" id="cAT-ZH-AjN"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.98109879030000002" alpha="1" colorSpace="calibratedWhite"/>
+                        <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    </view>
+                    <value key="contentSizeForViewInPopover" type="size" width="320" height="300"/>
+                    <splitViewMasterSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <connections>
+                        <outlet property="champNom" destination="YTH-5J-4jB" id="lii-BV-oSY"/>
+                        <outlet property="docPopover" destination="EXd-WP-icD" id="U1P-7e-MGl"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KaF-vN-GNv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1946" y="-2357"/>
+        </scene>
+        <!--Pool Popover View Controller-->
+        <scene sceneID="CkM-Ts-dBr">
+            <objects>
+                <viewController useStoryboardIdentifierAsRestorationIdentifier="YES" id="Dat-5l-ifb" customClass="PoolPopoverViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="rKZ-Vv-f6c"/>
+                        <viewControllerLayoutGuide type="bottom" id="qva-0L-oAR"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" restorationIdentifier="PoolPopoverID" id="Jja-J1-8UN">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="852"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Pool" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q1z-E4-zKY">
+                                <rect key="frame" x="138" y="20" width="35" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Pool" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sc4-Bb-WG6">
+                                <rect key="frame" x="0.0" y="65" width="320" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oWo-Ht-MxG">
                                 <rect key="frame" x="131" y="161" width="49" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Ajouter">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="addPool:" destination="NW3-hY-PEw" eventType="touchUpInside" id="OQx-9C-6V0"/>
-                                    <action selector="addSalon:" destination="NW3-hY-PEw" eventType="touchUpInside" id="eT0-NE-MX9"/>
+                                    <action selector="addPool:" destination="Dat-5l-ifb" eventType="touchUpInside" id="lyV-TH-Sgi"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -677,13 +730,11 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                     <value key="contentSizeForViewInPopover" type="size" width="320" height="300"/>
                     <splitViewMasterSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <connections>
-                        <outlet property="ViewPoolPopover" destination="EXd-WP-icD" id="Lgq-tB-fDW"/>
-                        <outlet property="ViewSalonPopover" destination="EXd-WP-icD" id="NvG-rF-fqu"/>
-                        <outlet property="champSalon" destination="YTH-5J-4jB" id="MZl-y7-sKx"/>
-                        <outlet property="champsPool" destination="YTH-5J-4jB" id="Prw-4a-oYE"/>
+                        <outlet property="champNom" destination="sc4-Bb-WG6" id="AMe-Po-i8B"/>
+                        <outlet property="docPopover" destination="Jja-J1-8UN" id="mNG-o5-YVp"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="KaF-vN-GNv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Qno-jS-HDI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1946" y="-2357"/>
         </scene>

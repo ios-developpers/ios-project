@@ -67,8 +67,6 @@
 
 - (IBAction)addDocumentListener:(UIBarButtonItem *)sender
 {
-    docPopover=nil;
-    
     NSLog(@"%@", [Utils concatenateString:LogListener withString:@" Add Document Listener"]);
     if (docView == nil) {
         //Create the ColorPickerViewController.
@@ -76,7 +74,7 @@
         // docView.delegate=self;
     }
     
-    if (docPopover == nil) {
+    if (docPopover == nil | ![docPopover isPopoverVisible]) {
         //The color picker popover is not showing. Show it.
         docPopover = [[UIPopoverController alloc] initWithContentViewController:docView];
         [docPopover presentPopoverFromBarButtonItem:(UIBarButtonItem *)sender
@@ -131,13 +129,4 @@
     //[self performSegueWithIdentifier:@"GoToSalonDetail" sender:[self.tableViewDocument cellForRowAtIndexPath:indexPath]];
 }
 
-/*
- - (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
- {
- if([segue.identifier isEqualToString:@"GoToSalonDetail"])
- {
- SplitView *destination = [segue destinationViewController];
- }
- }
- */
 @end

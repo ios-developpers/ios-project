@@ -22,6 +22,7 @@
 		34BF44FB18ACDB8800B66045 /* ConferenceTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 34BF44FA18ACDB8800B66045 /* ConferenceTests.m */; };
 		AA26B59D18ED6B9D00399BEA /* DocumentPopoverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AA26B59C18ED6B9D00399BEA /* DocumentPopoverViewController.m */; };
 		AA27A6DD18ED8E5E000EAFE4 /* DocumentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AA27A6DC18ED8E5E000EAFE4 /* DocumentViewController.m */; };
+		AA30565418F3E18A00E1B99D /* PoolPopoverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AA30565318F3E18A00E1B99D /* PoolPopoverViewController.m */; };
 		AAA6A47C18C5F4B500804407 /* AccueilViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AAA6A47B18C5F4B500804407 /* AccueilViewController.m */; };
 		AAD94BC218ED649B008B3057 /* SalonPopoverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AAD94BC118ED649B008B3057 /* SalonPopoverViewController.m */; };
 		AAE4FF0818F2EC670071123B /* Persistance.m in Sources */ = {isa = PBXBuildFile; fileRef = AAE4FF0718F2EC670071123B /* Persistance.m */; };
@@ -70,6 +71,8 @@
 		AA26B59C18ED6B9D00399BEA /* DocumentPopoverViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DocumentPopoverViewController.m; sourceTree = "<group>"; };
 		AA27A6DB18ED8E5E000EAFE4 /* DocumentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DocumentViewController.h; sourceTree = "<group>"; };
 		AA27A6DC18ED8E5E000EAFE4 /* DocumentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DocumentViewController.m; sourceTree = "<group>"; };
+		AA30565218F3E18A00E1B99D /* PoolPopoverViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PoolPopoverViewController.h; sourceTree = "<group>"; };
+		AA30565318F3E18A00E1B99D /* PoolPopoverViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PoolPopoverViewController.m; sourceTree = "<group>"; };
 		AAA6A47A18C5F4B500804407 /* AccueilViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccueilViewController.h; sourceTree = "<group>"; };
 		AAA6A47B18C5F4B500804407 /* AccueilViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccueilViewController.m; sourceTree = "<group>"; };
 		AAD94BC018ED649B008B3057 /* SalonPopoverViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SalonPopoverViewController.h; sourceTree = "<group>"; };
@@ -225,6 +228,8 @@
 				AAE4FF0A18F2EC8A0071123B /* SalonViewController.m */,
 				34BF44E418ACDB8700B66045 /* ViewController.h */,
 				34BF44E518ACDB8700B66045 /* ViewController.m */,
+				AA30565218F3E18A00E1B99D /* PoolPopoverViewController.h */,
+				AA30565318F3E18A00E1B99D /* PoolPopoverViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -363,6 +368,7 @@
 				AA26B59D18ED6B9D00399BEA /* DocumentPopoverViewController.m in Sources */,
 				AAFD6ED118F2CFF7000F697E /* ListeSalon.m in Sources */,
 				AAFD6ED718F2D290000F697E /* ListePool.m in Sources */,
+				AA30565418F3E18A00E1B99D /* PoolPopoverViewController.m in Sources */,
 				AAD94BC218ED649B008B3057 /* SalonPopoverViewController.m in Sources */,
 				AAA6A47C18C5F4B500804407 /* AccueilViewController.m in Sources */,
 				AAF3C6B618C720FA00B92618 /* Document.m in Sources */,

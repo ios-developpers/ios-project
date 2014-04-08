@@ -7,12 +7,14 @@
 //
 
 #import "AccueilViewController.h"
+#import "SalonViewController.h"
 
 @implementation AccueilViewController
 
 @synthesize tableViewSalon;
 @synthesize salonView;
 @synthesize salonPopover;
+@synthesize buttonGotoDocument;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -64,6 +66,7 @@
     // Dispose of any resources that can be recreated.
 }
 
+
 - (IBAction)addSalonListener:(UIBarButtonItem *)sender
 {
     NSLog(@"%@", [Utils concatenateString:LogListener withString:@" Add Salon Listener"]);
@@ -85,6 +88,7 @@
         salonPopover = nil;
     }
 }
+
 
 /*
  *  For table view
@@ -132,5 +136,25 @@
 {
     [[ListeSalon getInstance] setSelectedSalon:[indexPath row]];
 }
+
+- (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if (sender == buttonGotoDocument)
+    {
+        
+    }
+    else if(sender == self.buttonSalon)
+    {
+        
+    }
+    else
+    {
+    SalonViewController* segueController = [segue destinationViewController];
+    NSIndexPath *selectedRowPath = [tableViewSalon indexPathForSelectedRow];
+    
+    segueController.salon = [[ListeSalon getInstance].listSalon objectAtIndex:selectedRowPath.row];
+    }
+}
+
 
 @end

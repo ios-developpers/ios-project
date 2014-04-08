@@ -31,8 +31,15 @@
 @property (nonatomic, strong) UIViewController *poolView;
 @property (nonatomic, strong) UIPopoverController *poolPopover;
 
+//button
+@property (weak, nonatomic) IBOutlet UIButton *buttonGoToEdit;
+@property (weak, nonatomic) IBOutlet UIButton *buttonaddUnPool;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *buttonSendMail;
+
+
+
+
 //METHODS
-- (IBAction)addPoolListener:(id)sender;
 - (IBAction)sendButton:(id)sender;
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section;

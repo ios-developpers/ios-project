@@ -8,6 +8,7 @@
 
 //IMPORT
 #import "SalonViewController.h"
+#import "PoolPopoverViewController.h"
 
 //INTERFACE
 @interface SalonViewController ()
@@ -26,6 +27,10 @@
 @synthesize poolView;
 @synthesize poolPopover;
 
+@synthesize buttonaddUnPool;
+@synthesize buttonGoToEdit;
+@synthesize buttonSendMail;
+
 //METHODS
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -38,8 +43,18 @@
 
 -(void) viewWillAppear:(BOOL)animated
 {
-    self->salon = [[ListeSalon getInstance].listSalon objectAtIndex:[[ListeSalon getInstance] getSelectedSalon]];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(forceReload:) name:@"SalonPoolNotification" object:nil];
+}
+
+-(void) forceReload:(NSNotification *)notification
+{
     [tableViewPools reloadData];
+    
+    if (poolPopover != nil)
+    {
+        [poolPopover dismissPopoverAnimated:YES];
+        poolPopover = nil;
+    }
 }
 
 - (void)viewDidLoad
@@ -52,28 +67,6 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
-}
-
--(IBAction)addPoolListener:(id)sender
-{
-    NSLog(@"%@", [Utils concatenateString:LogListener withString:@" Add Pool Listener"]);
-    if (poolView == nil) {
-        //Create the ColorPickerViewController.
-        poolView = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"PoolPopoverID"];
-        // docView.delegate=self;
-    }
-    
-    if (poolPopover == nil | ![poolPopover isPopoverVisible]) {
-        //The color picker popover is not showing. Show it.
-        poolPopover = [[UIPopoverController alloc] initWithContentViewController:poolView];
-        [poolPopover presentPopoverFromBarButtonItem:(UIBarButtonItem *)sender
-                            permittedArrowDirections:UIPopoverArrowDirectionUp animated:YES];
-        
-    } else {
-        //The color picker popover is showing. Hide it.
-        [poolPopover dismissPopoverAnimated:YES];
-        poolPopover = nil;
-    }
 }
 
 //MAILS
@@ -153,6 +146,27 @@
     if (editingStyle == UITableViewCellEditingStyleDelete)
     {
         //[[ListeSalon getInstance] removeSalonAtIndex:indexPath.row];
+    }
+}
+
+- (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if (sender == buttonSendMail)
+    {
+        
+    }
+    else if (sender == buttonGoToEdit)
+    {
+        
+    }
+    else if (sender == buttonaddUnPool)
+    {
+    PoolPopoverViewController* segueController = [segue destinationViewController];
+    segueController.parent = self;
+    }
+    else
+    {
+        
     }
 }
 

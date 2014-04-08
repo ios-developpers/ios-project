@@ -28,7 +28,7 @@
 
 @property (nonatomic, weak) id<SalonPopoverDelegate> delegate;
 
-- (IBAction)addSalon:(id)sender ;
+//- (IBAction)addSalon:(id)sender ;
 - (id)init;
 - (id)initWithNibName:(NSString *)nibName bundle:(NSBundle *)bundle;
 @end

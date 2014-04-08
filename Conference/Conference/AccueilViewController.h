@@ -22,6 +22,7 @@
 }
 
 @property (strong, nonatomic) IBOutlet UIBarButtonItem *buttonSalon;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *buttonGotoDocument;
 
 @property (nonatomic, strong) NSArray *tableSalons;
 @property (strong, nonatomic) IBOutlet UITableView *tableViewSalon;

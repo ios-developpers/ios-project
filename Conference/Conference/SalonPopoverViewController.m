@@ -38,6 +38,7 @@
     champLieu.leftViewMode = UITextFieldViewModeAlways;
 }
 
+
 - (IBAction)addSalon:(id)sender {
     NSLog(@"%@", [Utils concatenateString:LogListener withString:@" Add Salon in Document Popover"]);
     
@@ -66,6 +67,7 @@
         champLieu.text = @"";
     }
 }
+
 
 - (id)initWithNibName:(NSString *)nibName bundle:(NSBundle *)bundle
 {
