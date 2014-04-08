@@ -14,8 +14,8 @@
 //SYNTHESIZE
 @synthesize name;
 @synthesize url;
-static NSString *const kName = @"Name";
-static NSString *const kUrl = @"Url";
+static NSString *const kName = @"nameDoc";
+static NSString *const kUrl = @"urlDoc";
 
 //METHODS
 -(id)initWithCoder:(NSCoder *)aDecoder

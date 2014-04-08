@@ -6,9 +6,11 @@
 //IMPORT
 #import <Foundation/Foundation.h>
 #import "Pool.h"
+#import "ListeSalon.h"
 
 //INTERFACE
 @interface Salon : NSObject <NSCoding>
+
 
 //PROPERTIES
 @property(nonatomic,copy)NSString *name;
@@ -28,5 +30,4 @@
 -(NSUInteger) countListPool;
 
 -(void)encodeWithCoder:(NSCoder *)aCoder;
-
 @end
