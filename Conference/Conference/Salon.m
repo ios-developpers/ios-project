@@ -19,6 +19,7 @@
 static NSString *const kName = @"Name";
 static NSString *const kAdress = @"Adress";
 static NSString *const kDate=@"date";
+static NSString *const kListPool=@"listPoolSalon";
 
 //METHODS
 -(id)initWithCoder:(NSCoder *)aDecoder
@@ -27,7 +28,8 @@ static NSString *const kDate=@"date";
         NSString *pName = [aDecoder decodeObjectForKey:kName];
         NSString *pAdress = [aDecoder decodeObjectForKey:kAdress];
         NSDate *pDate=[aDecoder decodeObjectForKey:kDate];
-        return [self initWithName:pName andAdress:pAdress andDate:pDate];
+        NSMutableArray *pListPool=[aDecoder decodeObjectForKey:kListPool];
+        return [self initWithName:pName andAdress:pAdress andDate:pDate andListPool:pListPool];
     }
     return self;
 }
@@ -110,6 +112,7 @@ static NSString *const kDate=@"date";
     [aCoder encodeObject:name forKey:kName];
     [aCoder encodeObject:adress forKey:kAdress];
     [aCoder encodeObject:date forKey:kDate];
+    [aCoder encodeObject:listPool forKey:kListPool];
 }
 
 // Observable protocol function

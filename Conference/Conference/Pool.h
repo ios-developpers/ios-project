@@ -8,14 +8,14 @@
 #import "Document.h"
 
 //INTERFACE
-@interface Pool : NSObject
+@interface Pool : NSObject <NSCoding>
 
 //PROPERTIES
 @property(nonatomic,copy)NSString *name;
 @property(nonatomic,strong)NSMutableArray *listDocument;
 
 //METHODS
--(id) initWithName:(NSString*)_name;
+-(id)initWithCoder:(NSCoder *)aDecoder;-(id) initWithName:(NSString*)_name;
 -(id) initWithName:(NSString*)_name andListDocument:(NSMutableArray *)_listDocument;
 
 -(BOOL) addDocument:(Document*)_document;
@@ -24,4 +24,5 @@
 -(void) clearListDocument;
 -(NSUInteger) countListDocument;
 
+-(void)encodeWithCoder:(NSCoder *)aCoder;
 @end

@@ -14,8 +14,20 @@
 //SYNTHESIZE
 @synthesize name;
 @synthesize listDocument;
+static NSString *const kName = @"namePool";
+static NSString *const kListDoc = @"listDocumentPool";
 
 //METHODS
+-(id)initWithCoder:(NSCoder *)aDecoder
+{
+    if ((self=[super init])) {
+        NSString *pName = [aDecoder decodeObjectForKey:kName];
+        NSMutableArray *pListDoc=[aDecoder decodeObjectForKey:kListDoc];
+        return [self initWithName:pName andListDocument:pListDoc];
+    }
+    return self;
+}
+
 -(id) initWithName:(NSString *)_name
 {
     self = [self initWithName:_name andListDocument:nil];
@@ -110,5 +122,13 @@
 {
     return [self->listDocument count];
 }
+
+
+-(void)encodeWithCoder:(NSCoder *)aCoder
+{
+    [aCoder encodeObject:name forKey:kName];
+    [aCoder encodeObject:listDocument forKey:kListDoc];
+}
+
 
 @end
