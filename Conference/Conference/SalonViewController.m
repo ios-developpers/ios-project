@@ -19,7 +19,6 @@
 @implementation SalonViewController
 
 @synthesize salon;
-@synthesize addPool;
 
 @synthesize tableViewPools;
 @synthesize tableViewDocuments;
@@ -48,8 +47,9 @@
 
 -(void) forceReload:(NSNotification *)notification
 {
+
+    NSLog(@"is calling force reload");
     [tableViewPools reloadData];
-    
     if (poolPopover != nil)
     {
         [poolPopover dismissPopoverAnimated:YES];
@@ -72,10 +72,18 @@
 //MAILS
 - (IBAction)sendButton:(id)sender {
     
+    NSString *nomSalon = salon.name;
+    NSDate *dateSalon = salon.date;
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    [dateFormatter setDateFormat:@"dd/MMM/yyyy"];
+    NSString *stringFromDate = [dateFormatter stringFromDate:dateSalon];
+    
+    
     MFMailComposeViewController *mc = [[MFMailComposeViewController alloc] init];
     mc.mailComposeDelegate = self;
     [mc setSubject:@"Polytech - Informations complémentaires suite à notre rencontre"];
-    [mc setMessageBody:@"Bonjour,\n\nSuite à notre rencontre lors du salon <nomsalon> (le <datesalon>), nous vous communiquons une liste de documents pouvant vous être utile si vous souhaitez rejoindre l'école.\n\nMerci et à bientôt à Polytech.\n\n======DOCUMENTS======\nDocument 1\nDocument 2\n======================\n\n" isHTML:NO];
+    NSString* body = [NSString stringWithFormat:@"Bonjour,\n\nSuite à notre rencontre lors du salon %@ (le %@), nous vous communiquons une liste de documents pouvant vous être utile si vous souhaitez rejoindre l'école.\n\nMerci et à bientôt à Polytech.\n\n======DOCUMENTS======\nDocument 1\nDocument 2\n======================\n\n", nomSalon, stringFromDate];
+    [mc setMessageBody:body isHTML:NO];
     
     [self presentViewController:mc animated:YES completion:NULL];
 }
@@ -161,8 +169,10 @@
     }
     else if (sender == buttonaddUnPool)
     {
-    PoolPopoverViewController* segueController = [segue destinationViewController];
-    segueController.parent = self;
+        PoolPopoverViewController* segueController = [segue destinationViewController];
+        segueController.parent = self;
+        NSLog(@"enregistre le popover");
+        poolPopover=[(UIStoryboardPopoverSegue *)segue popoverController];
     }
     else
     {

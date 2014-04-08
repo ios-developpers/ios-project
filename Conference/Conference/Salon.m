@@ -16,8 +16,8 @@
 @synthesize adress;
 @synthesize date;
 @synthesize listPool;
-static NSString *const kName = @"Name";
-static NSString *const kAdress = @"Adress";
+static NSString *const kName = @"nameSalon";
+static NSString *const kAdress = @"adressSalon";
 static NSString *const kDate=@"date";
 static NSString *const kListPool=@"listPoolSalon";
 
@@ -48,7 +48,13 @@ static NSString *const kListPool=@"listPoolSalon";
         self.name = _name;
         self.adress = _adress;
         self.date = _date;
-        self->listPool = _listPool;
+        if(_listPool==nil)
+        {
+            self.listPool=[[NSMutableArray alloc]init];
+        }else
+        {
+            self.listPool = _listPool;
+        }
     }
     
     NSLog(@"%@", [Utils concatenateString:LogConstructor withString:@" Salon"]);
@@ -60,38 +66,37 @@ static NSString *const kListPool=@"listPoolSalon";
 
 -(BOOL)addPool:(Pool *)_pool
 {
-    NSMutableArray *pools = self->listPool;
-    NSUInteger size = [pools count];
+    NSUInteger size = [listPool count];
     
-    [pools addObject:_pool];
-    
+    [listPool addObject:_pool];
     [self notifyObservers];
     
-    return([pools count] > size);
+    [[ListeSalon getInstance] saveItSelf];
+    
+    return([listPool count] > size);
 }
 
 -(BOOL) removePool:(Pool*)_pool
 {
-    NSMutableArray *pools = self->listPool;
-    NSUInteger size = [pools count];
+    NSUInteger size = [listPool count];
     
-    [pools removeObject:_pool];
-    
+    [listPool removeObject:_pool];
+    [[ListeSalon getInstance] saveItSelf];
     [self notifyObservers];
-    
-    return([pools count] < size);
+    return([listPool count] < size);
 }
 
 -(BOOL) removePoolAtIndex:(NSUInteger)index
 {
-    NSMutableArray *pools = self->listPool;
-    NSUInteger size = [pools count];
+    NSUInteger size = [listPool count];
     
-    [pools removeObjectAtIndex:index];
+    [listPool removeObjectAtIndex:index];
+    
+    [[ListeSalon getInstance] saveItSelf];
     
     [self notifyObservers];
     
-    return([pools count] < size);
+    return([listPool count] < size);
 }
 
 -(void) clearListPool
@@ -104,7 +109,7 @@ static NSString *const kListPool=@"listPoolSalon";
 
 -(NSUInteger) countListPool
 {
-    return [self->listPool count];
+    return [listPool count];
 }
 
 -(void)encodeWithCoder:(NSCoder *)aCoder

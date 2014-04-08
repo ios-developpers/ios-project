@@ -20,7 +20,6 @@
 @interface SalonViewController : UIViewController<MFMailComposeViewControllerDelegate, UITableViewDelegate, UITableViewDataSource,UIPopoverControllerDelegate>
 
 @property (nonatomic, strong) Salon* salon;
-@property (strong, nonatomic) IBOutlet UIButton *addPool;
 
 @property (nonatomic, strong) NSArray *tablePools;
 @property (strong, nonatomic) IBOutlet UITableView *tableViewPools;
@@ -29,13 +28,12 @@
 @property (strong, nonatomic) IBOutlet UITableView *tableViewDocuments;
 
 @property (nonatomic, strong) UIViewController *poolView;
-@property (nonatomic, strong) UIPopoverController *poolPopover;
+@property (nonatomic, weak) UIPopoverController *poolPopover;
 
 //button
 @property (weak, nonatomic) IBOutlet UIButton *buttonGoToEdit;
 @property (weak, nonatomic) IBOutlet UIButton *buttonaddUnPool;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *buttonSendMail;
-
 
 
 
