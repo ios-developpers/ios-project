@@ -157,12 +157,15 @@
     }
     else if (sender == buttonGoToEdit)
     {
+        PoolViewController* segueController = [segue destinationViewController];
+        NSIndexPath *selectedRowPath = [tableViewPools indexPathForSelectedRow];
         
+        segueController.pool = [[[ListePool getInstance] getAllPoolsOf:salon] objectAtIndex:selectedRowPath.row];
     }
     else if (sender == buttonaddUnPool)
     {
-    PoolPopoverViewController* segueController = [segue destinationViewController];
-    segueController.parent = self;
+        PoolPopoverViewController* segueController = [segue destinationViewController];
+        segueController.parent = self;
     }
     else
     {

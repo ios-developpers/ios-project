@@ -27,4 +27,6 @@
 
 -(NSMutableArray*) getAllPoolsOf:(Salon*)salon;
 
+-(BOOL) pool:(Pool*)pool contains:(Document*)document;
+
 @end

@@ -85,9 +85,9 @@
 {
     NSMutableArray* pools = [[NSMutableArray alloc] init];
     
-    Pool* pool = [[Pool alloc] initWithName:@"Tous les documents" andListDocument:[ListeDocument getInstance].listDocument];
+    Pool* pool ;//= [[Pool alloc] initWithName:@"Tous les documents" andListDocument:[ListeDocument getInstance].listDocument];
     
-    [pools addObject:pool];
+    //[pools addObject:pool];
     
     for(pool in salon.listPool)
     {
@@ -100,6 +100,19 @@
     }
     
     return pools;
+}
+
+-(BOOL) pool:(Pool*)pool contains:(Document*)document
+{
+    Document* tmp;
+    
+    for (tmp in pool.listDocument)
+    {
+        if (tmp == document)
+            return YES;
+    }
+    
+    return NO;
 }
 
 @end

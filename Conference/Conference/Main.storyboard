@@ -587,10 +587,10 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
             </objects>
             <point key="canvasLocation" x="2444" y="-418"/>
         </scene>
-        <!--View Controller - Edition-->
+        <!--Pool View Controller - Edition-->
         <scene sceneID="JqG-hF-acj">
             <objects>
-                <viewController id="4sf-T1-bOi" sceneMemberID="viewController">
+                <viewController id="4sf-T1-bOi" customClass="PoolViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Y0D-A8-oLA"/>
                         <viewControllerLayoutGuide type="bottom" id="dQp-qO-adJ"/>
@@ -616,7 +616,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="fu8-We-5zw">
+                                    <tableViewCell contentMode="scaleToFill" restorationIdentifier="CellDocumentPool" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="fu8-We-5zw">
                                         <rect key="frame" x="0.0" y="22" width="1024" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="fu8-We-5zw" id="XUJ-QH-i4Y">
@@ -625,6 +625,10 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="4sf-T1-bOi" id="C9n-xT-AZu"/>
+                                    <outlet property="delegate" destination="4sf-T1-bOi" id="w6S-90-qNX"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" red="0.38273868370000003" green="0.64091467020000004" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -632,6 +636,9 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                     </view>
                     <navigationItem key="navigationItem" title="Edition" id="Pj5-eQ-pY6"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <connections>
+                        <outlet property="tableViewDocument" destination="ZdO-jm-nor" id="vUU-Kr-9Jc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UCm-zi-auz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

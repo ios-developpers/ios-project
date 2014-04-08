@@ -33,6 +33,7 @@
 		AAF3C6BC18C7275F00B92618 /* Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = AAF3C6BB18C7275F00B92618 /* Utils.m */; };
 		AAF3C6BF18C7342000B92618 /* Salon.m in Sources */ = {isa = PBXBuildFile; fileRef = AAF3C6BE18C7342000B92618 /* Salon.m */; };
 		AAF3C6C218C737CD00B92618 /* Pool.m in Sources */ = {isa = PBXBuildFile; fileRef = AAF3C6C118C737CD00B92618 /* Pool.m */; };
+		AAF9E99618F42E2B0032064D /* PoolViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AAF9E99518F42E2B0032064D /* PoolViewController.m */; };
 		AAFD6ED118F2CFF7000F697E /* ListeSalon.m in Sources */ = {isa = PBXBuildFile; fileRef = AAFD6ED018F2CFF7000F697E /* ListeSalon.m */; };
 		AAFD6ED418F2D10F000F697E /* ListeDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = AAFD6ED318F2D10F000F697E /* ListeDocument.m */; };
 		AAFD6ED718F2D290000F697E /* ListePool.m in Sources */ = {isa = PBXBuildFile; fileRef = AAFD6ED618F2D290000F697E /* ListePool.m */; };
@@ -94,6 +95,8 @@
 		AAF3C6BE18C7342000B92618 /* Salon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Salon.m; sourceTree = "<group>"; };
 		AAF3C6C018C737CD00B92618 /* Pool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Pool.h; sourceTree = "<group>"; };
 		AAF3C6C118C737CD00B92618 /* Pool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Pool.m; sourceTree = "<group>"; };
+		AAF9E99418F42E2B0032064D /* PoolViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PoolViewController.h; sourceTree = "<group>"; };
+		AAF9E99518F42E2B0032064D /* PoolViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PoolViewController.m; sourceTree = "<group>"; };
 		AAFD6ECF18F2CFF7000F697E /* ListeSalon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListeSalon.h; sourceTree = "<group>"; };
 		AAFD6ED018F2CFF7000F697E /* ListeSalon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListeSalon.m; sourceTree = "<group>"; };
 		AAFD6ED218F2D10F000F697E /* ListeDocument.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListeDocument.h; sourceTree = "<group>"; };
@@ -222,6 +225,8 @@
 				AA26B59C18ED6B9D00399BEA /* DocumentPopoverViewController.m */,
 				AA27A6DB18ED8E5E000EAFE4 /* DocumentViewController.h */,
 				AA27A6DC18ED8E5E000EAFE4 /* DocumentViewController.m */,
+				AAF9E99418F42E2B0032064D /* PoolViewController.h */,
+				AAF9E99518F42E2B0032064D /* PoolViewController.m */,
 				AAD94BC018ED649B008B3057 /* SalonPopoverViewController.h */,
 				AAD94BC118ED649B008B3057 /* SalonPopoverViewController.m */,
 				AAE4FF0918F2EC8A0071123B /* SalonViewController.h */,
@@ -362,6 +367,7 @@
 			files = (
 				34BF44E618ACDB8700B66045 /* ViewController.m in Sources */,
 				AAFD6ED418F2D10F000F697E /* ListeDocument.m in Sources */,
+				AAF9E99618F42E2B0032064D /* PoolViewController.m in Sources */,
 				AAE4FF0818F2EC670071123B /* Persistance.m in Sources */,
 				34BF44E018ACDB8700B66045 /* AppDelegate.m in Sources */,
 				AA27A6DD18ED8E5E000EAFE4 /* DocumentViewController.m in Sources */,

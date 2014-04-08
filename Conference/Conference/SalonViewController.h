@@ -9,6 +9,7 @@
 //IMPORT
 #import <UIKit/UIKit.h>
 #import <MessageUI/MessageUI.h>
+#import "PoolViewController.h"
 #import "ListeSalon.h"
 #import "ListePool.h"
 #import "ListeDocument.h"
