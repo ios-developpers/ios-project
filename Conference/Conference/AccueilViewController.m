@@ -149,10 +149,10 @@
     }
     else
     {
-    SalonViewController* segueController = [segue destinationViewController];
-    NSIndexPath *selectedRowPath = [tableViewSalon indexPathForSelectedRow];
-    
-    segueController.salon = [[ListeSalon getInstance].listSalon objectAtIndex:selectedRowPath.row];
+        SalonViewController* segueController = [segue destinationViewController];
+        NSIndexPath *selectedRowPath = [tableViewSalon indexPathForSelectedRow];
+        
+        segueController.salon = [[ListeSalon getInstance].listSalon objectAtIndex:selectedRowPath.row];
     }
 }
 
