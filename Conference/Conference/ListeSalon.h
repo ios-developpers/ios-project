@@ -8,10 +8,9 @@
 
 #import <Foundation/Foundation.h>
 #import "PersistantP.h"
-#import "Salon.h"
 #import "Persistance.h"
 
-@class AccueilViewController;
+@class Salon;
 
 @interface ListeSalon : NSObject <PersistantP>
 
